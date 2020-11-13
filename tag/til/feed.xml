@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://lwoongh38.github.io/tag/til/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-11-14T01:04:34+09:00</updated>
+  <updated>2020-11-13T18:04:38+00:00</updated>
   <id>https://lwoongh38.github.io/tag/til/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">시험용 포스팅입니다 - 출력되어라</title>
       <link href="https://lwoongh38.github.io/test" rel="alternate" type="text/html" title="시험용 포스팅입니다 - 출력되어라" />
-      <published>2018-09-28T01:40:00+09:00</published>
-      <updated>2018-09-28T01:40:00+09:00</updated>
+      <published>2018-09-27T16:40:00+00:00</published>
+      <updated>2018-09-27T16:40:00+00:00</updated>
       <id>https://lwoongh38.github.io/test</id>
       <content type="html" xml:base="https://lwoongh38.github.io/test">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -79,7 +79,7 @@
 &lt;p&gt;이 글은 시험용입니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;잘-출력되었으면-좋겠어요&quot;&gt;잘 출력되었으면 좋겠어요&lt;/h2&gt;
-&lt;p&gt;폰트는 왜 바뀌지 않았을까요?&lt;/p&gt;
+&lt;p&gt;빌드 및 배포 자동화를 실행했어요&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# line comment&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
@@ -94,7 +94,7 @@
         &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
+&lt;!-- &lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
 markdown: kramdown
 # kramdown : markdown의 개조판.
 # markdown에서 불편한 사항을 개선한 형태.
@@ -246,8 +246,7 @@ exclude:
   # - _posts/datascience
   - _posts/iot
   - _posts/r
-  - _posts/economy&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/lwoongh38/751baaef281c849e20f4081006af7f55.js&quot;&gt; &lt;/script&gt;</content>
+  - _posts/economy&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/lwoongh38/751baaef281c849e20f4081006af7f55.js&quot;&gt; &lt;/script&gt; --&gt;</content>
 
       
       
