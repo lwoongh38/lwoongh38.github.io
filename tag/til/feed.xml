@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://lwoongh38.github.io/tag/til/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-12-07T15:22:06+00:00</updated>
+  <updated>2020-12-07T17:28:33+00:00</updated>
   <id>https://lwoongh38.github.io/tag/til/feed.xml</id>
 
   
@@ -40,8 +40,7 @@
       <content type="html" xml:base="https://lwoongh38.github.io/test">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Data Science - Python - &quot;Class&quot; 이녀석 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Data Science - Python - &quot;test &lt;/a&gt;&lt;/li&gt;
-
+   
 
 
 
@@ -268,7 +267,7 @@ exclude:
       
 
       
-        <summary type="html">목차 Data Science - Python - &quot;Class&quot; 이녀석 Data Science - Python - &quot;test</summary>
+        <summary type="html">목차 Data Science - Python - &quot;Class&quot; 이녀석</summary>
       
 
       
