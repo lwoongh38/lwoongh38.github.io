@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://lwoongh38.github.io/author/woongE/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-12-13T23:34:17+00:00</updated>
+  <updated>2020-12-13T23:38:23+00:00</updated>
   <id>https://lwoongh38.github.io/author/woongE/feed.xml</id>
 
   
@@ -139,21 +139,14 @@
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;models.py&lt;/code&gt; 파일을 작성했다면 어플리케이션에서 사용자가 입력한 정보를 저장할 데이터베이스를 구축하고 연결해야 한다.
 데이터베이스는 간단히 코드 세줄로 구축 및 연결이 가능하다.&lt;/p&gt;
 
-&lt;summary&gt;
-&lt;details&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 데이터베이스 구축&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;FLASK_APP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;twitter_app&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flask&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 데이터베이스 테이블 생성&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;FLASK_APP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;twitter_app&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flask&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;migrate&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#데이터베이스 테이블에 세부 컬럼 생성&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;FLASK_APP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;twitter_app&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flask&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;upgrade&lt;/span&gt;
 
-```py
-# 데이터베이스 구축
-FLASK_APP=twitter_app flask db init
-# 데이터베이스 테이블 생성
-FLASK_APP=twitter_app flask db migrate
-#데이터베이스 테이블에 세부 컬럼 생성
-FLASK_APP=twitter_app flask db upgrade
-
-```
-
-&lt;/details&gt;
-&lt;/summary&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;3-routes--templates-생성&quot;&gt;3. routes &amp;amp; templates 생성&lt;/h3&gt;
 

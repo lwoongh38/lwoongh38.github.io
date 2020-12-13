@@ -294,21 +294,14 @@ into the {body} of the default.hbs template -->
 <p><code class="highlighter-rouge">__init__.py</code>와 <code class="highlighter-rouge">models.py</code> 파일을 작성했다면 어플리케이션에서 사용자가 입력한 정보를 저장할 데이터베이스를 구축하고 연결해야 한다.
 데이터베이스는 간단히 코드 세줄로 구축 및 연결이 가능하다.</p>
 
-<summary>
-<details>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 데이터베이스 구축</span>
+<span class="n">FLASK_APP</span><span class="o">=</span><span class="n">twitter_app</span> <span class="n">flask</span> <span class="n">db</span> <span class="n">init</span>
+<span class="c"># 데이터베이스 테이블 생성</span>
+<span class="n">FLASK_APP</span><span class="o">=</span><span class="n">twitter_app</span> <span class="n">flask</span> <span class="n">db</span> <span class="n">migrate</span>
+<span class="c">#데이터베이스 테이블에 세부 컬럼 생성</span>
+<span class="n">FLASK_APP</span><span class="o">=</span><span class="n">twitter_app</span> <span class="n">flask</span> <span class="n">db</span> <span class="n">upgrade</span>
 
-```py
-# 데이터베이스 구축
-FLASK_APP=twitter_app flask db init
-# 데이터베이스 테이블 생성
-FLASK_APP=twitter_app flask db migrate
-#데이터베이스 테이블에 세부 컬럼 생성
-FLASK_APP=twitter_app flask db upgrade
-
-```
-
-</details>
-</summary>
+</code></pre></div></div>
 
 <h3 id="3-routes--templates-생성">3. routes &amp; templates 생성</h3>
 
