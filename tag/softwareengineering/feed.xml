@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://lwoongh38.github.io/tag/softwareengineering/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-12-13T16:16:34+00:00</updated>
+  <updated>2020-12-13T23:34:17+00:00</updated>
   <id>https://lwoongh38.github.io/tag/softwareengineering/feed.xml</id>
 
   
@@ -205,7 +205,7 @@ FLASK_APP=twitter_app flask db upgrade
 현재 어플리케이션이 완성됐으나 heroku를 통한 배포과정에서 오류가 생겨 문제를 해결중이다. 문제를 해결한 후 배포 파트에 대한 업데이트를 실시할 것이다.&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;h2 id=&quot;코드스테이츠의-데이터사이언티스트-코스-세번째-섹션의-첫-주를-마무리하며&quot;&gt;코드스테이츠의 데이터사이언티스트 코스 세번째 섹션의 첫 주를 마무리하며..&lt;/h2&gt;
+&lt;h2 id=&quot;코드스테이츠의-데이터사이언티스트-코스-세번째-섹션을-마무리하며&quot;&gt;코드스테이츠의 데이터사이언티스트 코스 세번째 섹션을 마무리하며..&lt;/h2&gt;
 
 &lt;p&gt;항상 프로젝트를 진행하면서 이 프로젝트는 추후 현업에서 어떻게 사용할 수 있을까에 대한 고민을 하게 된다. 그 고민은 일주일 동안 열정을 쏟을 나의 프로젝트에 대해 더 애착을 가지게 해주고 나아가 더 나은 결과물을 얻을 수 있는 큰 동기부여가 된다.&lt;/p&gt;
 
