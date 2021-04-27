@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://lwoongh38.github.io/tag/deeplearning/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://lwoongh38.github.io/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-01-17T17:29:10+00:00</updated>
-  <id>https://lwoongh38.github.io/tag/deeplearning/feed.xml</id>
+  <updated>2021-04-27T19:38:19+00:00</updated>
+  <id>https://lwoongh38.github.io/tag/ai/feed.xml</id>
 
   
   
@@ -280,7 +280,7 @@ LSTM의 게이트 숫자를 줄여 모델을 구조적으로 단순화했다는 
       
 
       
-        <category term="deeplearning" />
+        <category term="ai" />
       
 
       
@@ -497,7 +497,7 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
       
 
       
-        <category term="deeplearning" />
+        <category term="ai" />
       
 
       
