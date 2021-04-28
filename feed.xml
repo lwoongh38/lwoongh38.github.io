@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://lwoongh38.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" /><updated>2021-04-28T04:59:49+00:00</updated><id>https://lwoongh38.github.io/</id><title type="html">비 전공자의 Data Scientist 성장기</title><subtitle>Data Science 학습일지</subtitle><entry><title type="html">Deep Learning - 핵심 개념 &amp;amp; 용어</title><link href="https://lwoongh38.github.io/deeplearning-summary" rel="alternate" type="text/html" title="Deep Learning - 핵심 개념 &amp; 용어" /><published>2021-01-17T22:00:00+00:00</published><updated>2021-01-17T22:00:00+00:00</updated><id>https://lwoongh38.github.io/deeplearning-summary</id><content type="html" xml:base="https://lwoongh38.github.io/deeplearning-summary">&lt;p&gt;#deeplearning #용어 #개념&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://lwoongh38.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" /><updated>2021-04-28T05:10:26+00:00</updated><id>https://lwoongh38.github.io/</id><title type="html">비 전공자의 Data Scientist 성장기</title><subtitle>Data Science 학습일지</subtitle><entry><title type="html">Deep Learning - 핵심 개념 &amp;amp; 용어</title><link href="https://lwoongh38.github.io/deeplearning-summary" rel="alternate" type="text/html" title="Deep Learning - 핵심 개념 &amp; 용어" /><published>2021-01-17T22:00:00+00:00</published><updated>2021-01-17T22:00:00+00:00</updated><id>https://lwoongh38.github.io/deeplearning-summary</id><content type="html" xml:base="https://lwoongh38.github.io/deeplearning-summary">&lt;p&gt;#deeplearning #용어 #개념&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -453,7 +453,23 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Software Engineering - Python - &quot;Class&quot; 이녀석 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./twitter-application&quot;&gt;Software Engineering - Twitter Application &lt;/a&gt;&lt;/li&gt;
-   
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;   
 
 
 
@@ -620,7 +636,23 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Software Engineering - Python - &quot;Class&quot; 이녀석 &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./twitter-application&quot;&gt;Software Engineering - Twitter Application &lt;/a&gt;&lt;/li&gt;
-   
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;   
 
 
 
