@@ -1,11 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://lwoongh38.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" /><updated>2021-04-27T23:05:45+00:00</updated><id>https://lwoongh38.github.io/</id><title type="html">비 전공자의 Data Scientist 성장기</title><subtitle>Data Science 학습일지</subtitle><entry><title type="html">Deep Learning - 핵심 개념 &amp;amp; 용어</title><link href="https://lwoongh38.github.io/deeplearning-summary" rel="alternate" type="text/html" title="Deep Learning - 핵심 개념 &amp; 용어" /><published>2021-01-17T22:00:00+00:00</published><updated>2021-01-17T22:00:00+00:00</updated><id>https://lwoongh38.github.io/deeplearning-summary</id><content type="html" xml:base="https://lwoongh38.github.io/deeplearning-summary">&lt;p&gt;#deeplearning #용어 #개념&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://lwoongh38.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" /><updated>2021-04-28T04:59:49+00:00</updated><id>https://lwoongh38.github.io/</id><title type="html">비 전공자의 Data Scientist 성장기</title><subtitle>Data Science 학습일지</subtitle><entry><title type="html">Deep Learning - 핵심 개념 &amp;amp; 용어</title><link href="https://lwoongh38.github.io/deeplearning-summary" rel="alternate" type="text/html" title="Deep Learning - 핵심 개념 &amp; 용어" /><published>2021-01-17T22:00:00+00:00</published><updated>2021-01-17T22:00:00+00:00</updated><id>https://lwoongh38.github.io/deeplearning-summary</id><content type="html" xml:base="https://lwoongh38.github.io/deeplearning-summary">&lt;p&gt;#deeplearning #용어 #개념&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./machinelearning-bank-marketing&quot;&gt;Machine Learning - Project2 - Bank marketing 정기예금 가입여부 예측하기 &lt;/a&gt;&lt;/li&gt;    
     &lt;li&gt;&lt;a href=&quot;./deeplearning-bert&quot;&gt;Deep Learning - Project4 - BERT &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;Machine Learning - 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
 
 
 
@@ -233,7 +251,25 @@ LSTM의 게이트 숫자를 줄여 모델을 구조적으로 단순화했다는 
     &lt;li&gt;&lt;a href=&quot;./machinelearning-bank-marketing&quot;&gt;Machine Learning - Project2 - Bank marketing 정기예금 가입여부 예측하기 &lt;/a&gt;&lt;/li&gt;    
     &lt;li&gt;&lt;a href=&quot;./deeplearning-bert&quot;&gt;Deep Learning - Project4 - BERT &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;Machine Learning - 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
 
 
 
@@ -728,7 +764,25 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
     &lt;li&gt;&lt;a href=&quot;./machinelearning-bank-marketing&quot;&gt;Machine Learning - Project2 - Bank marketing 정기예금 가입여부 예측하기 &lt;/a&gt;&lt;/li&gt;    
     &lt;li&gt;&lt;a href=&quot;./deeplearning-bert&quot;&gt;Deep Learning - Project4 - BERT &lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;Machine Learning - 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
 
 
 
@@ -955,15 +1009,301 @@ f1 : 0.898
 하지만 우리나라의 특징에 맞는 특성들을 잘 교체할 수 있다면 충분히 모델을 구축할 수 있고 최적화여부에 따라 좋은 성능을 낼 수 있을 것 같다.&lt;/p&gt;
 
 &lt;p&gt;모델을 튜닝하며 성능을 개선하는 작업 자체는 성취감도 있고 굉장히 재밌다고 생각했는데
-어떻게 성능을 개선해야겠다는 아이디어는 비교적 잘 떠오르는데에 비해 그것을 적용시키는데에는 무수한 오류를 헤쳐나가야 했기때문에 생각했던 모든 아이디어들을 시험해보지 못한 것들이 아쉬웠다.&lt;/p&gt;</content><author><name>woongE</name></author><category term="ai" /><summary type="html">#randomforest #XGB #machinelearning</summary></entry><entry><title type="html">미세먼지와 공시지가의 상관관계</title><link href="https://lwoongh38.github.io/project-1" rel="alternate" type="text/html" title="미세먼지와 공시지가의 상관관계" /><published>2020-10-05T16:40:00+00:00</published><updated>2020-10-05T16:40:00+00:00</updated><id>https://lwoongh38.github.io/project-1</id><content type="html" xml:base="https://lwoongh38.github.io/project-1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+어떻게 성능을 개선해야겠다는 아이디어는 비교적 잘 떠오르는데에 비해 그것을 적용시키는데에는 무수한 오류를 헤쳐나가야 했기때문에 생각했던 모든 아이디어들을 시험해보지 못한 것들이 아쉬웠다.&lt;/p&gt;</content><author><name>woongE</name></author><category term="ai" /><summary type="html">#randomforest #XGB #machinelearning</summary></entry><entry><title type="html">ROC curve에 대해 알아보자</title><link href="https://lwoongh38.github.io/roccurve" rel="alternate" type="text/html" title="ROC curve에 대해 알아보자" /><published>2020-10-23T19:00:00+00:00</published><updated>2020-10-23T19:00:00+00:00</updated><id>https://lwoongh38.github.io/roccurve</id><content type="html" xml:base="https://lwoongh38.github.io/roccurve">&lt;p&gt;#평가지표 #ROCcurve&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-bank-marketing&quot;&gt;Machine Learning - Project2 - Bank marketing 정기예금 가입여부 예측하기 &lt;/a&gt;&lt;/li&gt;    
+    &lt;li&gt;&lt;a href=&quot;./deeplearning-bert&quot;&gt;Deep Learning - Project4 - BERT &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;Machine Learning - 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
+
+
+
+
+
+
+
+
+
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;roc-curve에-대해-알아보자&quot;&gt;ROC curve에 대해 알아보자&lt;/h1&gt;
+
+&lt;p&gt;선형회귀? 그게 뭐야? 회귀라는 말을 연어를 통해서만 들어본 그대.
+말이 어렵지 사실 그 개념 자체는 이미 우리가 알고있는 것이나 마찬가지다. 최대한 쉽게쉽게 풀어서 설명해볼 터이니
+오늘도 시작해보자.&lt;/p&gt;
+
+&lt;p&gt;선형회귀라고 대놓고 주제를 던졌으니 의미를 먼저 알아야겠지?
+y = ax+b 라는 식이 있다면 입력항인 x와 출력항인 y의 선형 상관관계를 모델링하는 기법이다. 
+아직도 모호한가? 그러면 이 말을우리 생활 속의 예제로 녹여보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96222124-a1f41000-0fc6-11eb-8d00-94644528b877.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;저 위의 &lt;code class=&quot;highlighter-rouge&quot;&gt;y = ax+b&lt;/code&gt;를 시험점수에 대한 식이라고 예를 들면,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;y = 물가&lt;/li&gt;
+  &lt;li&gt;x = 휴지가격&lt;/li&gt;
+  &lt;li&gt;a = 가중치(운송비용 등)&lt;/li&gt;
+  &lt;li&gt;b = 기본물가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이렇게 정리할 수 있다.
+위의 그림대로라면 휴지가격을 알 때 물가가 어떠한지를 얻을 수 있다.
+이것도 간단한 회귀식이다. 이처럼 수식화하지 않았을 뿐 우리 생활에는 다양한 회귀식들이 숨어있다.
+그럼 여태까지 회귀식을 모르고도 사는데 전혀 문제가 없었는데 갑자기 왜 들고나와서 머리아프게 하는지 궁금해 하는 사람이 있을 것이다.
+문제는 이처럼 간단한 회귀식이라면 상관이 없겠지만 데이터의 수가 엄청나게 많아지고 특징들이 많아진다면 사람의 머리로는 저런 생각을 하는 것이 불가능 할 것이다. 이를 위해 우리는 계산기(컴퓨터)의 힘을 빌리게 되고 컴퓨터의 좋은 성능을 이용하면 알고있었던 데이터(빨간 점)에서 답을 찾는 것 뿐만이 아닌, 새로운 데이터(x축, 휴지가격)을 바탕으로 정답(y축, 물가)를 예측해볼 수도 있다.
+이것이 요즘 흔히 하는 말로 &lt;strong&gt;머신러닝&lt;/strong&gt;이라고 하는 개념이다.
+물론 머신러닝도 지도, 비지도 등 여러가지 갈래로 나뉘어지지만 위에서 설명한 머신러닝은 선형적인 관계를 가진 데이터를 위한 선형회귀 예측모델이 되는 것이다. 빨간점을 활용하여 학습시키면 다른 데이터(이지만 비슷한 선형관계를 가진) 파란점의 휴지가격을 알 때, 물가를 예측해볼 수 있는 것이다. 
+한마디로 &lt;strong&gt;선형회귀는 선형관계를 가진 데이터를 모델링하여 예측하기 위한 머신러닝의 일종&lt;/strong&gt;이다.&lt;/p&gt;
+
+&lt;p&gt;선형회귀 기법을 사용하여 데이터에 맞는 예측모델을 만들기 위해서는 회귀직선 필요하다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96222090-97397b00-0fc6-11eb-8bdf-47ef8c0e2a32.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;회귀직선이 말하고자 하는 바는 예측을 할 때 이러한 느낌으로 예측을하면 맞출 수 있을것이라는 일종의 경향성을 의미하고 위의 그림에서는 녹색선이 그 경향을 의미한다.  우리는 데이터로 빨간 점을 가지고 있고 이 데이터가 어떤 경향을 띄는지를 가장 잘 설명해주는 선이 바로 녹색 선이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96223864-9524eb80-0fc9-11eb-8a0c-ffbd1840ad96.png&quot; alt=&quot;image&quot; /&gt;
+이 선을 설명하기 위해서는 예측값과 잔차라는 개념을 알아야 하는데 예측값은 저 녹색선이 추정하는 값이고, 잔차는 관측값(빨간점의 물가)와 예측값(파란점의 물가)의 차이를 말한다.
+녹색선은 그림의 검은점선으로 표시된 저 관측값과 파란점선의 예측값의 제곱의 합이 최소가 되어야 가장 경향을 잘 설명할 수 있다.
+여기서 파란점선의 크기와 검은 점선 크기의 제곱의 합을 잔차제곱합이라고 하는데 이 잔차제곱합을 비용함수(cost function)라고 하는데 머신러닝 모델을 만드는 과정에서 비용함수를 최소화 하는 모델(선)을 찾는 과정을 학습이라고 한다.&lt;/p&gt;
+
+&lt;p&gt;저 녹색 선을 그려서 저 녹색선을 바탕으로 값을 예측하게 하는 과정 전반이 머신러닝 선형회귀 모델링이 되는 것이다.&lt;/p&gt;
+
+&lt;p&gt;선형회귀 모델은 주어져있지 않은 함수값을 보간하여 예측하는데 유용한데 예를들어 빨간점이 아닌, 없는 데이터 즉 파란점에 해당하는 휴지가격을 알고 있을 때 원래 데이터(빨간점)에는 없지만 녹색선을 이용하여 파란점의 휴지가격을 알 때  물가를 어림잡아 예측해볼 수 있는 것이다.&lt;/p&gt;
+
+&lt;p&gt;오늘은 머신러닝의 많은 모델 중 하나인 선형회귀에 대해서 알아보았다. 이제는 선형회귀에 대한 말이 나오면 자신있게 대화에 끼어들어보자.
+앞으로도 다양한 머신러닝의 모델들을 알기쉽게 소개해보리라고 다짐하며 글을 마친다.&lt;/p&gt;
+
+&lt;p&gt;머신러닝에 대해 일주일간 다양한 모델들을 공부했다.
+사용 목적에 따라 많은 종류의 머신러닝 모델이 존재하지만 결국 큰 맥락에서 보자면 
+머신러닝은 결국 가지고 있는 데이터로 학습을 시키고, 학습시킨 모델을 이용하여 문제를 풀어내려고(예측하려고) 하는 것이다.
+결국 모델의 성능을 높인다는 의미는 모델이 예측을 잘 할 수 있게 한다는 뜻이고 이를 위해서는 해당 모델을 정확하게 평가할 수 있어야 한다.&lt;/p&gt;
+
+&lt;p&gt;머신러닝 모델에 대해 공부하다보면 해당 모델이 어떤 매커니즘으로 작동하는지, 배경은 무엇인지 등을 배우게 되지만
+공통적으로 모델마다 등장하는 섹터가 있다. 그것은 바로…..&lt;strong&gt;평가지표&lt;/strong&gt;다.
+위에서 말했듯이 제대로 모델의 성능을 알 수 있어야 개선이 가능하기 때문에 
+모델을 제대로 평가하는 것도 만드는 것만큼이나 중요하다.
+그래서 이번에는 공부했던 다양한 지표중에 이해가 제일 안갔던 &lt;code class=&quot;highlighter-rouge&quot;&gt;ROC curve&lt;/code&gt;에 대해 알아보려고 한다.
+함께 공부를 시작해보자.&lt;/p&gt;
+
+&lt;p&gt;ROC curve는 이진분류를 하는 모델의 성능을 평가하는 지표로 사용된다.
+이진분류는 쉽게 말하면 O,X 문제처럼 두가지 중 하나를 고르는 분류를 말한다.
+백문이 불여일견이라고 일단 그림을 보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96972847-04628880-1552-11eb-8a8c-a864568d2612.png&quot; alt=&quot;image&quot; /&gt;
+출처 : http://www.navan.name/roc/&lt;/p&gt;
+
+&lt;p&gt;구 개의 큰 산 모양을 보이는 그림은 데이터에서 두 클래스의 분포를 나타낸다. (O,X 문제에서 O와 X의 분포)
+암환자를 진단하는 모델을 만든다고 할 때, 오른쪽은 암환자, 왼쪽은 암환자가 아닌 경우이다.
+산이 겹치는 부분 가운데의 threshold는 모델을 만든사람이 정하는 변수로 이 임계값을 기준으로 모델은 오른쪽에 있으면 암환자로, 왼쪽에 있으면 암환자가 아니라고 판단을 내리게 된다. 
+그림의 좌 상단에 위치한 곡선이 ROC curve로 ROC curve는 위의 임계값에 대한 모델의 성능을 표시한 곡선이다. &lt;strong&gt;핵심을 먼저 얘기하고 넘어가자면 저 커브 아래의 면적(AUC, Area Under the Curve)이 클수록 모델의 성능이 뛰어나다는 것을 의미&lt;/strong&gt;한다.&lt;/p&gt;
+
+&lt;p&gt;커브에 대해 살펴보려면 우선 축이 무엇인지 알아보자.
+x축은 FPR y축은 TPR이라고 적혀있는데 이는 각각&lt;/p&gt;
+
+&lt;p&gt;FPR은 False Positive rate
+TPR은 True Positive rate&lt;/p&gt;
+
+&lt;p&gt;을 뜻한다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96987496-0df1ed80-155e-11eb-9a44-81044441a48a.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;의미는 같아도 해석을 사람마다 다르게하는 경향이 있으니 위 그림의 구성요소인 actual class와 predicted class에 대한 설명을 하고 넘어가면 좋을 것 같다.&lt;/p&gt;
+
+&lt;p&gt;먼저 actual class에는 True와 False로 나뉘는데 이는 예측결과가 맞으면 True, 틀리면 False라는 것을 의미한다.
+다음 predicted class는 Positive와 Negative로 나뉘는데 이는 예측을 긍정적으로 했으면 Positive, 그렇지 않다면 Negative로 표현한다.&lt;/p&gt;
+
+&lt;p&gt;위로 돌아가서 암환자를 예로 들어보면 TPR은 실제로 암에 걸린사람을 암에 걸렸다고 예측했다는 것이고
+FPR은 암환자라고 예측했으나 예측결과가 틀린것을 의미한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96972847-04628880-1552-11eb-8a8c-a864568d2612.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;TPR이 높다는 의미는 실제로 암이 걸린 환자를 암이 걸렸다고 판단을 잘 내린다는 뜻이고
+FPR이 높다는 의미는 암이 걸리지 않은 환자도 모두 암으로 판정한다는 의미이다. 
+암환자를 적게 놓치고 싶다면 임계값을 왼쪽으로 옮겨(낮춰) 빨간 클래스가 임계값 오른쪽에 모두 들어가게 하면 암환자를 무조건 맞출 수 있게 되겠지만 반대로 암환자가 아닌사람을 암환자로 오진하는 경우도 그만큼 늘어날 것이다.
+반대로 정상인을 암환자로 오진하는 경우를 줄이고 싶다면 임계값을 오른쪽으로 옮겨(올려) 파란 클래스가 임계값 왼쪽에 모두 들어가게하면 되지만 이 경우, 진짜 암에 걸린 환자를 암환자가 아니라고 판단하는 경우도 늘어나게 된다.&lt;/p&gt;
+
+&lt;p&gt;처음에 핵심을 이야기하며 저 곡선의 아래 면적이 클수록 성능이 좋다고 했는데 이를 다르게 이야기하면 두 클래스를 더 잘 예측하는 모델일수록 곡선은 그림의 좌상단으로 가까워져 사각형에 가깝게 되고 성능이 안좋은 모델일수록 직선에 가까워져
+곡선 아래 면적이 삼각형에 가깝게 된다.&lt;/p&gt;
+
+&lt;p&gt;즉 ROC curve는 임계값을 어떻게 설정해야할지 알고 싶을 때 임계값에 대한 정답율과 오답율의 비율을 보는 곡선이라고 이해하면 될 것이다.&lt;/p&gt;
+
+&lt;p&gt;오늘은 이진분류모델의 임계값을 결정할 때 도움을 줄 수 있는 ROC curve에 대해 알아봤다.
+다음에도 유익한 주제를 들고 찾아뵐 수 있기를 기대하며 글을 마친다.&lt;/p&gt;</content><author><name>woongE</name></author><category term="ai" /><summary type="html">#평가지표 #ROCcurve</summary></entry><entry><title type="html">Machine Learning - 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자</title><link href="https://lwoongh38.github.io/machinelearning-linearregression" rel="alternate" type="text/html" title="Machine Learning - 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자" /><published>2020-10-16T19:00:00+00:00</published><updated>2020-10-16T19:00:00+00:00</updated><id>https://lwoongh38.github.io/machinelearning-linearregression</id><content type="html" xml:base="https://lwoongh38.github.io/machinelearning-linearregression">&lt;p&gt;#선형회귀 #linearregression&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-bank-marketing&quot;&gt;Machine Learning - Project2 - Bank marketing 정기예금 가입여부 예측하기 &lt;/a&gt;&lt;/li&gt;    
+    &lt;li&gt;&lt;a href=&quot;./deeplearning-bert&quot;&gt;Deep Learning - Project4 - BERT &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;Machine Learning - 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
+
+
+
+
+
+
+
+
+
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;연어의-회귀본능이-아닌-선형회귀에-대해-알아보자&quot;&gt;연어의 회귀본능이 아닌 선형회귀에 대해 알아보자&lt;/h1&gt;
+
+&lt;p&gt;선형회귀? 그게 뭐야? 회귀라는 말을 연어를 통해서만 들어본 그대.
+말이 어렵지 사실 그 개념 자체는 이미 우리가 알고있는 것이나 마찬가지다. 최대한 쉽게쉽게 풀어서 설명해볼 터이니
+오늘도 시작해보자.&lt;/p&gt;
+
+&lt;p&gt;선형회귀라고 대놓고 주제를 던졌으니 의미를 먼저 알아야겠지?
+y = ax+b 라는 식이 있다면 입력항인 x와 출력항인 y의 선형 상관관계를 모델링하는 기법이다. 
+아직도 모호한가? 그러면 이 말을우리 생활 속의 예제로 녹여보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96222124-a1f41000-0fc6-11eb-8d00-94644528b877.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;저 위의 &lt;code class=&quot;highlighter-rouge&quot;&gt;y = ax+b&lt;/code&gt;를 시험점수에 대한 식이라고 예를 들면,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;y = 물가&lt;/li&gt;
+  &lt;li&gt;x = 휴지가격&lt;/li&gt;
+  &lt;li&gt;a = 가중치(운송비용 등)&lt;/li&gt;
+  &lt;li&gt;b = 기본물가&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이렇게 정리할 수 있다.
+위의 그림대로라면 휴지가격을 알 때 물가가 어떠한지를 얻을 수 있다.
+이것도 간단한 회귀식이다. 이처럼 수식화하지 않았을 뿐 우리 생활에는 다양한 회귀식들이 숨어있다.
+그럼 여태까지 회귀식을 모르고도 사는데 전혀 문제가 없었는데 갑자기 왜 들고나와서 머리아프게 하는지 궁금해 하는 사람이 있을 것이다.
+문제는 이처럼 간단한 회귀식이라면 상관이 없겠지만 데이터의 수가 엄청나게 많아지고 특징들이 많아진다면 사람의 머리로는 저런 생각을 하는 것이 불가능 할 것이다. 이를 위해 우리는 계산기(컴퓨터)의 힘을 빌리게 되고 컴퓨터의 좋은 성능을 이용하면 알고있었던 데이터(빨간 점)에서 답을 찾는 것 뿐만이 아닌, 새로운 데이터(x축, 휴지가격)을 바탕으로 정답(y축, 물가)를 예측해볼 수도 있다.
+이것이 요즘 흔히 하는 말로 &lt;strong&gt;머신러닝&lt;/strong&gt;이라고 하는 개념이다.
+물론 머신러닝도 지도, 비지도 등 여러가지 갈래로 나뉘어지지만 위에서 설명한 머신러닝은 선형적인 관계를 가진 데이터를 위한 선형회귀 예측모델이 되는 것이다. 빨간점을 활용하여 학습시키면 다른 데이터(이지만 비슷한 선형관계를 가진) 파란점의 휴지가격을 알 때, 물가를 예측해볼 수 있는 것이다. 
+한마디로 &lt;strong&gt;선형회귀는 선형관계를 가진 데이터를 모델링하여 예측하기 위한 머신러닝의 일종&lt;/strong&gt;이다.&lt;/p&gt;
+
+&lt;p&gt;선형회귀 기법을 사용하여 데이터에 맞는 예측모델을 만들기 위해서는 회귀직선 필요하다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96222090-97397b00-0fc6-11eb-8bdf-47ef8c0e2a32.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;회귀직선이 말하고자 하는 바는 예측을 할 때 이러한 느낌으로 예측을하면 맞출 수 있을것이라는 일종의 경향성을 의미하고 위의 그림에서는 녹색선이 그 경향을 의미한다.  우리는 데이터로 빨간 점을 가지고 있고 이 데이터가 어떤 경향을 띄는지를 가장 잘 설명해주는 선이 바로 녹색 선이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96223864-9524eb80-0fc9-11eb-8a0c-ffbd1840ad96.png&quot; alt=&quot;image&quot; /&gt;
+이 선을 설명하기 위해서는 예측값과 잔차라는 개념을 알아야 하는데 예측값은 저 녹색선이 추정하는 값이고, 잔차는 관측값(빨간점의 물가)와 예측값(파란점의 물가)의 차이를 말한다.
+녹색선은 그림의 검은점선으로 표시된 저 관측값과 파란점선의 예측값의 제곱의 합이 최소가 되어야 가장 경향을 잘 설명할 수 있다.
+여기서 파란점선의 크기와 검은 점선 크기의 제곱의 합을 잔차제곱합이라고 하는데 이 잔차제곱합을 비용함수(cost function)라고 하는데 머신러닝 모델을 만드는 과정에서 비용함수를 최소화 하는 모델(선)을 찾는 과정을 학습이라고 한다.&lt;/p&gt;
+
+&lt;p&gt;저 녹색 선을 그려서 저 녹색선을 바탕으로 값을 예측하게 하는 과정 전반이 머신러닝 선형회귀 모델링이 되는 것이다.&lt;/p&gt;
+
+&lt;p&gt;선형회귀 모델은 주어져있지 않은 함수값을 보간하여 예측하는데 유용한데 예를들어 빨간점이 아닌, 없는 데이터 즉 파란점에 해당하는 휴지가격을 알고 있을 때 원래 데이터(빨간점)에는 없지만 녹색선을 이용하여 파란점의 휴지가격을 알 때  물가를 어림잡아 예측해볼 수 있는 것이다.&lt;/p&gt;
+
+&lt;p&gt;오늘은 머신러닝의 많은 모델 중 하나인 선형회귀에 대해서 알아보았다. 이제는 선형회귀에 대한 말이 나오면 자신있게 대화에 끼어들어보자.
+앞으로도 다양한 머신러닝의 모델들을 알기쉽게 소개해보리라고 다짐하며 글을 마친다.&lt;/p&gt;</content><author><name>woongE</name></author><category term="ai" /><summary type="html">#선형회귀 #linearregression</summary></entry><entry><title type="html">미세먼지와 공시지가의 상관관계</title><link href="https://lwoongh38.github.io/project-1" rel="alternate" type="text/html" title="미세먼지와 공시지가의 상관관계" /><published>2020-10-05T16:40:00+00:00</published><updated>2020-10-05T16:40:00+00:00</updated><id>https://lwoongh38.github.io/project-1</id><content type="html" xml:base="https://lwoongh38.github.io/project-1">&lt;p&gt;#python #pandas #statistics&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./project-1&quot;&gt;미세먼지와 공시지가의 상관관계 &lt;/a&gt;&lt;/li&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp; 용어 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;Git, Github 왜 써야 해? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./statistics&quot;&gt;통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
 
-
-
-
-
+    
 
 
 
@@ -1289,16 +1629,35 @@ plt.show()
 조사한 시점 기준으로 미세먼지 농도와 공시지가가 상관이 있는지 여부는 알 수 있었지만 미세먼지의 농도와 공시지가가 서로 어떤 영향을 미치는지는 분석할 수 없어 아쉬웠습니다.
 미세먼지 농도와 공시지가가 서로 어떤 영향을 주고받는지를 분석하려면 같은 기간의 미세먼지 농도의 변동율, 그리고 공시지가의 변동율이 필요했는데 미세먼지데이터는 올 4월부터 제공되기 시작했고 공시지가는 1년단위로 한번의 데이터밖에 없어서 변동율을 구할 수가 없었거든요. 시간을 너무 많이 사용하고나서야 내가 원하는 정보를 얻기위한 데이터가 중분치 않다는 것을 깨달아서 데이터셋을 변경할 생각도 하지 못헀어요. 하지만 추후에 데이터가 충분해지면 변동율을 이용한 분석을 다시 해봐도 괜찮을 것 같다는 생각을 했습니다.
 원했던 인사이트들을 얻지 못해서 잠시 허무하긴 했는데 첫 시도부터 만족스럽긴 힘들테니까요. 다음에는 어떻게 하면 좋겠다는 팁을 얻었다는 그 자체로 의미가 있었다고 생각하려고 합니다.(안그러면 허무해서 잠도 못잘 것 같아요.)
-추후에는 더욱 흥미로운 프로젝트를 소개해보겠습니다. 긴 글을 읽어주셔서 고맙습니다.&lt;/p&gt;</content><author><name>woongE</name></author><category term="fundemental" /><summary type="html">목차 미세먼지와 공시지가의 상관관계</summary></entry><entry><title type="html">시험용 포스팅입니다 - 출력되어라</title><link href="https://lwoongh38.github.io/test" rel="alternate" type="text/html" title="시험용 포스팅입니다 - 출력되어라" /><published>2018-09-27T16:40:00+00:00</published><updated>2018-09-27T16:40:00+00:00</updated><id>https://lwoongh38.github.io/test</id><content type="html" xml:base="https://lwoongh38.github.io/test">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+추후에는 더욱 흥미로운 프로젝트를 소개해보겠습니다. 긴 글을 읽어주셔서 고맙습니다.&lt;/p&gt;</content><author><name>woongE</name></author><category term="fundemental" /><summary type="html">#python #pandas #statistics</summary></entry><entry><title type="html">통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자</title><link href="https://lwoongh38.github.io/statistics" rel="alternate" type="text/html" title="통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자" /><published>2020-09-18T16:40:00+00:00</published><updated>2020-09-18T16:40:00+00:00</updated><id>https://lwoongh38.github.io/statistics</id><content type="html" xml:base="https://lwoongh38.github.io/statistics">&lt;p&gt;#빈도주의 #베이지안 #통계학&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Software Engineering - Python - &quot;Class&quot; 이녀석 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./twitter-application&quot;&gt;Software Engineering - Twitter Application &lt;/a&gt;&lt;/li&gt;
-   
+    &lt;li&gt;&lt;a href=&quot;./project-1&quot;&gt;미세먼지와 공시지가의 상관관계 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;Git, Github 왜 써야 해? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./statistics&quot;&gt;통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
 
-
-
-
-
+    
 
 
 
@@ -1329,174 +1688,179 @@ plt.show()
     
 &lt;/ul&gt;
 
-&lt;p&gt;이 글은 시험용입니다.&lt;/p&gt;
+&lt;h1 id=&quot;통계학의-두-관점-빈도주의와-베이지안에-대해서-알아보자&quot;&gt;통계학의 두 관점, 빈도주의와 베이지안에 대해서 알아보자.&lt;/h1&gt;
 
-&lt;h2 id=&quot;잘-출력되었으면-좋겠어요&quot;&gt;잘 출력되었으면 좋겠어요&lt;/h2&gt;
-&lt;p&gt;빌드 및 배포 자동화를 실행했어요&lt;/p&gt;
+&lt;p&gt;“빈도주의 통계학과 베이지안 관점의 통계학은 무엇이 다른가?” 라는 질문에, 
+뭔가 다른 것 같긴 한데 우물쭈물 대답할 말이 마땅히 생각나지 않는 그대는 이 글을 한번쯤 읽어봤으면 좋겠다.
+수학, 통계 이런거 아무것도 몰라도 쉽게 이해할 수 있게 말로 장황하게 늘어놓았으니, 겁먹지 말고 시작해보자.&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# line comment&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt;
+&lt;p&gt;베이지안 통계학이란?
+세상의 불확실성을 확률로 설명 가능한  학문이라고 할 수 있다.&lt;/p&gt;
 
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;p&gt;확률을 정리하면 크게 &lt;code class=&quot;highlighter-rouge&quot;&gt;빈도주의&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;베이지안&lt;/code&gt; 두가지 관점으로 나눌 수 있다.
+빈도주의 관점에서는 확률을 &lt;strong&gt;상대적인 빈도의 극한값&lt;/strong&gt;으로 나타내는데  이 말은 동일한 일을 무한히 반복했을 때의 빈도를 의미한다. 
+빈도주의 관점에서는 동전던지기, 주사위 던지기 등의 무작위 사건의 확률을 설명할 수 있다.&lt;/p&gt;
 
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;동전을 10번 던졌을 때 6번 앞면이 나온다면 이는 상대적 빈도값이 6/10이 되는 것이고, 
+10000번 던졌을 때 5600번 앞면이 나온다면 5600/10000, 횟수를 무한히 늘려나간다면 이 값은 결국 1/2 = 0.5(50%)에 수렴하게 된다. 
+이를 앞면이 나올 &lt;code class=&quot;highlighter-rouge&quot;&gt;확률&lt;/code&gt;이라고 정의하는 것이다.
+하지만 빈도주의 관점에서의 확률은 명확한 한계를 가지고 있는데 횟수를 무한히 늘릴 수 없는 사건에 대해서는 확률 계산이 불가능하다는 것이다. 
+예를들어 내일 비가 내릴 확률은 상대적인 빈도로는 설명할 수 없다. 같은 조건에서 무한히 반복할 수 없기 때문에 빈도를 계산할 수 없어서 확률을 구할 수가 없다. 이처럼 무작위 사건이 아닌 인식론적 불확실성을 설명하기 위해서 새로운 확률의 정의가 필요성이 생겼고,&lt;/p&gt;
 
-&lt;!-- &lt;noscript&gt;&lt;pre&gt;# Jekyll configuration
-markdown: kramdown
-# kramdown : markdown의 개조판.
-# markdown에서 불편한 사항을 개선한 형태.
+&lt;p&gt;그래서 등장한 것이 &lt;strong&gt;베이지안 관점의 확률&lt;/strong&gt;이다.
+베이지안 관점에서는 확률을 믿음의 정도(degree of belief)로 정의한다. 가령 “내일 비가 내릴 확률은 70%이다”라는 말처럼 어떠한 사건 발생에 대한 믿음의 정도로 확률을 정의하기 때문에, 빈도주의로 설명할 수 없는 훨씬 다양한 상황에 확률을 부여할 수 있다. 때문에 베이지안 관점의 확률을 &lt;strong&gt;불확실성 측정의 도구&lt;/strong&gt;라고도 이야기한다.&lt;/p&gt;
 
-# MyData
-owner:
-  name:           WoongHee Lee
-  avatar:         photo.jpg
-  bio:            &amp;quot;&amp;quot;
-  email:          lwoongh38@g.skku.edu
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  facebook:
-  github:
-  stackexchange:
-  linkedin:
-  instagram:
-  flickr:
-  tumblr:
-  # google plus id, include the &amp;#39;+&amp;#39;, eg +mmistakes
-  google_plus:
+&lt;p&gt;베이즈정리를 설명해보면,
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/93562522-2603a980-f9c1-11ea-8c16-b6b7b8541a1f.png&quot; alt=&quot;image&quot; /&gt;
+P(H) 는 사전확률로 가설 H에 대해서 사전에 우리가 믿고있는 정도(사전지식)를 이야기한다. 
+가능도P(D|H)는 가설 H가 주어졌을 때 데이터 D를 지지하는 정도, 즉 데이터D가 관찰될 가능성에 해당한다.
+사전확률 P(H) 와 가능도P(D|H)를 곱하여 업데이트된 확률인 사후확률 P(H|D)를 얻는다. 이는 데이터 D가 관찰되었을 때, 가설 H의 확률을 말한다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/93564809-46356780-f9c5-11ea-84e0-a7c5f3c38142.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-highlighter: rouge
-# text highlighter로 rouge이용
-# 2016.02월 이후로 syntax highlighter는 rouge만 지원.
-# Pygments 사용불가.
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;모집단을 설명하는 가설 H1,H2, H3, H4가 있다고 가정하고, D라는 데이터가 관찰되었을 때, P(H1&lt;/td&gt;
+      &lt;td&gt;D)를 공식으로 유도해보면 다음과 같다.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-paginate: 20
-# 작성한 모든 post를 하나의 페이지에 열거할 수 없으니
-# pagination이 필요하고 몇개의 post를 하나의 page에서
-# 보여줄 건지를 설정.
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/93564180-3cf7cb00-f9c4-11ea-9c45-811abd769a77.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-language: &amp;#39;en-uk&amp;#39;
-# 언어 설정
+&lt;p&gt;이제 공식을 설명해보면,
+P(H) 는 &lt;strong&gt;사전확률&lt;/strong&gt;로 가설 H에 대해서 사전에 우리가 믿고있는 정도(사전지식)를 이야기한다. 
+P(D|H)에서 가설 H가 주어졌을 때 데이터 D를 지지하는 정도, 즉 데이터D가 관찰될 가능성에 해당한다.
+사전확률 P(H) 와 가능도P(D|H)를 곱하여 업데이트된 확률인 사후확률 P(H|D)를 얻는다. 이는 데이터 D가 관찰되었을 때, 가설 H의 확률을 말한다.&lt;/p&gt;
 
-url: https://lwoongh38.github.io
-# Google Search Console에서 사용하는 sitemap.xml 생성시
-# 이 url key값이 존재하지 않으면 sitemap.xml이
-# 정상적으로 생성되지 않는다.
-# 또한 disqus(댓글시스템)를 이용하기 위해서도 필요.
-# 자신의 github page url을 입력
-# ( https://your_github_id.github.io 형식 )
+&lt;p&gt;사전확률 H1, H2, H3, H4는 모두 같았지만 D라는 데이터가 관찰되고 난 후, 데이터 D 안에서 H1이 차지하는 비중이 큰 것을 볼 수 있다. 즉, 데이터가 H1을 더 많이 지지하기 때문에 실제 현상에서도 H1이 일어날 확률이 더 높다고 추론할 수 있다.
+따라서 사전확률은 동일했지만 데이터 D가 주어졌을 때 H1의 확률은 다른 가설들보다 H1이 더 크게 되는 것이다. 즉 데이터가 관찰되고 나서 사전확률이 사후확률로 &lt;strong&gt;업데이트&lt;/strong&gt;된 것이다.
+이처럼 베이즈 정리는 &lt;code class=&quot;highlighter-rouge&quot;&gt;관찰된 데이터&lt;/code&gt;를 토대로 &lt;code class=&quot;highlighter-rouge&quot;&gt;사전확률&lt;/code&gt;이 어떻게 &lt;code class=&quot;highlighter-rouge&quot;&gt;사후확률&lt;/code&gt;로 &lt;strong&gt;업데이트&lt;/strong&gt; 되는지를 알 수 있게 해주고 데이터는 가능도를 통해 사후확률에 영향을 준다는 것을 알 수 있다.&lt;/p&gt;
 
-baseurl: /
+&lt;p&gt;기존의 빈도주의에 의한 통계는 집단이 어떤 분포를 가지는지를 정의하고 계산을 통한 확률에 대해 이야기한다. 하지만 베이지안 관점에서는 사전확률 즉, 경험이 주어지고 추가적인 정보를 통해 확률을 지속적으로 갱신한다.
+현대에 와서 베이지안 관점의 통계가 더 많은 주목을 받는 이유는 경험(데이터)가 나올수록 예측모델이 더 정확해지기 때문인데 데이터가 넘쳐나는 세상이라 그런 듯 하다. 호랑이 등에 날개를 단 격이라고 할까. 추가로 나중에 머신러닝에 대해 공부할 때, 이런 베이즈정리가 많이 쓰인다고 한다. 이번에 공부하면서 머신러닝에 Naive Bayes Clasify라는 이론도 많이 쓰인다는 것을 알게 되었는데 추후 머신러닝에 대해 공부할 때 이에 대해서도 자세히 소개하기로 다짐하며 글을 마친다.&lt;/p&gt;</content><author><name>woongE</name></author><category term="fundemental" /><summary type="html">#빈도주의 #베이지안 #통계학</summary></entry><entry><title type="html">코스레스토랑에 보내는 제안서</title><link href="https://lwoongh38.github.io/proposal" rel="alternate" type="text/html" title="코스레스토랑에 보내는 제안서" /><published>2020-09-11T16:40:00+00:00</published><updated>2020-09-11T16:40:00+00:00</updated><id>https://lwoongh38.github.io/proposal</id><content type="html" xml:base="https://lwoongh38.github.io/proposal">&lt;p&gt;#시각화 #visualization #seaborn #tips&lt;/p&gt;
 
-# Website info
-title: 비 전공자의 Data Scientist 성장기
-# 자신의 blog title.
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./project-1&quot;&gt;미세먼지와 공시지가의 상관관계 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;Git, Github 왜 써야 해? &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./statistics&quot;&gt;통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
 
-description: Data Science 학습일지
-# blog home에 표시될 blog에 대한 전반적인 설명.
-
-cover: assets/built/images/blog-cove1.jpg
-# blog home에 표시될 blog cover image.
-
-logo:
-logo_dark:
-
-favicon: assets/built/images/atom-icon.png
-# favicon으로 사용할 image
-
-production_url: https://lwoongh38.github.io/
-# 최종적으로 blog가 운영될 url
-
-source_url: 
-# blogmaker(jekyll source folder)에 대한 github repository
-
-# Social info
-navigation: True
-# Navigation bar link를 보여줄건지 여부
-
-subscribers: True
-# subscriber 기능을 사용할건지의 여부
-# 저는 약간의 수정을 통해 subscriber 기능대신
-# lunr.js를 이용한 검색 기능으로 대체 사용했습니다.
-# 검색기능으로 대체하기 위해서
-# `_includes/subscribe-form.html` 파일의 수정이 필요합니다.
-
-twitter:
-facebook:
-# 만약 twitter와 facebook을 이용하면 username을 입력
-
-# Disqus
-disqus: True
-disqus_shortname: xxxxxxxx
-# disqus는 온라인 댓글 시스템. 댓글 기능을 사용하기 위해
-# disqus를 이용할 것인지 여부와 만약 사용하면
-# disqus shortname을 입력 ( disqus username이 아님 )
+    
 
 
-# Google Analytics
-google_analytics: UA-xxxxxxxx-x # replace with your GA tracking identifier
-# Google Analytics을 사용할 경우 GA tracking identifier를 입력
-
-# Permalinks
-permalink: /:title
-# permalink: /author/:author
-# permalink: /tag/:title
-# 각각의 post에 고정주소를 어떤 방식으로 할당할 것인지를 결정
-# 이 값을 바꾸면 작성한 포스트의 저장위치나 파일이름이 변경된다.
-
-# gems and other configs
-plugins: [jekyll-paginate, jekyll-feed, jekyll-gist]
-
-feed:
-  path: feed.xml
-
-# Travis-CI 설정입니다.
-safe: False
-lsi: False
-
-username: lwoongh38
-repo: GitHubPageMaker
-# username : travis-ci와 연동하는 github의 username
-# repo: travis-ci와 연동하는 github의 repository이름
-# https://github.com/&amp;lt;username&amp;gt;/&amp;lt;repository&amp;gt;
-
-branch: master
-# 사용할 branch명
-
-relative_source:
-
-destination: ../[GitHubPage]/
-# compile된 결과가 생성되는 폴더
-# 이 폴더안의 내용이 우리가 운영하는 블로그 내용이 컴파일되서 들어간다.
-# 이 폴더안의 내용을 github repository(https://username.github.io)에 push
-# 만약 Travis-CI를 이용할 예정이면 이 부분을 git submodule로
-# github repository(https://username.github.io)에 연결해야 한다.
 
 
-# exclude는 Jekyll컴파일 시 destination에 포함될 필요가
-# 없는것들을 명시한다. (node_modules와 필요없는 것들은 제외)
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - &amp;quot;*.Rmd&amp;quot;
-  - vendor
-  - .travis.yml
-  - node_modules
-  - assets/css
-  - assets/images
-  - _posts/angular
-  - _posts/et-cetera
-  # - _posts/python
-  - _posts/typescript
-  # - _posts/datascience
-  - _posts/iot
-  - _posts/r
-  - _posts/economy&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/lwoongh38/751baaef281c849e20f4081006af7f55.js&quot;&gt; &lt;/script&gt; --&gt;</content><author><name>woongE</name></author><category term="til" /><summary type="html">목차 Software Engineering - Python - &quot;Class&quot; 이녀석 Software Engineering - Twitter Application</summary></entry></feed>
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;p&gt;본 글에 나오는 데이터는 Seaborn 라이브러리의 기본 데이터셋 tips를 활용하였고, 코스레스토랑(&lt;code class=&quot;highlighter-rouge&quot;&gt;코&lt;/code&gt;드&lt;code class=&quot;highlighter-rouge&quot;&gt;스&lt;/code&gt;테이츠)과 구정환(&lt;code class=&quot;highlighter-rouge&quot;&gt;구&lt;/code&gt;일모, 한&lt;code class=&quot;highlighter-rouge&quot;&gt;정&lt;/code&gt;민, 김진&lt;code class=&quot;highlighter-rouge&quot;&gt;환&lt;/code&gt;) 매니저는 가상의 장소, 인물임을 알려드립니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;코스레스토랑에-보내는-제안서&quot;&gt;코스레스토랑에 보내는 제안서&lt;/h1&gt;
+
+&lt;p&gt;안녕하세요 코드레스토랑 구정환 매니저님. 우선 저를 믿고 서비스 컨설팅 의뢰를 맡겨주셔서 진심으로 감사합니다.
+보내주신 데이터의 분석 결과나 제안들을 보여드리기에 앞서, 본데이터를 어떻게 활용할 것이고 한계는 어떤것이었는지에 대해 먼저 간단하게 설명드리려고 합니다.
+먼저 보내주신 데이터를 간단하게 살펴봤을 때, 데이터 안에는 244개의 매출데이터가 있었는데 양을 봤을 때 일주일 중 목요일부터 일요일까지 일주일 정도의 분량일 것으로 생각됩니다. 데이터가 많을수록 매출의 ‘경향성’을 파악하기가 용이하지만 보내주신 데이터를 최대한 활용하여 분석을 실시했습니다. 나름의 근거를 제시했으나 데이터의 양이 부족하였기 때문에 제가 드리는 제언은 절대적인 것이 아니며 레스토랑 경영에 참고지표 정도로 사용하시는 것이 좋다는 사실을 미리 말씀드립니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;팁에 어떤 요인이 있는지를 분석해달라고 의뢰를 하셔서 어떤 방면으로 분석결과를 활용하실 것인지, 왜 팁에 대한 상관관계가 궁금했을지를 제일 먼저 생각해봤습니다.
+팁이 만약 종업원에게 전부 돌아간다면 경영자의 입장에서 분석을 의뢰하실 정도로 크게 의미있는 요소는 아니라고 생각되어 한가지 전제를 가지고 데이터 분석을 실시하였습니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;전제1. 레스토랑에서 받는 팁은 레스토랑측과 종업원이 일정비율로 나누어 갖는다. 즉 팁을 받는 것은 매출 향상에도 기여하고,&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;전제2. 따라서 팁을 많이 받을 수 있는 요인을 분석하는 것이 레스토랑의 매출을 향상시킬 수 있다고 판단하였습니다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;자세한-분석결과를-보고싶으시다면-아래-세부정보를-눌러서-글을-펼쳐주세요&quot;&gt;자세한 분석결과를 보고싶으시다면 아래 세부정보를 눌러서 글을 펼쳐주세요.&lt;/h2&gt;
+&lt;summary&gt;
+&lt;details&gt;
+
+### 요일별 테이블 당 매출 &amp;amp; 팁
+먼저 전체 매출과 팁은 어떤 연관성이 있는지에 대한 결과입니다.
+![image](https://user-images.githubusercontent.com/70134676/92865871-d1e54c00-f439-11ea-9d87-684d531ef7c8.png)
+![image](https://user-images.githubusercontent.com/70134676/92866746-dcecac00-f43a-11ea-8d7f-f27e2ac66761.png)
+
+분석결과는 평균값으로 각 요일마다 테이블당 평균 매출과 팁이 얼마나 발생했는지를 보여주고 있습니다. 전반적으로 주중보다는 주말이 매출이 높았으며 팁은 매출과 비례하여 발생한다는 사실을 알 수 있습니다. 큰 의미가 있는 지표는 아니며 테이블당 얼마의 매출이 발생하는지, 전체 매출에 대한 팁은 어떤 연관관계가 있는지 정도의 기본정보라고 보시면 됩니다.
+
+다음은 팁을 받는데는 어떤 요인이 작용할지에 대한 분석자료입니다. 메뉴나 가격에 대한 정보가 없어 팁을 늘리기 위한 방편으로 팁을 받는 횟수(즉 매출이 발생한 횟수)를 늘려야 한다는 점에 초점을 맞추고 분석을 진행하였습니다.
+
+### 요일 별 팁 발생 횟수
+![image](https://user-images.githubusercontent.com/70134676/92867635-ceeb5b00-f43b-11ea-97f0-ff06315c2b7c.png)
+위의 그래프를 보시면 **금요일날 매출이 유독 적게 발생한다는 사실을 알 수 있습니다.**
+
+### 일행 숫자 별 팁 발생 횟수
+![image](https://user-images.githubusercontent.com/70134676/92867964-2db0d480-f43c-11ea-9a0c-0d09d201f0bb.png)
+위의 그래프는 일행 숫자에 따른 팁 횟수입니다. 여기서는 의미가 있는 결과가 나왔는데
+**일주일간 전체  매출 횟수 중에 2인 일행이 이용한 횟수가 절대적으로 많다는 사실을 보여줍니다.**
+
+### 성별에 따른 계산 횟수
+![image](https://user-images.githubusercontent.com/70134676/92868498-bdef1980-f43c-11ea-88f1-0a2852502431.png)
+다음은 어느 성별이 더 많이 계산을 하는가에 대한 지표입니다. 보통 **남성이 여성에 비해 두배에 가깝게 계산을 많이 한다는 것을 알 수 있습니다.**
+
+### 시간에 따른 팁 발생 횟수
+![image](https://user-images.githubusercontent.com/70134676/92868567-ce9f8f80-f43c-11ea-8f39-946bf3b6182a.png)
+마지막으로 전체 매출 중에 점심, 저녁으로 나누어 언제 팁이 많이 발생했는지에 대한 지표입니다.
+**팁 발생 횟수는 저녁이 점심보다 290%정도 많았다는 사실을 알 수 있습니다.**
+
+&lt;/details&gt;
+&lt;/summary&gt;
+
+&lt;h2 id=&quot;위의-분석-결과를-토대로-제가-코드레스토랑에-드리는-서비스-제언입니다&quot;&gt;위의 분석 결과를 토대로 제가 코드레스토랑에 드리는 서비스 제언입니다.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;금요일에 테이블회전율이 낮으니 금요일에 매출을 늘릴 수 있는 방법을 강구해야 합니다. 혹은 금요일의 매출이 정상궤도에 올라오기 전까지 인건비의 절약 차원에서 금요일에 종업원들에게 휴무일을 지정하거나 잉여노동력을 매장이 바쁜 시간대에 재배치 하는 등의 조치를 통해 노동력을 활용함에 있어 효율을 높이시길 바랍니다.&lt;/li&gt;
+  &lt;li&gt;점심에 이용하는 고객보다 저녁에 이용하는 고객이 많으므로 점심에 더 많은 고객을 유치할 수 있도록 하거나 저녁시간에 많은 손님이 몰릴 때 불만사항이 생기지 않도록 서비스를 더욱 강화해야 합니다.&lt;/li&gt;
+  &lt;li&gt;2인 테이블에서 대부분의 매출이 나오고 있으니 2인 테이블 손님들에게 좋은 인상을 줄만한 서비스를 발전시키는 것이 매출 향상에 유리합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;위의 제언을 참고하셔서 구정환 매니저님의 코드레스토랑이 더욱 번창하시길 기원합니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;사실 읽어보시면 아시겠지만 분석결과가 허접합니다.  그래서 어떤 코드를 작성했고 어떤 기법을 통해 예측을 했고 이런 기술적인 면 보다는 우리가 실제로 현업에 나가게 된다면 비전공자에게 분석 결과를 이해시켜야 할 일이 많을 것 같아 &lt;strong&gt;어떻게 쉽게 설명할 수 있을까?&lt;/strong&gt; 에 초점을 맞춘 글이라고 자기합리화를 해봅니다. (사실 판다스를 다루는 능력이 일천하여 시간내에 제가 원하는 연산들을 할 수가 없었습니다.ㅠㅠ)
+긴 글을 읽어주셔서 고맙습니다.&lt;/p&gt;</content><author><name>woongE</name></author><category term="fundemental" /><summary type="html">#시각화 #visualization #seaborn #tips</summary></entry></feed>
