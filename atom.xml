@@ -8,6 +8,36 @@
     
       
       <item>
+        <title>Text 데이터 광고 필터링을 위한 분류 모델 구축</title>
+        
+          <description>&lt;p&gt;#deeplearning #NLP #BERT #classification #filtering&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 12 Apr 2021 22:00:00 +0000</pubDate>
+        <link>
+        https://lwoongh38.github.io/text-ads-filtering</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/text-ads-filtering</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>사용자 리뷰 핵심어 추출 및 감성분석</title>
+        
+          <description>&lt;p&gt;#deeplearning #NLP #BERT #sentimental classification #keyword extraction&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 17 Mar 2021 22:00:00 +0000</pubDate>
+        <link>
+        https://lwoongh38.github.io/bert-sentiment-keyword</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/bert-sentiment-keyword</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Deep Learning - 핵심 개념 &amp; 용어</title>
         
           <description>&lt;p&gt;#deeplearning #용어 #개념&lt;/p&gt;
@@ -23,7 +53,7 @@
     
       
       <item>
-        <title>Deep Learning - Project4 - BERT</title>
+        <title>NLP - 딥러닝 모델의 범용적 활용가능성 분석</title>
         
           <description>&lt;p&gt;#BERT #textmining #deeplearning&lt;/p&gt;
 
@@ -31,8 +61,8 @@
         
         <pubDate>Wed, 13 Jan 2021 19:00:00 +0000</pubDate>
         <link>
-        https://lwoongh38.github.io/deeplearning-bert</link>
-        <guid isPermaLink="true">https://lwoongh38.github.io/deeplearning-bert</guid>
+        https://lwoongh38.github.io/versatility</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/versatility</guid>
       </item>
       
     
@@ -68,7 +98,7 @@
     
       
       <item>
-        <title>Machine Learning - Project2 - Bank marketing 정기예금 가입여부 예측하기</title>
+        <title>Bank marketing 정기예금 가입여부 예측</title>
         
           <description>&lt;p&gt;#randomforest #XGB #machinelearning&lt;/p&gt;
 
@@ -76,8 +106,8 @@
         
         <pubDate>Fri, 06 Nov 2020 19:00:00 +0000</pubDate>
         <link>
-        https://lwoongh38.github.io/machinelearning-bank-marketing</link>
-        <guid isPermaLink="true">https://lwoongh38.github.io/machinelearning-bank-marketing</guid>
+        https://lwoongh38.github.io/bank-marketing</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/bank-marketing</guid>
       </item>
       
     
@@ -98,7 +128,7 @@
     
       
       <item>
-        <title>Machine Learning - 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자</title>
+        <title>연어의 회귀본능이 아닌 선형회귀에 대해 알아보자</title>
         
           <description>&lt;p&gt;#선형회귀 #linearregression&lt;/p&gt;
 
