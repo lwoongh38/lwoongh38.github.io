@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="https://lwoongh38.github.io/author/woongE/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-05-23T00:56:45+00:00</updated>
+  <updated>2021-05-23T01:02:56+00:00</updated>
   <id>https://lwoongh38.github.io/author/woongE/feed.xml</id>
 
   
@@ -988,17 +988,17 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
     </entry>
   
     <entry>
-      <title type="html">Project 3 - Twitter Application</title>
-      <link href="https://lwoongh38.github.io/twitter-application" rel="alternate" type="text/html" title="Project 3 - Twitter Application" />
+      <title type="html">Twitter Web Application</title>
+      <link href="https://lwoongh38.github.io/twitter-web-application" rel="alternate" type="text/html" title="Twitter Web Application" />
       <published>2020-12-13T16:40:00+00:00</published>
       <updated>2020-12-13T16:40:00+00:00</updated>
-      <id>https://lwoongh38.github.io/twitter-application</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/twitter-application">&lt;p&gt;#Twitter #application #softwareengineering&lt;/p&gt;
+      <id>https://lwoongh38.github.io/twitter-web-application</id>
+      <content type="html" xml:base="https://lwoongh38.github.io/twitter-web-application">&lt;p&gt;#Twitter #application #softwareengineering&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Software Engineering - Python - &quot;Class&quot; 이녀석 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./twitter-application&quot;&gt;Software Engineering - Twitter Application &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./twitter-web-application&quot;&gt;Software Engineering - Twitter Web Application &lt;/a&gt;&lt;/li&gt;
     &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
     &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
     &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
@@ -1215,7 +1215,7 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Software Engineering - Python - &quot;Class&quot; 이녀석 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./twitter-application&quot;&gt;Software Engineering - Twitter Application &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./twitter-web-application&quot;&gt;Software Engineering - Twitter Web Application &lt;/a&gt;&lt;/li&gt;
     &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
     &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
     &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
