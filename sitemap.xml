@@ -4,6 +4,102 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://lwoongh38.github.io/tadgan.html</loc>
+        
+        <lastmod>2021-10-25T07:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/text-ads-filtering.html</loc>
+        
+        <lastmod>2021-04-13T07:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/bert-sentiment-keyword.html</loc>
+        
+        <lastmod>2021-03-18T07:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/deeplearning-summary.html</loc>
+        
+        <lastmod>2021-01-18T07:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/versatility.html</loc>
+        
+        <lastmod>2021-01-14T04:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/twitter-web-application.html</loc>
+        
+        <lastmod>2020-12-14T01:40:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://lwoongh38.github.io/python-class.html</loc>
         
         <lastmod>2020-11-14T01:40:00+09:00</lastmod>
@@ -20,9 +116,9 @@
     </url>
     
     <url>
-        <loc>https://lwoongh38.github.io/test.html</loc>
+        <loc>https://lwoongh38.github.io/bank-marketing.html</loc>
         
-        <lastmod>2018-09-28T01:40:00+09:00</lastmod>
+        <lastmod>2020-11-07T04:00:00+09:00</lastmod>
         
 
         
@@ -36,9 +132,89 @@
     </url>
     
     <url>
-        <loc>https://lwoongh38.github.io/welcome.html</loc>
+        <loc>https://lwoongh38.github.io/roccurve.html</loc>
         
-        <lastmod>2017-07-27T19:00:00+09:00</lastmod>
+        <lastmod>2020-10-24T04:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/machinelearning-linearregression.html</loc>
+        
+        <lastmod>2020-10-17T04:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/project-1.html</loc>
+        
+        <lastmod>2020-10-06T01:40:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/statistics.html</loc>
+        
+        <lastmod>2020-09-19T01:40:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/proposal.html</loc>
+        
+        <lastmod>2020-09-12T01:40:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://lwoongh38.github.io/github.html</loc>
+        
+        <lastmod>2020-09-05T01:40:00+09:00</lastmod>
         
 
         

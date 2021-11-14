@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Text 데이터 광고 필터링을 위한 분류 모델 구축</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- custom.css -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- 웹폰트 -->
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
+
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css">
+  
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Data Science 학습일지" />
+    <link rel="shortcut icon" href="https://lwoongh38.github.io/assets/built/images/atom-icon.png" type="image/png" />
+    <link rel="canonical" href="https://lwoongh38.github.io/text-ads-filtering" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Data Scientist 성장기" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Text 데이터 광고 필터링을 위한 분류 모델 구축" />
+    <meta property="og:description" content="#deeplearning #NLP #BERT #classification #filtering 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 Text" />
+    <meta property="og:url" content="https://lwoongh38.github.io/text-ads-filtering" />
+    <meta property="og:image" content="https://lwoongh38.github.io/assets/built/images/blockads.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2021-04-13T07:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-04-13T07:00:00+09:00" />
+    <meta property="article:tag" content="Ai" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Text 데이터 광고 필터링을 위한 분류 모델 구축" />
+    <meta name="twitter:description" content="#deeplearning #NLP #BERT #classification #filtering 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 Text" />
+    <meta name="twitter:url" content="https://lwoongh38.github.io/" />
+    <meta name="twitter:image" content="https://lwoongh38.github.io/assets/built/images/blockads.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Data Scientist 성장기" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Ai" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Data Scientist 성장기",
+        "logo": "https://lwoongh38.github.io/"
+    },
+    "url": "https://lwoongh38.github.io/text-ads-filtering",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://lwoongh38.github.io/assets/built/images/blockads.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lwoongh38.github.io/text-ads-filtering"
+    },
+    "description": "#deeplearning #NLP #BERT #classification #filtering 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 Text"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Text 데이터 광고 필터링을 위한 분류 모델 구축" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://lwoongh38.github.io/">Data Scientist 성장기</a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-fundemental" role="menuitem"><a href="/tag/fundemental/">Fundemental</a></li>
+    <li class="nav-softwareengineering" role="menuitem"><a href="/tag/softwareengineering/">Software Engineering</a></li>
+    <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
+    <li class="nav-til" role="menuitem"><a href="/tag/til/">TIL</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag별 Posts</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-ai post tag-ai ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="13 April 2021">13 April 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/ai/'>AI</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Text 데이터 광고 필터링을 위한 분류 모델 구축</h1>
+            </header>
+
+            <!-- 
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/blockads.jpg)">
+            </figure>
+             -->
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>#deeplearning #NLP #BERT #classification #filtering</p>
+
+<p><span class="table-of-contents-list">목차 </span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./text-ads-filtering">Text 데이터 광고 필터링을 위한 분류 모델 구축 </a></li>
+    <li><a href="./bert-sentiment-keyword">사용자 리뷰 핵심어 추출 및 감성분석 </a></li>
+    <li><a href="./deeplearning-summary">Deep Learning - 핵심 개념 &amp; 용어 </a></li>
+    <li><a href="./versatility">NLP - 딥러닝 모델의 범용적 활용가능성 분석 </a></li>
+    <li><a href="./bank-marketing">Bank marketing 정기예금 가입여부 예측 </a></li>
+    <li><a href="./roccurve">ROC curve에 대해 알아보자 </a></li>
+    <li><a href="./machinelearning-linearregression">연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 </a></li>  
+    
+        
+    
+    
+
+
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li>     -->
+
+
+
+
+
+
+
+
+
+<!-- 
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+  -->
+    
+</ul>
+
+<h1 id="text-데이터-광고-필터링을-위한-분류-모델-구축">Text 데이터 광고 필터링을 위한 분류 모델 구축</h1>
+
+<h2 id="abstract">abstract</h2>
+
+<p>본 프로젝트는 시계열(text) 데이터를 분석하기 위한 전처리 과정에서 사용자가 원하지 않는 정보를 자동적으로 필터링하여 전처리 진행 속도를 상승시키는 것을 목적으로 한다.
+Hate speech 분류에 사용되는 BiLSTM, CharCNN 등의 알고리즘을 활용 가능한지 파악하고 이를 차용하여 인스타그램의 텍스트 데이터에서 광고를 분류하는데 적용하고 각 모델의 성능을 비교한다.</p>
+
+<p><a href="https://github.com/lwoongh38/project_cs2" title="프로젝트링크">Github repo</a></p>
+
+<hr />
+
+<h2 id="1-intro">1. Intro</h2>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119241353-b158be80-bb90-11eb-92cb-69c4b43ea285.png" width="90%" height="100%" /></p>
+
+<p>코로나 바이러스 감염증이 확산된 후 2020년 세계 소매분야 e커머스 매출액은 약 4,414조원으로 전년도 매출 3494조원에 비해 920조원 가량 늘어났다고 합니다.(분석:미디어투자기업 Group M, 출처:e커머스 전망 보고서) 
+언택트 소비가 활성화 되면서 더욱 많은 소비자들이 상품평이나 구매 후기 등에 의존하게 되고 이에 따라 기업들은 구매후기 작성에 따른 혜택을 늘려가고 있는데 이를 악용하는 사례 역시 늘어나고 있는 추세입니다.</p>
+
+<p>구매후기 데이터는 소비자들 뿐만 아니라 기업의 마케팅을 위해서도 활용되는데 이를 위해서는 데이터가 순수한 소비자의 후기를 제외한  이른바 ‘뒷광고’, ‘거짓 후기’ 등으로 오염되어있는 데이터를 정제하는 과정이 필요합니다. 하지만 이 과정에서 많은 시간과, 경제적인 자원이 소모됩니다. 따라서 대량의 시계열(text) 데이터를 빠른시간안에 효율적으로 정제하기 위하여 광고나 거짓후기를 필터링할 수 있는 기술이 필요합니다.</p>
+
+<p>저는 대학원 연구실에서 인스타그램의 후기 데이터를 바탕으로 마케팅 현황을 분석하는 프로젝트에 참여한 경험이 있습니다.
+해당 프로젝트의 데이터 전처리 단계에서 사람이 일일이 읽어보고 광고여부를 판단하여 제거하는 과정을 수행했는데 시간이 매우 오래걸리고 작업자를 지치게 하는 과정이었어요. 따라서 시계열(text)데이터에서 광고를 필터링할 수 있는 모델이 있다면 데이터 전처리 과정의 소요시간을 대폭 감소시킬 수 있을 것이라는 생각이 들어 프로젝트를 기획하게 되었습니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119241578-78b9e480-bb92-11eb-8327-ff9456e7d2ab.png" width="90%" height="100%" /></p>
+
+<p>인스타그램.<br />
+현재 국내에서 가장 많이 쓰는 sns 2위를 차지하고 있고 세계적으로도 10억명 이상이 사용할 정도로 절대다수의 이용자들이 자신의 디지털 소통창구로 인스타그램을 활용하고 있습니다. 이런 막강한 유저풀을 활용한 콘텐츠 마케팅이 눈길을 끌고 있습니다.</p>
+
+<p>2021년 인스타그램에서 발표한 통계자료를 보면 사용자의 약 81%가 제품이나 서비스를 검색하기 위해 인스타그램을 사용하고 있고 1억 3천만명의 유저들이 매달 쇼핑에 관련된 게시글을 보고있습니다. 또 비즈니스계정 사용자는 하루에 평균 한 건의 게시물을 게재하고 있다고 합니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119241664-10b7ce00-bb93-11eb-8799-e3a2ade9c4ec.png" width="90%" height="100%" /></p>
+
+<p>다음은 인스타그램에서 화장품을 검색했을 때 노출되는 게시글입니다.
+빨간색으로 강조되어있는 부분을 보면 이 게시글들은 광고인 것을 알 수 있습니다.</p>
+
+<p>문제는 일반 이용자의 경우는 해당 화장품의 솔직한 후기가 궁금하여 게시글을 검색하는 경우가 대부분인데 일일이 게시글을 열어보고 골라내야한다는 점과,
+기업의 입장에서는 사용자들의 솔직한 후기를 제품의 개선점이나 신제품출시에 대한 지표를 사용할텐데 텍스트파일을 일일이 읽어보고 광고를 골라내야한다는 점에서 소비자와 기업 모두 인스타그램 텍스트데이터를 활용하는데 있어 어려움을 겪고 있습니다.</p>
+
+<h3 id="11-가설-설정">1.1 가설 설정</h3>
+
+<p>그래서 저는,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Hate speech 탐지에 쓰이는 방법을 광고 분류 모델에도 적용할 수 있을 것이다.
+2. Hate speech 탐지에 쓰이는 이상탐지 메커니즘을 활용하여 광고성 문구를 판별하는 모델을 생성, 0.9 이상의 정확도를 달성할 수 있을 것이다.
+</code></pre></div></div>
+<p>라는 가설을 세우고 여러 모델을 제작하여 모델의 성능을 비교해보기로 했습니다.</p>
+
+<ol>
+  <li>인스타그램 텍스트데이터를 입력하여 전처리, 토큰화하고, 레이블을 입력합니다.</li>
+  <li>각 모델별로 광고성, 비광고성 글에 나타나는 특징에 따라 광고 여부를 판단할 수 있도록 학습시킵니다.</li>
+</ol>
+
+<p>인스타그램의 텍스트데이터를 사용하여 광고를 분류할 수 있는 모델을 만드는 것이 최종 목표입니다.</p>
+
+<h2 id="2-modeling">2. Modeling</h2>
+
+<h3 id="21-모델-결정">2.1 모델 결정</h3>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119241971-3c3bb800-bb95-11eb-9523-6d6564e40dc1.png" width="90%" height="100%" /></p>
+
+<p>제가 구축할 파이프라인에 사용될 모델 중 하나는 버트입니다.<br />
+다층의 레이어를 활용해서 문장을 구성하고 있는 토큰 사이의 의미를 잘 추출해낼 수 있습니다.<br />
+간단하게 버트가 학습하는 과정을 살펴보면 문장의 일부 단어를 mask토큰으로 바꾸고 가려진 단어를 예측하도록 하는 첫번째 학습을 통해 문맥을 파악하는 능력을 기르게 되고
+또 다음 문장이 올바른 문장인지 맞추는 학습을 통해 문장 사이의 관계를 학습하게 됩니다.<br />
+저는 버트 모델중에서도 한글에 특화되어있는 skt에서 한글로 학습시킨 kobert 을 선택했습니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119241997-69886600-bb95-11eb-9a57-acf3efe2e1c1.png" width="90%" height="100%" /></p>
+
+<p>두번째 모델은 bilstm입니다.<br />
+Bilstm에 대해 예를 들어 설명하면,</p>
+
+<p><code class="highlighter-rouge">" 나는 __을 뒤집어 쓰고 펑펑 울었다. "</code></p>
+
+<p>위의 문장에서 빈칸에 어떤 단어가 들어갈 지 유추할때, 한국어를 자유자재로 사용하는 사람은 빈칸에 들어갈 말이 이불이라는 것을 쉽게 알 수 있습니다. 그런데 이 문장의 경우, 빈칸을 유추 할때, 빈칸 앞보다는 빈칸 뒤에 나오는 단어들이 더 중요 합니다.<br />
+ ‘나는’ 뒤에 나올 수 있는 단어는 수없이 많은 반면에, ‘뒤집어 쓰고 펑펑 울었다’ 앞에 나올 수 있는 단어는 흔치 않기 때문 입니다.<br />
+ 이 예제에서 볼 수 있듯이, 텍스트 데이터는 정방향 추론 못지 않게 역방향 추론도 유의미한 결과를 낼 수 있습니다. 그래서 lstm을 다음과 같이 정방향 학습, 역방향 학습을 할 수 있도록 설계한 것이 bilstm입니다.</p>
+
+<h3 id="22-데이터-수집">2.2 데이터 수집</h3>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242063-f0d5d980-bb95-11eb-9a43-5339e7a8c57a.png" width="90%" height="100%" /></p>
+
+<p>저는 인스타로더를 사용해서 인스타그램 텍스트데이터를 확보했습니다.<br />
+하지만 정제가 되어있지 않기 때문에 주어진 시간을 효율적으로 활용하기 위해 광고일 확률이 높은 해시태그와 광고가 아닐 확률이 높은 해시태그를 선정해서 크롤링한 다음, 광고 필터링 리스트를 제작해서 라벨링을 진행했습니다.</p>
+
+<p>검증, 테스트용 데이터셋은 일반적으로 사람이 광고를 분류하는 기준을 적용하기 위해서 약 3만개의 데이터를 직접 분류하는 방법으로 라벨링했습니다.<br />
+학습용 데이터셋은 제품이나 서비스 분야를 가리지 않고 적용시킬 수 있도록 #광고아님, #찐후기, #내돈내산, #홍보, #협찬 등과 같이 되도록 일반적인 해시태그로 데이터를 추출했고
+검증, 테스트용 데이터셋은 광고와 광고가 아닌 일반 후기를 수집하기 수월한 #설화수, #미용기기 프라엘을 선정해서 이것을 해시태그로 수집했습니다.</p>
+
+<h3 id="23-데이터-전처리">2.3 데이터 전처리</h3>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242145-a1dc7400-bb96-11eb-92e1-18a50068bda8.png" width="90%" height="100%" /></p>
+
+<p>인스타그램 텍스트데이터를 크롤링하는 패키지를 사용해서 얻어지는 raw데이터는 위와 같고, 1차적으로 이모티콘을 제거하고 줄바꿈과 같은 제어문자를 제거했습니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242197-f2ec6800-bb96-11eb-8f27-86c7e0febe45.png" width="90%" height="100%" /></p>
+
+<p>모든 특수 문자를 한번에 지우지 않은 이유는, 필터링을 통해 라벨링을 할 때 예를 들어 #광고 해시태그를 필터링 하고 싶을 때 #이 없으면 광고로 필터링을 진행해야 하는데 이 때 광고아님도 같이 포함되어 필터링이 되기 때문에 1차 전처리 완료하고 라벨링을 한다음, 이어서 전처리를 진행했습니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242226-1ca58f00-bb97-11eb-8663-80ccecd074c1.png" width="90%" height="100%" /></p>
+
+<p>다음은 라벨링을 완료하고 2차전처리로 특수기호까지 제거해준 모습입니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242252-537ba500-bb97-11eb-9360-47922e294363.png" width="90%" height="100%" /></p>
+
+<p>띄어쓰기가 되어있지 않은 데이터 같은 경우는 그냥 전처리를 하게 되면 토큰화를 할 때 의미단위로 코퍼스가 분리되지 않는 문제가 있어서 따로 처리해줬습니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242278-9178c900-bb97-11eb-9828-9979390601a5.png" width="90%" height="100%" /></p>
+
+<p>최종적으로 전처리가 완료되면 위와 같은 방식으로 정제되는 것을 볼 수 있습니다.</p>
+
+<h2 id="3-검증">3. 검증</h2>
+
+<h3 id="31-데이터-eda">3.1 데이터 EDA</h3>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242312-d3a20a80-bb97-11eb-86c2-869ce5da0d38.png" width="90%" height="100%" /></p>
+
+<p>데이터셋의 단어 통계를 확인하고싶어 한국어 형태소 분석기인 Mecab 패키지를 사용해서 간단하게 EDA를 진행해봤습니다. 토크나이저를 사용하고, 각 학습용 데이터셋에 대해서 라벨별로 최빈 단어들을 모아본 결과, 다음과 같은 결과를 얻을 수 있었습니다. 광고 데이터셋의 최빈단어목록에서 ‘협찬’ 같은 단어가 발견되었지만 그 외에는 크게 의미가 있는 결과를 보여주진 못했습니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242428-870aff00-bb98-11eb-86de-2bed2386cb59.png" width="90%" height="100%" /></p>
+
+<p>혹시 데이터의 길이로 판별이 가능한지 알아본 결과 광고성 글은 비 광고성 글의 길이보다 평균 두배 정도가 차이가 났습니다. 하지만 두 레이블 모두  겹치는 구간이 꽤 발생하기 때문에 문장의 길이로 단정짓기는 힘들다고 판단했습니다.</p>
+
+<h3 id="4-실험-결과-및-결론">4. 실험 결과 및 결론</h3>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242466-d81af300-bb98-11eb-92b5-c66a83fe8c68.png" width="90%" height="100%" /></p>
+
+<p>완성된 두가지 모델입니다.<br />
+정밀도와 재현율, f1 스코어를 평가지표로 결정했고 이중에 재현율을 좀더 중요하게 활용하기로 했습니다.<br />
+광고가 아닌 글들을 광고라고 판단하는 경우가 다소 있더라도, 실제 광고 글을 잘 분류해내는 것이 모델이 달성해야 할 최우선 목표라고 생각했기 때문입니다.<br />
+평가지표상의 성능으로 판단해보면 데이터들의 분포는 오른쪽 그림과 같이 되어있음을 추측해볼 수 있었습니다.</p>
+
+<p>이 모델들이 실제 광고를 광고로 올바르게 분류할 확률은 0.9 이상으로 가설로 제시했던 0.6을 상회하는 성능을 보여주었습니다. 이는 실제 광고를 광고라고 예측하는 기능은 모델의 목적에 맞도록 잘 작동하고 있다고 볼 수 있습니다.<br />
+하지만 재현율에 비해 정밀도나 F1스코어가 많이 낮은것을 보면 광고라고 예측된 것 중에 실제로는 광고가 아니었던 사례들이 꽤 많다는 것을 알 수 있어 모델의 전반적인 성능을 위해 개선작업이 필요하다고 판단됩니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/119242536-8aeb5100-bb99-11eb-882c-ba5998ac90ec.png" width="90%" height="100%" /></p>
+
+<p>마지막으로 모델로 데이터 전체를 분류해본 결과입니다.<br />
+두가지 모델의 성능은 크게 다르지 않았지만 한글을 모델에 적용하는 과정에서 kobert가 전이학습된 모델을 가져와서 사용하기 때문에 형태소분석 등의 번거로운 과정을 생략할 수 있다는 점이 큰 장점으로 다가왔습니다.</p>
+
+<hr />
+
+<h2 id="프로젝트를-마무리하며">프로젝트를 마무리하며..</h2>
+
+<p>저는 이번 프로젝트에서 인스타그램의 텍스트 데이터 분류를 위한 광고 필터링 모델을 제작하는 것을 계획했습니다. 기술적인 어려움도 있었지만 데이터를 라벨링하는 과정에서 수동으로 일일이 광고인 것과 아닌 것을 분류해야하는 작업에서 시간적인 어려움을 겪었습니다. 전체 프로젝트에 할당된 시간중 거의 90%에 가까운 시간이 데이터를 크롤링하고, 정제하고, 라벨링하는데 소요되었습니다.</p>
+
+<p>여태껏 정제되어있는 데이터만을 프로젝트에서 사용했었는데 데이터셋 하나를 만든다는 것이 얼마나 많은 공이 들어가는 일인지를 알 수 있었습니다. 특히 NLP에 사용되는 데이터셋은 전처리 과정에서 이것저것 신경쓸 것도 많아 쉽지않은 과정이었습니다. 데이터셋을 만드는데 얼마나 많은 공이 들어가는지 알게 되었으니 앞으로는 고마운 마음으로 써야할 것 같네요.</p>
+
+<p>이번 프로젝트에서 가장 크게 배운점이라면 바로 윈도우와 맥os에서 한글의 유니코드 정규화가 다르게 이루어진다는 것을 알게 된 것입니다.<br />
+중2병이 돋은듯한 한글자모분리현상과 일부 특수기호나 이모티콘이 일괄제거가 되지 않아 원인을 파고파고 또 파보니 맥os는 NFD, 윈도우는 NFC라는 방식을 사용한다고 합니다.<br />
+같은 언어를 운영체제에 따라 다르게 받아들일 수 있다고는 상상도 못해봤기에 기업간의 쓸데없는 자존심 싸움이 사용자들에게 의미없는 수고를 강요한다는 생각이 들었습니다.</p>
+
+<p>프로젝트 진행과정에서 전처리와 레이블링 과정에서 굉장히 고생을 많이 했고 또 배운점이 많아 추후에 텍스트 전처리와 레이블링 작업에 대해 별도로 포스팅 해리라 결심해보며 이번 프로젝트를 마무리합니다.</p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!-- 
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Data Scientist 성장기</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+             -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/woongE">woongE</a></h4>
+                                
+                                    <p>Read <a href="/author/woongE">more posts</a> by this author.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/woongE">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'https://lwoongh38.github.io/text-ads-filtering';
+                            this.page.identifier = '/text-ads-filtering';
+                            this.page.title = 'Text 데이터 광고 필터링을 위한 분류 모델 구축';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://xxxxxxxx.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/built/images/blog-cove1.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Data Scientist 성장기 &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/ai/">Ai</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/bert-sentiment-keyword">사용자 리뷰 핵심어 추출 및 감성분석</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/deeplearning-summary">Deep Learning - 핵심 개념 & 용어</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/versatility">NLP - 딥러닝 모델의 범용적 활용가능성 분석</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/ai/">
+                                
+                                    See all 7 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/tadgan">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/blockads.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/tadgan">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Ai</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Text 데이터 광고 필터링을 위한 분류 모델 구축</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/woongE/">woongE</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/bert-sentiment-keyword">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/reviews.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/bert-sentiment-keyword">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Ai</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">사용자 리뷰 핵심어 추출 및 감성분석</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/woongE/">woongE</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://lwoongh38.github.io/">
+            
+            <span>Data Scientist 성장기</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Text 데이터 광고 필터링을 위한 분류 모델 구축</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Text+%EB%8D%B0%EC%9D%B4%ED%84%B0+%EA%B4%91%EA%B3%A0+%ED%95%84%ED%84%B0%EB%A7%81%EC%9D%84+%EC%9C%84%ED%95%9C+%EB%B6%84%EB%A5%98+%EB%AA%A8%EB%8D%B8+%EA%B5%AC%EC%B6%95&amp;url=https://lwoongh38.github.io/text-ads-filtering"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://lwoongh38.github.io/text-ads-filtering"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://lwoongh38.github.io/">Data Scientist 성장기</a> &copy; 2021</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search Data Scientist 성장기</h1>
+            <p class="subscribe-overlay-description">
+            lunr.js를 이용한 posts 검색 </p>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-xxxxxxxx-x', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

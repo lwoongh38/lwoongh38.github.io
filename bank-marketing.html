@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Bank marketing 정기예금 가입여부 예측</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- custom.css -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- 웹폰트 -->
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
+
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css">
+  
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Data Science 학습일지" />
+    <link rel="shortcut icon" href="https://lwoongh38.github.io/assets/built/images/atom-icon.png" type="image/png" />
+    <link rel="canonical" href="https://lwoongh38.github.io/bank-marketing" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Data Scientist 성장기" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bank marketing 정기예금 가입여부 예측" />
+    <meta property="og:description" content="#randomforest #XGB #machinelearning 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 Section 2 Project" />
+    <meta property="og:url" content="https://lwoongh38.github.io/bank-marketing" />
+    <meta property="og:image" content="https://lwoongh38.github.io/assets/built/images/bankmarketing.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2020-11-07T04:00:00+09:00" />
+    <meta property="article:modified_time" content="2020-11-07T04:00:00+09:00" />
+    <meta property="article:tag" content="Ai" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bank marketing 정기예금 가입여부 예측" />
+    <meta name="twitter:description" content="#randomforest #XGB #machinelearning 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 Section 2 Project" />
+    <meta name="twitter:url" content="https://lwoongh38.github.io/" />
+    <meta name="twitter:image" content="https://lwoongh38.github.io/assets/built/images/bankmarketing.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Data Scientist 성장기" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Ai" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Data Scientist 성장기",
+        "logo": "https://lwoongh38.github.io/"
+    },
+    "url": "https://lwoongh38.github.io/bank-marketing",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://lwoongh38.github.io/assets/built/images/bankmarketing.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lwoongh38.github.io/bank-marketing"
+    },
+    "description": "#randomforest #XGB #machinelearning 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 Section 2 Project"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Bank marketing 정기예금 가입여부 예측" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://lwoongh38.github.io/">Data Scientist 성장기</a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-fundemental" role="menuitem"><a href="/tag/fundemental/">Fundemental</a></li>
+    <li class="nav-softwareengineering" role="menuitem"><a href="/tag/softwareengineering/">Software Engineering</a></li>
+    <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
+    <li class="nav-til" role="menuitem"><a href="/tag/til/">TIL</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag별 Posts</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-ai post tag-ai ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 7 November 2020"> 7 November 2020</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/ai/'>AI</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Bank marketing 정기예금 가입여부 예측</h1>
+            </header>
+
+            <!-- 
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/bankmarketing.jpg)">
+            </figure>
+             -->
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>#randomforest #XGB #machinelearning</p>
+
+<p><span class="table-of-contents-list">목차 </span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./text-ads-filtering">Text 데이터 광고 필터링을 위한 분류 모델 구축 </a></li>
+    <li><a href="./bert-sentiment-keyword">사용자 리뷰 핵심어 추출 및 감성분석 </a></li>
+    <li><a href="./deeplearning-summary">Deep Learning - 핵심 개념 &amp; 용어 </a></li>
+    <li><a href="./versatility">NLP - 딥러닝 모델의 범용적 활용가능성 분석 </a></li>
+    <li><a href="./bank-marketing">Bank marketing 정기예금 가입여부 예측 </a></li>
+    <li><a href="./roccurve">ROC curve에 대해 알아보자 </a></li>
+    <li><a href="./machinelearning-linearregression">연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 </a></li>  
+    
+        
+    
+    
+
+
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li>     -->
+
+
+
+
+
+
+
+
+
+<!-- 
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+  -->
+    
+</ul>
+
+<h1 id="section-2-project---bank-marketing-정기예금-가입여부-예측하기">Section 2 Project - Bank marketing 정기예금 가입여부 예측하기</h1>
+
+<h2 id="abstract">abstract</h2>
+<ul>
+  <li>이윤을 추구하는 기업의 입장에서는 최소한으로 투자하고 최대한의 효과를 보기위해 부단히 노력하기 마련이다. 때문에 자사의 제품이나 서비스에 대한 마케팅을 실시할 때도 불필요한 지출은 줄이고 꼭 필요한 비용만을 이용하여 최대효율을 달성하는 것을 지향한다.<br />
+본 프로젝트는 은행에서 정기예금에 대한 마케팅을 실시할 때, 무작위로 대상을 선정하기보다 <strong>정기예금을 신청할 것 같은</strong> 대상을 효율적으로 분별하여 마케팅을 실시할 수 있도록 한다. 핀포인트 마케팅이 가능하도록 하는 예측모델을 만들어보고 이를 개선시키는 것을 목적으로 진행하였다.</li>
+</ul>
+
+<hr />
+
+<h2 id="1-시나리오">1. 시나리오</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>포르투갈의 한 은행에서 새롭게 출시하는 정기예금 상품을 기존 고객들을 대상으로 영업을 할 계획을 세우고 있다.
+기존에는 무작위로 대상을 선별하여 연락하는 방법을 고수하였으나 이때 임시로 텔레마케터를 고용하는데 드는 비용이나 
+마케팅에 성실하게 응답하는 고객이 많이 없다는 점이 문제로 지적된다. 그래서 이 문제를 해결하기 위해 
+은행에서 수집한 고객 데이터를 바탕으로 마케팅이 성공할 수 있을지 여부를 분류해주는 예측모델을 만들어달라고 의뢰하였다. 
+이렇게 우리는 제공받은 고객데이터를 바탕으로 "정기예금 신청여부"를 예측해주는 모델을 제작하게 되는데...
+</code></pre></div></div>
+
+<h3 id="11-제공받은-데이터">1.1 제공받은 데이터</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bank client data: (은행 고객관련 특성)
+- 나이
+- 직업
+- 결혼 여부
+- 교육수준
+- 채무불이행 여부
+- 주택 담보 대출 여부
+- 개인 대출 여부
+
+related with the last contact of the current campaign: (현재 캠페인의 마지막 연락 관련 특성)
+- 접촉 수단
+- 마지막 연락(월)
+- 마지막 연락(요일)
+- 마지막 접촉 기간(초) : leakage 주의
+other attributes: (기타 특성)
+- 캠페인 중 고객에게 연락한 횟수
+- 이전 캠페인에서 고객과 마지막으로 연락 후 경과일
+- 캠페인 이전 고객에게 연락횟수
+- 이전 마케팅 캠페인 결과
+
+social and economic context attributes(사회, 경제적 특성)
+- 고용 변동률-분기별
+- 소비자 물가지수-월별
+- 소비자 신뢰지수
+- Euribo(유럽연합 내 12개국 시중은행간 금리)
+- 직원 수(분기)
+
+- 정기예금 신청 여부
+</code></pre></div></div>
+
+<h3 id="12-예측모델-정의">1.2 예측모델 정의</h3>
+<p><img src="https://user-images.githubusercontent.com/70134676/98316542-e8fd8000-201d-11eb-8d2c-e36759b7675c.png" alt="image" /></p>
+
+<p>내가 만들게 될 모델은 데이터를 입력받았을 때 정기예금 신청여부를 “예”, “아니오”로 대답하는 이진분류 모델이 될 것이고 예측모델의 타겟이 되는 정기예금 신청여부를 확인해본 결과 yes와 no가 약 1:9 의 비율로 상당히 불균형한 것을 알 수 있다.
+이런 경우, 전부 ‘no’로 예측해도 정확도가 90%에 가깝기 때문에 정확도를 지표로 삼기보다 다른 평가지표를 활용해야 할 것이다.
+accuracy나 confusion matrix의 경우는 클래스불균형 문제에서 퍼포먼스를 왜곡할 가능성이 있다는 연구결과를 보게되었고 이때 추천할 수 있는 방법으로 클래스 불균형 여부에 상관없이 일정한 퍼포먼스 인덱스를 제공해주는 AUC, F1-score 두 가지를 평가에 활용할 예정이다. 또한 평가방법으로는 Cross validation을 선택하였는데 이는 전체적인 데이터셋의 크기가 크지 않다고 판단했기 때문이다.</p>
+
+<h2 id="2-eda">2. EDA</h2>
+<p>데이터는 상당히 잘 정제되어있는 상태였으며 간단한 전처리과정을 거치고 바로 EDA 작업에 들어갔다.
+가장 먼저 각각의 개별적인 특성에 따라 정기예금 신청여부를 얼마나 잘 구별할 수 있는지 알아보기위해 특성별 타겟분포를 시각화해본 결과 중에 타겟의 분포에 따라 뚜렷한 차이를 보여 타겟 예측에 도움을 줄 것 같은 특성들과 별로 차이가 없어 별 도움을 줄 것같지 않은 특성을 몇가지 소개한다.
+먼저 이전의 마케팅 결과에 대한 특성이 존재하여 예측에 큰 힘을 싣어줄 것으로 기대했으나</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98320489-6f1dc480-2026-11eb-9654-717ffcd11410.png" alt="image" /></p>
+
+<p>분포를 살펴본 결과 대부분 데이터가 없는 것으로 볼 때, 이전의 마케팅에 참여한 적이 없는 신규고객들이 대다수인 것을 알 수 있었다.</p>
+
+<p>마지막 접촉(월)에 따른 타겟 분포를 살펴보면</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98320067-71335380-2025-11eb-97bf-c01e0c13c923.png" alt="image" /></p>
+
+<p>5,6,7,8월 같은 특정 월에 집중적으로 가입자 수가 많은 것을 알 수 있다.</p>
+
+<p>결혼 여부에 따른 타겟 분포를 살펴보면,</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98318311-b6558680-2021-11eb-892e-f525e8c06ec8.png" alt="image" /></p>
+
+<p>결혼상태에 따라서 정기예금 신청여부도 기혼, 미혼, 이혼 상태 등의 순서로 예금 가입여부가 차이가 난다는 것을 볼 수 있다.</p>
+
+<hr />
+
+<p>반면 나이에 따른 타겟분포를 살펴보면,</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98318516-1ba97780-2022-11eb-8523-baa5144c9796.png" alt="image" /></p>
+
+<p>정기예금을 신청한 경우와 그렇지 않은 경우 모두 평균연령이 비슷한 30대 후반인 것을 알 수 있었다. 따라서 이 특성은 타겟을 분류하는데 별로 좋은 특성이 아닐 것이라고 생각했다.</p>
+
+<p>마지막 접촉(요일) 특성 또한</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98320345-14846880-2026-11eb-81fe-4b816b1075e8.png" alt="image" /></p>
+
+<p>특정 요일에 편향되지 않고 고르게 타겟의 분포가 형성되어 있는 것을 보면 타겟을 분류하는데 좋은 특성이 아니라고 추측할 수 있다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98320848-169af700-2027-11eb-967b-26913b4b8ce9.png" width="350" height="300" /> <img src="https://user-images.githubusercontent.com/70134676/98320852-1ac71480-2027-11eb-9117-317393bb4377.png" width="350" height="300" /></p>
+
+<p>소비자 신뢰지수나 유럽 시중은행의 금리 지수(euribo) 에 따른 타겟의 분포도 차이가 있어 EDA단계에서 의미를 찾지는 못했으나 예측모델을 만드는데 긍정적인 역할을 할 수 있을 것이라고 생각되었다.</p>
+
+<h2 id="3-모델링">3. 모델링</h2>
+<p>모델링은  작업은</p>
+<ol>
+  <li>좋은 성능을 보여주는 앙상블 모델 중</li>
+  <li>bagging모델의 대표주자 랜덤포레스트분류모델(이하 RF)과 boosting모델의 대표주자 그레디언트부스팅(이하 XGB) 분류모델 두가지를 비교하여</li>
+  <li>더 좋은 성능을 보여주는 모델 한가지를 선택한 후 성능개선</li>
+</ol>
+
+<p>순서로 진행하였다.
+먼저 RF 모델과 XGB 모델을 동일하게 랜덤서치CV를 통하여 최적파라미터를 찾아준 다음 성능을 파악한 결과</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RF 
+auc : 0.778
+f1 : 0.353
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XGB 
+auc : 0.804
+f1 : 0.366
+</code></pre></div></div>
+<p>XGB 모델이 모든 성능지표에서 성능상 우위를 가지는 것을 볼 수 있었다. 이렇게 예측모델의 기법은 XGB모델로 결정하고
+성능개선 작업을 시작했다.</p>
+
+<h3 id="31-성능개선">3.1 성능개선</h3>
+
+<p>XGB 모델은 RF모델보다 하이퍼파라미터의 튜닝에 민감하게 반응하는 모델기법이다. 그래서 큰 기대를 가지고 모델성능 개선작업에 착수하였다.</p>
+
+<p>성능개선 작업은</p>
+<ol>
+  <li>특성의 특징에 따라 인코딩 방법을 섞어서 진행</li>
+  <li>타겟의 클래스를 비슷하게 보정
+두 단계로 진행해보았다.</li>
+</ol>
+
+<p>먼저 인코딩방법은 기존에는 사용해봤을 때 무난한 성능을 보여주었던 ordinal 인코더를 사용했었다.
+하지만 새로 인코딩을 실시할 때는,
+범주가 적고 범주간에 우선순위가 없는 특성에는 OneHotEncoder를 사용하였고
+그 외의 특성에는 TargetEncoder를 사용하여 성능을 향상시키려고 시도하였다.
+인코딩 작업이 완료된 후의 성능은</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XGB 
+auc : 0.807
+f1 : 0.375
+</code></pre></div></div>
+<p>으로 소폭의 성능향상이 이루어졌다.</p>
+
+<p>두번째로 성능을 향상시키는 아이디어는 오버샘플링으로 모든 예측모델은 타겟의 클래스가 50:50일 때 가장 성능이 좋다는 점에 착안한 방법이다.
+이 방법에도 언더샘플링과 오버샘플링 두가지 방법이 있으나 언더샘플링은 데이터양이 줄어들기 때문에 학습 시 실행시간을 줄일 수 있다는 장점이 있지만 분류모델을 만들 때 유용하게 사용될 수 있는 데이터가 유실될 우려가 있고 임의적으로 뽑은 샘플이 편향되거나 모집단을 대표하지 않을 수 있어 최종적으로 테스트셋에 적용했을 때 결과가 좋지 않을 수 있다.</p>
+
+<p>오버샘플링은 소수클래스를 임의로 복제하여 수를 늘리는 방법인데 소수 클래스를 판별할 때 과적합의 우려가 있으나 전반적으로 언더샘플링보다 뛰어난 효과를 보여주므로 오버샘플링 기법으로 클래스의 비율을 맞출 것이다.
+이 중에서도 Synthetic Minority Over-sampling Technique (SMOTE) 알고리즘은 소수클래스로부터 일부를 선택하여 인접한 데이터 샘플을 찾아 그 사이에 새로운 데이터를 생성하는 방법으로 임의로 오버샘플링을 했을 때보다 과적합을 완화시킬 수 있다.</p>
+
+<p>따라서 오버샘플링 중에 SMOTE라는 방법으로 오버샘플링을 진행하였다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98322673-5b289180-202b-11eb-9b79-133305fd4d0c.png" width="350" height="300" /> <img src="https://user-images.githubusercontent.com/70134676/98322676-5d8aeb80-202b-11eb-980b-8663db87f460.png" width="350" height="300" /></p>
+
+<p>좌측은 샘플링을 실시하기 전, 우측은 샘플링을 실시한 이후의 클래스 분포를 보여준다.</p>
+
+<p>샘플링 이후의 데이터로 다시 모델을 돌렸을 때의 성능은</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XGB 
+auc : 0.976
+f1 : 0.898
+</code></pre></div></div>
+<p>auc 스코어와 f1스코어 모두 대폭 성능이 향상된 것을 볼 수 있었고
+모델의 클래스 분포에 따라 같은 모델이라도 입력되는 학습데이터셋에 따라서 성능차이가 나는지를 확인할 수 있었다.</p>
+
+<h2 id="4-결과-해석">4. 결과 해석</h2>
+<h3 id="41-특성-중요도permutation-importance-순열-중요도">4.1 특성 중요도(Permutation Importance, 순열 중요도)</h3>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98323252-bd35c680-202c-11eb-8652-debab6d0e654.png" alt="image" /></p>
+
+<p>완성된 모델이 판단하기에 정기예금 가입 여부에 큰 영향을 주는 특성은 무엇이었는지를 알아보기 위해 Permutation Importance를 구해보았다.
+상위 3개의 특성이 분류결과에 영향을 많이 주는 것을 알 수 있었고 PDP 를 그려서 특성이 어떤 영향을 주었는지를 파악해보기로 하였다.</p>
+
+<h3 id="42-pdppartial-dependence-plot-부분-의존성-그림">4.2 PDP(Partial Dependence plot, 부분 의존성 그림)</h3>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98326002-87481080-2033-11eb-9fd5-36d125edc6e7.png" alt="image" /></p>
+
+<p>capaign은 마케팅 캠페인 중에 고객에게 연락한 횟수에 대한 특성이다.
+캠페인 기간중에 연락을 한 횟수가 늘어날수록 0(정기예금 가입 안함)으로 예측한다고 해석할 수 있다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/70134676/98326539-d93d6600-2034-11eb-90f4-337882df6393.png" alt="image" /></p>
+
+<p>다음은 순열중요도에서 상위 두가지, campaign, nr.employed 특성과 동시에 타겟과의 관계를 살펴보았다.
+캠페인 기간중에 연락을 한 횟수 2회까지는 소폭 1로 예측할 확률이 상승하지만 이후부터는 횟수가 늘어날수록 0(정기예금 가입 안함)으로 예측한다고 해석할 수 있다.
+연락을 적게할수록 직원숫자가 적을수록, 직원 숫자가 적을수록 정기예금에 가입할 확률이 높다고 해석할 수 있다.
+해당특성을 pdp로 살펴보기 전에는 연락을 적게 할수록 정기예금 가입을 하지 않는다고 생각했는데 오히려 연락횟수가 적을수록 정기예금을 가입하는 경우가 많은 것으로 보인다.
+연락횟수 1에서 2로 올라갈때는 소폭 증가하는 것을 보면 2회 이상 연락하는 것은 오히려 역효과를 내는 것으로 볼 수 있다.</p>
+
+<h2 id="5-결론">5. 결론</h2>
+<h3 id="51-model의-기대효과-및-한계">5.1 Model의 기대효과 및 한계</h3>
+<p>미흡하게 만들어진 모델이지만 우리나라의 여건에 적용시킬 수 있을지 여부를 생각해봤을 때,
+유리보(유럽연합 내 12개국 시중은행간 금리)등의 특성은 해당지역의 고유적인 인덱스이므로
+그에 상응하는 우리나라의 고유지표를 찾아야 모델을 구축할 수 있을 것이며 바뀐 특성에 따라 성능도 물론 달라질 것이다.
+하지만 우리나라의 특징에 맞는 특성들을 잘 교체할 수 있다면 충분히 모델을 구축할 수 있고 최적화여부에 따라 좋은 성능을 낼 수 있을 것 같다.</p>
+
+<p>모델을 튜닝하며 성능을 개선하는 작업 자체는 성취감도 있고 굉장히 재밌다고 생각했는데
+어떻게 성능을 개선해야겠다는 아이디어는 비교적 잘 떠오르는데에 비해 그것을 적용시키는데에는 무수한 오류를 헤쳐나가야 했기때문에 생각했던 모든 아이디어들을 시험해보지 못한 것들이 아쉬웠다.</p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!-- 
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Data Scientist 성장기</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+             -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/woongE">woongE</a></h4>
+                                
+                                    <p>Read <a href="/author/woongE">more posts</a> by this author.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/woongE">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'https://lwoongh38.github.io/bank-marketing';
+                            this.page.identifier = '/bank-marketing';
+                            this.page.title = 'Bank marketing 정기예금 가입여부 예측';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://xxxxxxxx.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/built/images/blog-cove1.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Data Scientist 성장기 &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/ai/">Ai</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/tadgan">Text 데이터 광고 필터링을 위한 분류 모델 구축</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/text-ads-filtering">Text 데이터 광고 필터링을 위한 분류 모델 구축</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/bert-sentiment-keyword">사용자 리뷰 핵심어 추출 및 감성분석</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/ai/">
+                                
+                                    See all 7 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/python-class">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/python-class.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/python-class">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Softwareengineering</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Python - "Class" 이녀석</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/woongE/">woongE</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/roccurve">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/roc.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/roccurve">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Ai</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">ROC curve에 대해 알아보자</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/woongE/">woongE</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://lwoongh38.github.io/">
+            
+            <span>Data Scientist 성장기</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Bank marketing 정기예금 가입여부 예측</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Bank+marketing+%EC%A0%95%EA%B8%B0%EC%98%88%EA%B8%88+%EA%B0%80%EC%9E%85%EC%97%AC%EB%B6%80+%EC%98%88%EC%B8%A1&amp;url=https://lwoongh38.github.io/bank-marketing"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://lwoongh38.github.io/bank-marketing"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://lwoongh38.github.io/">Data Scientist 성장기</a> &copy; 2021</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search Data Scientist 성장기</h1>
+            <p class="subscribe-overlay-description">
+            lunr.js를 이용한 posts 검색 </p>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-xxxxxxxx-x', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

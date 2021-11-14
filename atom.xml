@@ -8,46 +8,99 @@
     
       
       <item>
+        <title>Text 데이터 광고 필터링을 위한 분류 모델 구축</title>
+        
+          <description>&lt;p&gt;#deeplearning #Time eries Anomaly Detection #TadGAN&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 25 Oct 2021 07:00:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/tadgan</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/tadgan</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Text 데이터 광고 필터링을 위한 분류 모델 구축</title>
+        
+          <description>&lt;p&gt;#deeplearning #NLP #BERT #classification #filtering&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 13 Apr 2021 07:00:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/text-ads-filtering</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/text-ads-filtering</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>사용자 리뷰 핵심어 추출 및 감성분석</title>
+        
+          <description>&lt;p&gt;#deeplearning #NLP #BERT #sentimental classification #keyword extraction&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 18 Mar 2021 07:00:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/bert-sentiment-keyword</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/bert-sentiment-keyword</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Deep Learning - 핵심 개념 &amp; 용어</title>
+        
+          <description>&lt;p&gt;#deeplearning #용어 #개념&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 18 Jan 2021 07:00:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/deeplearning-summary</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/deeplearning-summary</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>NLP - 딥러닝 모델의 범용적 활용가능성 분석</title>
+        
+          <description>&lt;p&gt;#BERT #textmining #deeplearning&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 14 Jan 2021 04:00:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/versatility</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/versatility</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Twitter Web Application</title>
+        
+          <description>&lt;p&gt;#Twitter #application #softwareengineering&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 14 Dec 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/twitter-web-application</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/twitter-web-application</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Python - &quot;Class&quot; 이녀석</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Data Science - Python - &quot;Class&quot; 이녀석 &lt;/a&gt;&lt;/li&gt;
-
-
-
-
-
-
-
-
-
-
-&lt;!-- 
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-  --&gt;
-    
-&lt;/ul&gt;
+          <description>&lt;p&gt;#Python #Class #softwareengineering&lt;/p&gt;
 
 </description>
         
@@ -60,68 +113,106 @@
     
       
       <item>
-        <title>시험용 포스팅입니다 - 출력되어라</title>
+        <title>Bank marketing 정기예금 가입여부 예측</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./python-class&quot;&gt;Data Science - Python - &quot;Class&quot; 이녀석 &lt;/a&gt;&lt;/li&gt;
-
-
-
-
-
-
-
-
-
-
-&lt;!-- 
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-  --&gt;
-    
-&lt;/ul&gt;
+          <description>&lt;p&gt;#randomforest #XGB #machinelearning&lt;/p&gt;
 
 </description>
         
-        <pubDate>Fri, 28 Sep 2018 01:40:00 +0900</pubDate>
+        <pubDate>Sat, 07 Nov 2020 04:00:00 +0900</pubDate>
         <link>
-        https://lwoongh38.github.io/test</link>
-        <guid isPermaLink="true">https://lwoongh38.github.io/test</guid>
+        https://lwoongh38.github.io/bank-marketing</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/bank-marketing</guid>
       </item>
       
     
       
       <item>
-        <title>Welcome to Ghost</title>
+        <title>ROC curve에 대해 알아보자</title>
         
-          <description>&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
+          <description>&lt;p&gt;#평가지표 #ROCcurve&lt;/p&gt;
 
 </description>
         
-        <pubDate>Thu, 27 Jul 2017 19:00:00 +0900</pubDate>
+        <pubDate>Sat, 24 Oct 2020 04:00:00 +0900</pubDate>
         <link>
-        https://lwoongh38.github.io/welcome</link>
-        <guid isPermaLink="true">https://lwoongh38.github.io/welcome</guid>
+        https://lwoongh38.github.io/roccurve</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/roccurve</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>연어의 회귀본능이 아닌 선형회귀에 대해 알아보자</title>
+        
+          <description>&lt;p&gt;#선형회귀 #linearregression&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 17 Oct 2020 04:00:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/machinelearning-linearregression</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/machinelearning-linearregression</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>미세먼지와 공시지가의 상관관계</title>
+        
+          <description>&lt;p&gt;#python #pandas #statistics&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 06 Oct 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/project-1</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/project-1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자</title>
+        
+          <description>&lt;p&gt;#빈도주의 #베이지안 #통계학&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 19 Sep 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/statistics</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/statistics</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>코스레스토랑에 보내는 제안서</title>
+        
+          <description>&lt;p&gt;#시각화 #visualization #seaborn #tips&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 12 Sep 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/proposal</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/proposal</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Git, Github 왜 써야 해?</title>
+        
+          <description>&lt;p&gt;#git #github&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 05 Sep 2020 01:40:00 +0900</pubDate>
+        <link>
+        https://lwoongh38.github.io/github</link>
+        <guid isPermaLink="true">https://lwoongh38.github.io/github</guid>
       </item>
       
     
