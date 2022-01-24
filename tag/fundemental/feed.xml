@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://lwoongh38.github.io/tag/fundemental/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-11-16T22:45:06+09:00</updated>
-  <id>https://lwoongh38.github.io/tag/fundemental/feed.xml</id>
+  <link href="http://localhost:4000/tag/fundemental/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-01-24T21:25:38+09:00</updated>
+  <id>http://localhost:4000/tag/fundemental/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">미세먼지와 공시지가의 상관관계</title>
-      <link href="https://lwoongh38.github.io/project-1" rel="alternate" type="text/html" title="미세먼지와 공시지가의 상관관계" />
+      <link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="미세먼지와 공시지가의 상관관계" />
       <published>2020-10-06T01:40:00+09:00</published>
       <updated>2020-10-06T01:40:00+09:00</updated>
-      <id>https://lwoongh38.github.io/project-1</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/project-1">&lt;p&gt;#python #pandas #statistics&lt;/p&gt;
+      <id>http://localhost:4000/project-1</id>
+      <content type="html" xml:base="http://localhost:4000/project-1">&lt;p&gt;#python #pandas #statistics&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -424,11 +424,11 @@ plt.show()
   
     <entry>
       <title type="html">통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자</title>
-      <link href="https://lwoongh38.github.io/statistics" rel="alternate" type="text/html" title="통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자" />
+      <link href="http://localhost:4000/statistics" rel="alternate" type="text/html" title="통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자" />
       <published>2020-09-19T01:40:00+09:00</published>
       <updated>2020-09-19T01:40:00+09:00</updated>
-      <id>https://lwoongh38.github.io/statistics</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/statistics">&lt;p&gt;#빈도주의 #베이지안 #통계학&lt;/p&gt;
+      <id>http://localhost:4000/statistics</id>
+      <content type="html" xml:base="http://localhost:4000/statistics">&lt;p&gt;#빈도주의 #베이지안 #통계학&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -570,11 +570,11 @@ P(D|H)에서 가설 H가 주어졌을 때 데이터 D를 지지하는 정도, �
   
     <entry>
       <title type="html">코스레스토랑에 보내는 제안서</title>
-      <link href="https://lwoongh38.github.io/proposal" rel="alternate" type="text/html" title="코스레스토랑에 보내는 제안서" />
+      <link href="http://localhost:4000/proposal" rel="alternate" type="text/html" title="코스레스토랑에 보내는 제안서" />
       <published>2020-09-12T01:40:00+09:00</published>
       <updated>2020-09-12T01:40:00+09:00</updated>
-      <id>https://lwoongh38.github.io/proposal</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/proposal">&lt;p&gt;#시각화 #visualization #seaborn #tips&lt;/p&gt;
+      <id>http://localhost:4000/proposal</id>
+      <content type="html" xml:base="http://localhost:4000/proposal">&lt;p&gt;#시각화 #visualization #seaborn #tips&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -732,11 +732,11 @@ P(D|H)에서 가설 H가 주어졌을 때 데이터 D를 지지하는 정도, �
   
     <entry>
       <title type="html">Git, Github 왜 써야 해?</title>
-      <link href="https://lwoongh38.github.io/github" rel="alternate" type="text/html" title="Git, Github 왜 써야 해?" />
+      <link href="http://localhost:4000/github" rel="alternate" type="text/html" title="Git, Github 왜 써야 해?" />
       <published>2020-09-05T01:40:00+09:00</published>
       <updated>2020-09-05T01:40:00+09:00</updated>
-      <id>https://lwoongh38.github.io/github</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/github">&lt;p&gt;#git #github&lt;/p&gt;
+      <id>http://localhost:4000/github</id>
+      <content type="html" xml:base="http://localhost:4000/github">&lt;p&gt;#git #github&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;

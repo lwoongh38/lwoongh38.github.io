@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://lwoongh38.github.io/author/woongE/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-11-16T22:45:06+09:00</updated>
-  <id>https://lwoongh38.github.io/author/woongE/feed.xml</id>
+  <link href="http://localhost:4000/author/woongE/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-01-24T21:25:38+09:00</updated>
+  <id>http://localhost:4000/author/woongE/feed.xml</id>
 
   
   
@@ -32,12 +32,12 @@
 
   
     <entry>
-      <title type="html">TadGAN</title>
-      <link href="https://lwoongh38.github.io/tadgan" rel="alternate" type="text/html" title="TadGAN" />
-      <published>2021-10-25T07:00:00+09:00</published>
-      <updated>2021-10-25T07:00:00+09:00</updated>
-      <id>https://lwoongh38.github.io/tadgan</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/tadgan">&lt;p&gt;#deeplearning #Time eries Anomaly Detection #TadGAN&lt;/p&gt;
+      <title type="html">Intro to the Time Series Anomaly Detection</title>
+      <link href="http://localhost:4000/tadgan-copy" rel="alternate" type="text/html" title="Intro to the Time Series Anomaly Detection" />
+      <published>2023-10-28T07:00:00+09:00</published>
+      <updated>2023-10-28T07:00:00+09:00</updated>
+      <id>http://localhost:4000/tadgan%20copy</id>
+      <content type="html" xml:base="http://localhost:4000/tadgan-copy">&lt;p&gt;#deeplearning #NLP #BERT #classification #filtering&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -104,7 +104,361 @@
     
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;작성중&quot;&gt;작성중&lt;/h1&gt;</content>
+&lt;h1 id=&quot;시계열-데이터-이상치-탐지&quot;&gt;시계열 데이터 이상치 탐지&lt;/h1&gt;
+
+&lt;h2 id=&quot;abstract&quot;&gt;abstract&lt;/h2&gt;
+
+&lt;p&gt;본 프로젝트는 시계열 데이터의 이상 탐지  모델 중, 최근 두드러지는 성능을 보이고 있는 MIT 에서 발표한 논문 TadGAN : Time series Anomaly Detection Using Generative Adversarial Networks에 대하여 학습하고 데이터에 실제로 적용하여 논문을 구현하는 것을 목적으로 하였습니다.
+Google Colab을 사용하여 구현하고 데이콘에 공개되어 있는 데이터셋을 파일을 활용할 수 있도록 코드를 수정하여 구현하였습니다.
+이 프로젝트를 통해 이상 탐지 분야에 대하여 심도있게 학습하고 오픈소스를 빠르게 커스터마이징하여 목적에 맞도록 사용하는 능력을 개발할 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lwoongh38/project_cs2&quot; title=&quot;프로젝트링크&quot;&gt;Github repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;1-intro&quot;&gt;1. Intro&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119241353-b158be80-bb90-11eb-92cb-69c4b43ea285.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;TadGAN은 machine learning 중 비지도 학습 방식입니다. 입력되는 시계열 데이터와 최대한 유사한 데이터를 모방하도록 학습하고, Threshold에 따라 이상치를 판단하는 이상 탐지 기법입니다. 이상 탐지 분야는 다양한 목적을 위해 활용되고 있는데 다음과 같이 열거할 수 있습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;데이터 품질 향상
+스탠포드 대학의 Andrew ng 교수는 모델을 튜닝하는 것 못지않게 모델의 학습에 이용되는 데이터의 품질을 높이는 것이 모델 성능 향상에 주요한 영향을 미친다고 말했습니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119241578-78b9e480-bb92-11eb-8327-ff9456e7d2ab.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;인스타그램.&lt;br /&gt;
+현재 국내에서 가장 많이 쓰는 sns 2위를 차지하고 있고 세계적으로도 10억명 이상이 사용할 정도로 절대다수의 이용자들이 자신의 디지털 소통창구로 인스타그램을 활용하고 있습니다. 이런 막강한 유저풀을 활용한 콘텐츠 마케팅이 눈길을 끌고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;2021년 인스타그램에서 발표한 통계자료를 보면 사용자의 약 81%가 제품이나 서비스를 검색하기 위해 인스타그램을 사용하고 있고 1억 3천만명의 유저들이 매달 쇼핑에 관련된 게시글을 보고있습니다. 또 비즈니스계정 사용자는 하루에 평균 한 건의 게시물을 게재하고 있다고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119241664-10b7ce00-bb93-11eb-8799-e3a2ade9c4ec.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;다음은 인스타그램에서 화장품을 검색했을 때 노출되는 게시글입니다.
+빨간색으로 강조되어있는 부분을 보면 이 게시글들은 광고인 것을 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;문제는 일반 이용자의 경우는 해당 화장품의 솔직한 후기가 궁금하여 게시글을 검색하는 경우가 대부분인데 일일이 게시글을 열어보고 골라내야한다는 점과,
+기업의 입장에서는 사용자들의 솔직한 후기를 제품의 개선점이나 신제품출시에 대한 지표를 사용할텐데 텍스트파일을 일일이 읽어보고 광고를 골라내야한다는 점에서 소비자와 기업 모두 인스타그램 텍스트데이터를 활용하는데 있어 어려움을 겪고 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;11-가설-설정&quot;&gt;1.1 가설 설정&lt;/h3&gt;
+
+&lt;p&gt;그래서 저는,&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Hate speech 탐지에 쓰이는 방법을 광고 분류 모델에도 적용할 수 있을 것이다.
+2. Hate speech 탐지에 쓰이는 이상탐지 메커니즘을 활용하여 광고성 문구를 판별하는 모델을 생성, 0.9 이상의 정확도를 달성할 수 있을 것이다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;라는 가설을 세우고 여러 모델을 제작하여 모델의 성능을 비교해보기로 했습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;인스타그램 텍스트데이터를 입력하여 전처리, 토큰화하고, 레이블을 입력합니다.&lt;/li&gt;
+  &lt;li&gt;각 모델별로 광고성, 비광고성 글에 나타나는 특징에 따라 광고 여부를 판단할 수 있도록 학습시킵니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;인스타그램의 텍스트데이터를 사용하여 광고를 분류할 수 있는 모델을 만드는 것이 최종 목표입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-modeling&quot;&gt;2. Modeling&lt;/h2&gt;
+
+&lt;h3 id=&quot;21-모델-결정&quot;&gt;2.1 모델 결정&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119241971-3c3bb800-bb95-11eb-9523-6d6564e40dc1.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;제가 구축할 파이프라인에 사용될 모델 중 하나는 버트입니다.&lt;br /&gt;
+다층의 레이어를 활용해서 문장을 구성하고 있는 토큰 사이의 의미를 잘 추출해낼 수 있습니다.&lt;br /&gt;
+간단하게 버트가 학습하는 과정을 살펴보면 문장의 일부 단어를 mask토큰으로 바꾸고 가려진 단어를 예측하도록 하는 첫번째 학습을 통해 문맥을 파악하는 능력을 기르게 되고
+또 다음 문장이 올바른 문장인지 맞추는 학습을 통해 문장 사이의 관계를 학습하게 됩니다.&lt;br /&gt;
+저는 버트 모델중에서도 한글에 특화되어있는 skt에서 한글로 학습시킨 kobert 을 선택했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119241997-69886600-bb95-11eb-9a57-acf3efe2e1c1.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;두번째 모델은 bilstm입니다.&lt;br /&gt;
+Bilstm에 대해 예를 들어 설명하면,&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot; 나는 __을 뒤집어 쓰고 펑펑 울었다. &quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;위의 문장에서 빈칸에 어떤 단어가 들어갈 지 유추할때, 한국어를 자유자재로 사용하는 사람은 빈칸에 들어갈 말이 이불이라는 것을 쉽게 알 수 있습니다. 그런데 이 문장의 경우, 빈칸을 유추 할때, 빈칸 앞보다는 빈칸 뒤에 나오는 단어들이 더 중요 합니다.&lt;br /&gt;
+ ‘나는’ 뒤에 나올 수 있는 단어는 수없이 많은 반면에, ‘뒤집어 쓰고 펑펑 울었다’ 앞에 나올 수 있는 단어는 흔치 않기 때문 입니다.&lt;br /&gt;
+ 이 예제에서 볼 수 있듯이, 텍스트 데이터는 정방향 추론 못지 않게 역방향 추론도 유의미한 결과를 낼 수 있습니다. 그래서 lstm을 다음과 같이 정방향 학습, 역방향 학습을 할 수 있도록 설계한 것이 bilstm입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;22-데이터-수집&quot;&gt;2.2 데이터 수집&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242063-f0d5d980-bb95-11eb-9a43-5339e7a8c57a.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;저는 인스타로더를 사용해서 인스타그램 텍스트데이터를 확보했습니다.&lt;br /&gt;
+하지만 정제가 되어있지 않기 때문에 주어진 시간을 효율적으로 활용하기 위해 광고일 확률이 높은 해시태그와 광고가 아닐 확률이 높은 해시태그를 선정해서 크롤링한 다음, 광고 필터링 리스트를 제작해서 라벨링을 진행했습니다.&lt;/p&gt;
+
+&lt;p&gt;검증, 테스트용 데이터셋은 일반적으로 사람이 광고를 분류하는 기준을 적용하기 위해서 약 3만개의 데이터를 직접 분류하는 방법으로 라벨링했습니다.&lt;br /&gt;
+학습용 데이터셋은 제품이나 서비스 분야를 가리지 않고 적용시킬 수 있도록 #광고아님, #찐후기, #내돈내산, #홍보, #협찬 등과 같이 되도록 일반적인 해시태그로 데이터를 추출했고
+검증, 테스트용 데이터셋은 광고와 광고가 아닌 일반 후기를 수집하기 수월한 #설화수, #미용기기 프라엘을 선정해서 이것을 해시태그로 수집했습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;23-데이터-전처리&quot;&gt;2.3 데이터 전처리&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242145-a1dc7400-bb96-11eb-92e1-18a50068bda8.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;인스타그램 텍스트데이터를 크롤링하는 패키지를 사용해서 얻어지는 raw데이터는 위와 같고, 1차적으로 이모티콘을 제거하고 줄바꿈과 같은 제어문자를 제거했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242197-f2ec6800-bb96-11eb-8f27-86c7e0febe45.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;모든 특수 문자를 한번에 지우지 않은 이유는, 필터링을 통해 라벨링을 할 때 예를 들어 #광고 해시태그를 필터링 하고 싶을 때 #이 없으면 광고로 필터링을 진행해야 하는데 이 때 광고아님도 같이 포함되어 필터링이 되기 때문에 1차 전처리 완료하고 라벨링을 한다음, 이어서 전처리를 진행했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242226-1ca58f00-bb97-11eb-8663-80ccecd074c1.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;다음은 라벨링을 완료하고 2차전처리로 특수기호까지 제거해준 모습입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242252-537ba500-bb97-11eb-9360-47922e294363.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;띄어쓰기가 되어있지 않은 데이터 같은 경우는 그냥 전처리를 하게 되면 토큰화를 할 때 의미단위로 코퍼스가 분리되지 않는 문제가 있어서 따로 처리해줬습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242278-9178c900-bb97-11eb-9828-9979390601a5.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;최종적으로 전처리가 완료되면 위와 같은 방식으로 정제되는 것을 볼 수 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-검증&quot;&gt;3. 검증&lt;/h2&gt;
+
+&lt;h3 id=&quot;31-데이터-eda&quot;&gt;3.1 데이터 EDA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242312-d3a20a80-bb97-11eb-86c2-869ce5da0d38.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터셋의 단어 통계를 확인하고싶어 한국어 형태소 분석기인 Mecab 패키지를 사용해서 간단하게 EDA를 진행해봤습니다. 토크나이저를 사용하고, 각 학습용 데이터셋에 대해서 라벨별로 최빈 단어들을 모아본 결과, 다음과 같은 결과를 얻을 수 있었습니다. 광고 데이터셋의 최빈단어목록에서 ‘협찬’ 같은 단어가 발견되었지만 그 외에는 크게 의미가 있는 결과를 보여주진 못했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242428-870aff00-bb98-11eb-86de-2bed2386cb59.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;혹시 데이터의 길이로 판별이 가능한지 알아본 결과 광고성 글은 비 광고성 글의 길이보다 평균 두배 정도가 차이가 났습니다. 하지만 두 레이블 모두  겹치는 구간이 꽤 발생하기 때문에 문장의 길이로 단정짓기는 힘들다고 판단했습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-실험-결과-및-결론&quot;&gt;4. 실험 결과 및 결론&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242466-d81af300-bb98-11eb-92b5-c66a83fe8c68.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;완성된 두가지 모델입니다.&lt;br /&gt;
+정밀도와 재현율, f1 스코어를 평가지표로 결정했고 이중에 재현율을 좀더 중요하게 활용하기로 했습니다.&lt;br /&gt;
+광고가 아닌 글들을 광고라고 판단하는 경우가 다소 있더라도, 실제 광고 글을 잘 분류해내는 것이 모델이 달성해야 할 최우선 목표라고 생각했기 때문입니다.&lt;br /&gt;
+평가지표상의 성능으로 판단해보면 데이터들의 분포는 오른쪽 그림과 같이 되어있음을 추측해볼 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;이 모델들이 실제 광고를 광고로 올바르게 분류할 확률은 0.9 이상으로 가설로 제시했던 0.6을 상회하는 성능을 보여주었습니다. 이는 실제 광고를 광고라고 예측하는 기능은 모델의 목적에 맞도록 잘 작동하고 있다고 볼 수 있습니다.&lt;br /&gt;
+하지만 재현율에 비해 정밀도나 F1스코어가 많이 낮은것을 보면 광고라고 예측된 것 중에 실제로는 광고가 아니었던 사례들이 꽤 많다는 것을 알 수 있어 모델의 전반적인 성능을 위해 개선작업이 필요하다고 판단됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/119242536-8aeb5100-bb99-11eb-882c-ba5998ac90ec.png&quot; width=&quot;90%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;마지막으로 모델로 데이터 전체를 분류해본 결과입니다.&lt;br /&gt;
+두가지 모델의 성능은 크게 다르지 않았지만 한글을 모델에 적용하는 과정에서 kobert가 전이학습된 모델을 가져와서 사용하기 때문에 형태소분석 등의 번거로운 과정을 생략할 수 있다는 점이 큰 장점으로 다가왔습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;프로젝트를-마무리하며&quot;&gt;프로젝트를 마무리하며..&lt;/h2&gt;
+
+&lt;p&gt;저는 이번 프로젝트에서 인스타그램의 텍스트 데이터 분류를 위한 광고 필터링 모델을 제작하는 것을 계획했습니다. 기술적인 어려움도 있었지만 데이터를 라벨링하는 과정에서 수동으로 일일이 광고인 것과 아닌 것을 분류해야하는 작업에서 시간적인 어려움을 겪었습니다. 전체 프로젝트에 할당된 시간중 거의 90%에 가까운 시간이 데이터를 크롤링하고, 정제하고, 라벨링하는데 소요되었습니다.&lt;/p&gt;
+
+&lt;p&gt;여태껏 정제되어있는 데이터만을 프로젝트에서 사용했었는데 데이터셋 하나를 만든다는 것이 얼마나 많은 공이 들어가는 일인지를 알 수 있었습니다. 특히 NLP에 사용되는 데이터셋은 전처리 과정에서 이것저것 신경쓸 것도 많아 쉽지않은 과정이었습니다. 데이터셋을 만드는데 얼마나 많은 공이 들어가는지 알게 되었으니 앞으로는 고마운 마음으로 써야할 것 같네요.&lt;/p&gt;
+
+&lt;p&gt;이번 프로젝트에서 가장 크게 배운점이라면 바로 윈도우와 맥os에서 한글의 유니코드 정규화가 다르게 이루어진다는 것을 알게 된 것입니다.&lt;br /&gt;
+중2병이 돋은듯한 한글자모분리현상과 일부 특수기호나 이모티콘이 일괄제거가 되지 않아 원인을 파고파고 또 파보니 맥os는 NFD, 윈도우는 NFC라는 방식을 사용한다고 합니다.&lt;br /&gt;
+같은 언어를 운영체제에 따라 다르게 받아들일 수 있다고는 상상도 못해봤기에 기업간의 쓸데없는 자존심 싸움이 사용자들에게 의미없는 수고를 강요한다는 생각이 들었습니다.&lt;/p&gt;
+
+&lt;p&gt;프로젝트 진행과정에서 전처리와 레이블링 과정에서 굉장히 고생을 많이 했고 또 배운점이 많아 추후에 텍스트 전처리와 레이블링 작업에 대해 별도로 포스팅 해리라 결심해보며 이번 프로젝트를 마무리합니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>woongE</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">#deeplearning #NLP #BERT #classification #filtering</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Intro to the Time Series Anomaly Detection</title>
+      <link href="http://localhost:4000/tadgan" rel="alternate" type="text/html" title="Intro to the Time Series Anomaly Detection" />
+      <published>2021-10-28T07:00:00+09:00</published>
+      <updated>2021-10-28T07:00:00+09:00</updated>
+      <id>http://localhost:4000/tadgan</id>
+      <content type="html" xml:base="http://localhost:4000/tadgan">&lt;p&gt;#deeplearning #Time series Anomaly Detection #TadGAN&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./text-ads-filtering&quot;&gt;Text 데이터 광고 필터링을 위한 분류 모델 구축 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./bert-sentiment-keyword&quot;&gt;사용자 리뷰 핵심어 추출 및 감성분석 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./versatility&quot;&gt;NLP - 딥러닝 모델의 범용적 활용가능성 분석 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./bank-marketing&quot;&gt;Bank marketing 정기예금 가입여부 예측 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;  
+    
+        
+    
+    
+
+
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
+
+
+
+
+
+
+
+
+
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;작성중&quot;&gt;작성중&lt;/h3&gt;
+&lt;p&gt;ssss&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>woongE</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">#deeplearning #Time series Anomaly Detection #TadGAN</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">TadGAN</title>
+      <link href="http://localhost:4000/tadgan" rel="alternate" type="text/html" title="TadGAN" />
+      <published>2021-10-25T07:00:00+09:00</published>
+      <updated>2021-10-25T07:00:00+09:00</updated>
+      <id>http://localhost:4000/tadgan</id>
+      <content type="html" xml:base="http://localhost:4000/tadgan">&lt;p&gt;#deeplearning #Time eries Anomaly Detection #TadGAN&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./text-ads-filtering&quot;&gt;Text 데이터 광고 필터링을 위한 분류 모델 구축 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./bert-sentiment-keyword&quot;&gt;사용자 리뷰 핵심어 추출 및 감성분석 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./versatility&quot;&gt;NLP - 딥러닝 모델의 범용적 활용가능성 분석 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./bank-marketing&quot;&gt;Bank marketing 정기예금 가입여부 예측 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;  
+    
+        
+    
+    
+
+
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
+
+
+
+
+
+
+
+
+
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;작성중&quot;&gt;작성중&lt;/h1&gt;
+&lt;p&gt;ddddd&lt;/p&gt;</content>
 
       
       
@@ -134,11 +488,11 @@
   
     <entry>
       <title type="html">Text 데이터 광고 필터링을 위한 분류 모델 구축</title>
-      <link href="https://lwoongh38.github.io/text-ads-filtering" rel="alternate" type="text/html" title="Text 데이터 광고 필터링을 위한 분류 모델 구축" />
+      <link href="http://localhost:4000/text-ads-filtering" rel="alternate" type="text/html" title="Text 데이터 광고 필터링을 위한 분류 모델 구축" />
       <published>2021-04-13T07:00:00+09:00</published>
       <updated>2021-04-13T07:00:00+09:00</updated>
-      <id>https://lwoongh38.github.io/text-ads-filtering</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/text-ads-filtering">&lt;p&gt;#deeplearning #NLP #BERT #classification #filtering&lt;/p&gt;
+      <id>http://localhost:4000/text-ads-filtering</id>
+      <content type="html" xml:base="http://localhost:4000/text-ads-filtering">&lt;p&gt;#deeplearning #NLP #BERT #classification #filtering&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -385,11 +739,11 @@ Bilstm에 대해 예를 들어 설명하면,&lt;/p&gt;
   
     <entry>
       <title type="html">사용자 리뷰 핵심어 추출 및 감성분석</title>
-      <link href="https://lwoongh38.github.io/bert-sentiment-keyword" rel="alternate" type="text/html" title="사용자 리뷰 핵심어 추출 및 감성분석" />
+      <link href="http://localhost:4000/bert-sentiment-keyword" rel="alternate" type="text/html" title="사용자 리뷰 핵심어 추출 및 감성분석" />
       <published>2021-03-18T07:00:00+09:00</published>
       <updated>2021-03-18T07:00:00+09:00</updated>
-      <id>https://lwoongh38.github.io/bert-sentiment-keyword</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/bert-sentiment-keyword">&lt;p&gt;#deeplearning #NLP #BERT #sentimental classification #keyword extraction&lt;/p&gt;
+      <id>http://localhost:4000/bert-sentiment-keyword</id>
+      <content type="html" xml:base="http://localhost:4000/bert-sentiment-keyword">&lt;p&gt;#deeplearning #NLP #BERT #sentimental classification #keyword extraction&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -585,11 +939,11 @@ Review는 리뷰 원문, review_count는 원문을 키워드단위로 쪼갰을 
   
     <entry>
       <title type="html">Deep Learning - 핵심 개념 &amp;amp; 용어</title>
-      <link href="https://lwoongh38.github.io/deeplearning-summary" rel="alternate" type="text/html" title="Deep Learning - 핵심 개념 &amp; 용어" />
+      <link href="http://localhost:4000/deeplearning-summary" rel="alternate" type="text/html" title="Deep Learning - 핵심 개념 &amp; 용어" />
       <published>2021-01-18T07:00:00+09:00</published>
       <updated>2021-01-18T07:00:00+09:00</updated>
-      <id>https://lwoongh38.github.io/deeplearning-summary</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/deeplearning-summary">&lt;p&gt;#deeplearning #용어 #개념&lt;/p&gt;
+      <id>http://localhost:4000/deeplearning-summary</id>
+      <content type="html" xml:base="http://localhost:4000/deeplearning-summary">&lt;p&gt;#deeplearning #용어 #개념&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -871,11 +1225,11 @@ LSTM의 게이트 숫자를 줄여 모델을 구조적으로 단순화했다는 
   
     <entry>
       <title type="html">NLP - 딥러닝 모델의 범용적 활용가능성 분석</title>
-      <link href="https://lwoongh38.github.io/versatility" rel="alternate" type="text/html" title="NLP - 딥러닝 모델의 범용적 활용가능성 분석" />
+      <link href="http://localhost:4000/versatility" rel="alternate" type="text/html" title="NLP - 딥러닝 모델의 범용적 활용가능성 분석" />
       <published>2021-01-14T04:00:00+09:00</published>
       <updated>2021-01-14T04:00:00+09:00</updated>
-      <id>https://lwoongh38.github.io/versatility</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/versatility">&lt;p&gt;#BERT #textmining #deeplearning&lt;/p&gt;
+      <id>http://localhost:4000/versatility</id>
+      <content type="html" xml:base="http://localhost:4000/versatility">&lt;p&gt;#BERT #textmining #deeplearning&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -1114,11 +1468,11 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
   
     <entry>
       <title type="html">Twitter Web Application</title>
-      <link href="https://lwoongh38.github.io/twitter-web-application" rel="alternate" type="text/html" title="Twitter Web Application" />
+      <link href="http://localhost:4000/twitter-web-application" rel="alternate" type="text/html" title="Twitter Web Application" />
       <published>2020-12-14T01:40:00+09:00</published>
       <updated>2020-12-14T01:40:00+09:00</updated>
-      <id>https://lwoongh38.github.io/twitter-web-application</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/twitter-web-application">&lt;p&gt;#Twitter #application #softwareengineering&lt;/p&gt;
+      <id>http://localhost:4000/twitter-web-application</id>
+      <content type="html" xml:base="http://localhost:4000/twitter-web-application">&lt;p&gt;#Twitter #application #softwareengineering&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -1330,11 +1684,11 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
   
     <entry>
       <title type="html">Python - “Class” 이녀석</title>
-      <link href="https://lwoongh38.github.io/python-class" rel="alternate" type="text/html" title="Python - &quot;Class&quot; 이녀석" />
+      <link href="http://localhost:4000/python-class" rel="alternate" type="text/html" title="Python - &quot;Class&quot; 이녀석" />
       <published>2020-11-14T01:40:00+09:00</published>
       <updated>2020-11-14T01:40:00+09:00</updated>
-      <id>https://lwoongh38.github.io/python-class</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/python-class">&lt;p&gt;#Python #Class #softwareengineering&lt;/p&gt;
+      <id>http://localhost:4000/python-class</id>
+      <content type="html" xml:base="http://localhost:4000/python-class">&lt;p&gt;#Python #Class #softwareengineering&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -1523,11 +1877,11 @@ steam 리뷰는 게임을 판매, 구동시켜주는 steam 플랫폼의 리뷰�
   
     <entry>
       <title type="html">Bank marketing 정기예금 가입여부 예측</title>
-      <link href="https://lwoongh38.github.io/bank-marketing" rel="alternate" type="text/html" title="Bank marketing 정기예금 가입여부 예측" />
+      <link href="http://localhost:4000/bank-marketing" rel="alternate" type="text/html" title="Bank marketing 정기예금 가입여부 예측" />
       <published>2020-11-07T04:00:00+09:00</published>
       <updated>2020-11-07T04:00:00+09:00</updated>
-      <id>https://lwoongh38.github.io/bank-marketing</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/bank-marketing">&lt;p&gt;#randomforest #XGB #machinelearning&lt;/p&gt;
+      <id>http://localhost:4000/bank-marketing</id>
+      <content type="html" xml:base="http://localhost:4000/bank-marketing">&lt;p&gt;#randomforest #XGB #machinelearning&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -1807,308 +2161,6 @@ f1 : 0.898
 
       
         <summary type="html">#randomforest #XGB #machinelearning</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">ROC curve에 대해 알아보자</title>
-      <link href="https://lwoongh38.github.io/roccurve" rel="alternate" type="text/html" title="ROC curve에 대해 알아보자" />
-      <published>2020-10-24T04:00:00+09:00</published>
-      <updated>2020-10-24T04:00:00+09:00</updated>
-      <id>https://lwoongh38.github.io/roccurve</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/roccurve">&lt;p&gt;#평가지표 #ROCcurve&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./text-ads-filtering&quot;&gt;Text 데이터 광고 필터링을 위한 분류 모델 구축 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./bert-sentiment-keyword&quot;&gt;사용자 리뷰 핵심어 추출 및 감성분석 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./versatility&quot;&gt;NLP - 딥러닝 모델의 범용적 활용가능성 분석 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./bank-marketing&quot;&gt;Bank marketing 정기예금 가입여부 예측 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;  
-    
-        
-    
-    
-
-
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
-
-
-
-
-
-
-
-
-
-&lt;!-- 
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-  --&gt;
-    
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;roc-curve에-대해-알아보자&quot;&gt;ROC curve에 대해 알아보자&lt;/h1&gt;
-
-&lt;p&gt;머신러닝에 대해 일주일간 다양한 모델들을 공부했다.
-사용 목적에 따라 많은 종류의 머신러닝 모델이 존재하지만 결국 큰 맥락에서 보자면 
-머신러닝은 결국 가지고 있는 데이터로 학습을 시키고, 학습시킨 모델을 이용하여 문제를 풀어내려고(예측하려고) 하는 것이다.
-결국 모델의 성능을 높인다는 의미는 모델이 예측을 잘 할 수 있게 한다는 뜻이고 이를 위해서는 해당 모델을 정확하게 평가할 수 있어야 한다.&lt;/p&gt;
-
-&lt;p&gt;머신러닝 모델에 대해 공부하다보면 해당 모델이 어떤 매커니즘으로 작동하는지, 배경은 무엇인지 등을 배우게 되지만
-공통적으로 모델마다 등장하는 섹터가 있다. 그것은 바로…..&lt;strong&gt;평가지표&lt;/strong&gt;다.
-위에서 말했듯이 제대로 모델의 성능을 알 수 있어야 개선이 가능하기 때문에 
-모델을 제대로 평가하는 것도 만드는 것만큼이나 중요하다.
-그래서 이번에는 공부했던 다양한 지표중에 이해가 제일 안갔던 &lt;code class=&quot;highlighter-rouge&quot;&gt;ROC curve&lt;/code&gt;에 대해 알아보려고 한다.
-함께 공부를 시작해보자.&lt;/p&gt;
-
-&lt;p&gt;ROC curve는 이진분류를 하는 모델의 성능을 평가하는 지표로 사용된다.
-이진분류는 쉽게 말하면 O,X 문제처럼 두가지 중 하나를 고르는 분류를 말한다.
-백문이 불여일견이라고 일단 그림을 보자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96972847-04628880-1552-11eb-8a8c-a864568d2612.png&quot; alt=&quot;image&quot; /&gt;
-출처 : http://www.navan.name/roc/&lt;/p&gt;
-
-&lt;p&gt;구 개의 큰 산 모양을 보이는 그림은 데이터에서 두 클래스의 분포를 나타낸다. (O,X 문제에서 O와 X의 분포)
-암환자를 진단하는 모델을 만든다고 할 때, 오른쪽은 암환자, 왼쪽은 암환자가 아닌 경우이다.
-산이 겹치는 부분 가운데의 threshold는 모델을 만든사람이 정하는 변수로 이 임계값을 기준으로 모델은 오른쪽에 있으면 암환자로, 왼쪽에 있으면 암환자가 아니라고 판단을 내리게 된다. 
-그림의 좌 상단에 위치한 곡선이 ROC curve로 ROC curve는 위의 임계값에 대한 모델의 성능을 표시한 곡선이다. &lt;strong&gt;핵심을 먼저 얘기하고 넘어가자면 저 커브 아래의 면적(AUC, Area Under the Curve)이 클수록 모델의 성능이 뛰어나다는 것을 의미&lt;/strong&gt;한다.&lt;/p&gt;
-
-&lt;p&gt;커브에 대해 살펴보려면 우선 축이 무엇인지 알아보자.
-x축은 FPR y축은 TPR이라고 적혀있는데 이는 각각&lt;/p&gt;
-
-&lt;p&gt;FPR은 False Positive rate
-TPR은 True Positive rate&lt;/p&gt;
-
-&lt;p&gt;을 뜻한다.
-&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96987496-0df1ed80-155e-11eb-9a44-81044441a48a.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;의미는 같아도 해석을 사람마다 다르게하는 경향이 있으니 위 그림의 구성요소인 actual class와 predicted class에 대한 설명을 하고 넘어가면 좋을 것 같다.&lt;/p&gt;
-
-&lt;p&gt;먼저 actual class에는 True와 False로 나뉘는데 이는 예측결과가 맞으면 True, 틀리면 False라는 것을 의미한다.
-다음 predicted class는 Positive와 Negative로 나뉘는데 이는 예측을 긍정적으로 했으면 Positive, 그렇지 않다면 Negative로 표현한다.&lt;/p&gt;
-
-&lt;p&gt;위로 돌아가서 암환자를 예로 들어보면 TPR은 실제로 암에 걸린사람을 암에 걸렸다고 예측했다는 것이고
-FPR은 암환자라고 예측했으나 예측결과가 틀린것을 의미한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96972847-04628880-1552-11eb-8a8c-a864568d2612.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TPR이 높다는 의미는 실제로 암이 걸린 환자를 암이 걸렸다고 판단을 잘 내린다는 뜻이고
-FPR이 높다는 의미는 암이 걸리지 않은 환자도 모두 암으로 판정한다는 의미이다. 
-암환자를 적게 놓치고 싶다면 임계값을 왼쪽으로 옮겨(낮춰) 빨간 클래스가 임계값 오른쪽에 모두 들어가게 하면 암환자를 무조건 맞출 수 있게 되겠지만 반대로 암환자가 아닌사람을 암환자로 오진하는 경우도 그만큼 늘어날 것이다.
-반대로 정상인을 암환자로 오진하는 경우를 줄이고 싶다면 임계값을 오른쪽으로 옮겨(올려) 파란 클래스가 임계값 왼쪽에 모두 들어가게하면 되지만 이 경우, 진짜 암에 걸린 환자를 암환자가 아니라고 판단하는 경우도 늘어나게 된다.&lt;/p&gt;
-
-&lt;p&gt;처음에 핵심을 이야기하며 저 곡선의 아래 면적이 클수록 성능이 좋다고 했는데 이를 다르게 이야기하면 두 클래스를 더 잘 예측하는 모델일수록 곡선은 그림의 좌상단으로 가까워져 사각형에 가깝게 되고 성능이 안좋은 모델일수록 직선에 가까워져
-곡선 아래 면적이 삼각형에 가깝게 된다.&lt;/p&gt;
-
-&lt;p&gt;즉 ROC curve는 임계값을 어떻게 설정해야할지 알고 싶을 때 임계값에 대한 정답율과 오답율의 비율을 보는 곡선이라고 이해하면 될 것이다.&lt;/p&gt;
-
-&lt;p&gt;오늘은 이진분류모델의 임계값을 결정할 때 도움을 줄 수 있는 ROC curve에 대해 알아봤다.
-다음에도 유익한 주제를 들고 찾아뵐 수 있기를 기대하며 글을 마친다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>woongE</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="ai" />
-      
-
-      
-        <summary type="html">#평가지표 #ROCcurve</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">연어의 회귀본능이 아닌 선형회귀에 대해 알아보자</title>
-      <link href="https://lwoongh38.github.io/machinelearning-linearregression" rel="alternate" type="text/html" title="연어의 회귀본능이 아닌 선형회귀에 대해 알아보자" />
-      <published>2020-10-17T04:00:00+09:00</published>
-      <updated>2020-10-17T04:00:00+09:00</updated>
-      <id>https://lwoongh38.github.io/machinelearning-linearregression</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/machinelearning-linearregression">&lt;p&gt;#선형회귀 #linearregression&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./text-ads-filtering&quot;&gt;Text 데이터 광고 필터링을 위한 분류 모델 구축 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./bert-sentiment-keyword&quot;&gt;사용자 리뷰 핵심어 추출 및 감성분석 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./deeplearning-summary&quot;&gt;Deep Learning - 핵심 개념 &amp;amp; 용어 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./versatility&quot;&gt;NLP - 딥러닝 모델의 범용적 활용가능성 분석 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./bank-marketing&quot;&gt;Bank marketing 정기예금 가입여부 예측 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./roccurve&quot;&gt;ROC curve에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./machinelearning-linearregression&quot;&gt;연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;  
-    
-        
-    
-    
-
-
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
-
-
-
-
-
-
-
-
-
-&lt;!-- 
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
-  --&gt;
-    
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;연어의-회귀본능이-아닌-선형회귀에-대해-알아보자&quot;&gt;연어의 회귀본능이 아닌 선형회귀에 대해 알아보자&lt;/h1&gt;
-
-&lt;p&gt;선형회귀? 그게 뭐야? 회귀라는 말을 연어를 통해서만 들어본 그대.
-말이 어렵지 사실 그 개념 자체는 이미 우리가 알고있는 것이나 마찬가지다. 최대한 쉽게쉽게 풀어서 설명해볼 터이니
-오늘도 시작해보자.&lt;/p&gt;
-
-&lt;p&gt;선형회귀라고 대놓고 주제를 던졌으니 의미를 먼저 알아야겠지?
-y = ax+b 라는 식이 있다면 입력항인 x와 출력항인 y의 선형 상관관계를 모델링하는 기법이다. 
-아직도 모호한가? 그러면 이 말을우리 생활 속의 예제로 녹여보자.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96222124-a1f41000-0fc6-11eb-8d00-94644528b877.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;저 위의 &lt;code class=&quot;highlighter-rouge&quot;&gt;y = ax+b&lt;/code&gt;를 시험점수에 대한 식이라고 예를 들면,&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;y = 물가&lt;/li&gt;
-  &lt;li&gt;x = 휴지가격&lt;/li&gt;
-  &lt;li&gt;a = 가중치(운송비용 등)&lt;/li&gt;
-  &lt;li&gt;b = 기본물가&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;이렇게 정리할 수 있다.
-위의 그림대로라면 휴지가격을 알 때 물가가 어떠한지를 얻을 수 있다.
-이것도 간단한 회귀식이다. 이처럼 수식화하지 않았을 뿐 우리 생활에는 다양한 회귀식들이 숨어있다.
-그럼 여태까지 회귀식을 모르고도 사는데 전혀 문제가 없었는데 갑자기 왜 들고나와서 머리아프게 하는지 궁금해 하는 사람이 있을 것이다.
-문제는 이처럼 간단한 회귀식이라면 상관이 없겠지만 데이터의 수가 엄청나게 많아지고 특징들이 많아진다면 사람의 머리로는 저런 생각을 하는 것이 불가능 할 것이다. 이를 위해 우리는 계산기(컴퓨터)의 힘을 빌리게 되고 컴퓨터의 좋은 성능을 이용하면 알고있었던 데이터(빨간 점)에서 답을 찾는 것 뿐만이 아닌, 새로운 데이터(x축, 휴지가격)을 바탕으로 정답(y축, 물가)를 예측해볼 수도 있다.
-이것이 요즘 흔히 하는 말로 &lt;strong&gt;머신러닝&lt;/strong&gt;이라고 하는 개념이다.
-물론 머신러닝도 지도, 비지도 등 여러가지 갈래로 나뉘어지지만 위에서 설명한 머신러닝은 선형적인 관계를 가진 데이터를 위한 선형회귀 예측모델이 되는 것이다. 빨간점을 활용하여 학습시키면 다른 데이터(이지만 비슷한 선형관계를 가진) 파란점의 휴지가격을 알 때, 물가를 예측해볼 수 있는 것이다. 
-한마디로 &lt;strong&gt;선형회귀는 선형관계를 가진 데이터를 모델링하여 예측하기 위한 머신러닝의 일종&lt;/strong&gt;이다.&lt;/p&gt;
-
-&lt;p&gt;선형회귀 기법을 사용하여 데이터에 맞는 예측모델을 만들기 위해서는 회귀직선 필요하다.
-&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96222090-97397b00-0fc6-11eb-8bdf-47ef8c0e2a32.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;회귀직선이 말하고자 하는 바는 예측을 할 때 이러한 느낌으로 예측을하면 맞출 수 있을것이라는 일종의 경향성을 의미하고 위의 그림에서는 녹색선이 그 경향을 의미한다.  우리는 데이터로 빨간 점을 가지고 있고 이 데이터가 어떤 경향을 띄는지를 가장 잘 설명해주는 선이 바로 녹색 선이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/96223864-9524eb80-0fc9-11eb-8a0c-ffbd1840ad96.png&quot; alt=&quot;image&quot; /&gt;
-이 선을 설명하기 위해서는 예측값과 잔차라는 개념을 알아야 하는데 예측값은 저 녹색선이 추정하는 값이고, 잔차는 관측값(빨간점의 물가)와 예측값(파란점의 물가)의 차이를 말한다.
-녹색선은 그림의 검은점선으로 표시된 저 관측값과 파란점선의 예측값의 제곱의 합이 최소가 되어야 가장 경향을 잘 설명할 수 있다.
-여기서 파란점선의 크기와 검은 점선 크기의 제곱의 합을 잔차제곱합이라고 하는데 이 잔차제곱합을 비용함수(cost function)라고 하는데 머신러닝 모델을 만드는 과정에서 비용함수를 최소화 하는 모델(선)을 찾는 과정을 학습이라고 한다.&lt;/p&gt;
-
-&lt;p&gt;저 녹색 선을 그려서 저 녹색선을 바탕으로 값을 예측하게 하는 과정 전반이 머신러닝 선형회귀 모델링이 되는 것이다.&lt;/p&gt;
-
-&lt;p&gt;선형회귀 모델은 주어져있지 않은 함수값을 보간하여 예측하는데 유용한데 예를들어 빨간점이 아닌, 없는 데이터 즉 파란점에 해당하는 휴지가격을 알고 있을 때 원래 데이터(빨간점)에는 없지만 녹색선을 이용하여 파란점의 휴지가격을 알 때  물가를 어림잡아 예측해볼 수 있는 것이다.&lt;/p&gt;
-
-&lt;p&gt;오늘은 머신러닝의 많은 모델 중 하나인 선형회귀에 대해서 알아보았다. 이제는 선형회귀에 대한 말이 나오면 자신있게 대화에 끼어들어보자.
-앞으로도 다양한 머신러닝의 모델들을 알기쉽게 소개해보리라고 다짐하며 글을 마친다.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>woongE</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="ai" />
-      
-
-      
-        <summary type="html">#선형회귀 #linearregression</summary>
       
 
       

@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/fundemental/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-01-24T21:19:59+09:00</updated>
+  <id>http://localhost:4000/tag/fundemental/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Data Scientist 성장기 | </title>
+  
+
+  
+    <subtitle>Data Science 학습일지</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">미세먼지와 공시지가의 상관관계</title>
+      <link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="미세먼지와 공시지가의 상관관계" />
+      <published>2020-10-06T01:40:00+09:00</published>
+      <updated>2020-10-06T01:40:00+09:00</updated>
+      <id>http://localhost:4000/project-1</id>
+      <content type="html" xml:base="http://localhost:4000/project-1">&lt;p&gt;#python #pandas #statistics&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./project-1&quot;&gt;미세먼지와 공시지가의 상관관계 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./statistics&quot;&gt;통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;Git, Github 왜 써야 해? &lt;/a&gt;&lt;/li&gt;
+    
+
+    
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
+
+    
+
+
+
+
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;미세먼지와-공시지가의-상관관계&quot;&gt;미세먼지와 공시지가의 상관관계&lt;/h1&gt;
+
+&lt;h3 id=&quot;abstract&quot;&gt;abstract&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;작년까지 말썽을 부린 미세먼지 문제와 현재진행형으로 사회적 이슈가 되고있는 집값문제. 두가지 요소가 서로 어떤 연관성을 가지고 있는지 데이터를 이용하여 분석한다. 서울의 s-dot프로그램의 일환으로 서울전역에 설치된 850개의 미세먼지 센서를 통해 수집된 데이터와 공시지가데이터를 전처리하여 시각화해보고 미세먼지가 많은 지역과 그렇지 않은 지역의 공시지가는 어떤 경향을 보이는지 알아본다. 통계적으로 두 변수가 연관이 있는지 알아보는 것으로 프로젝트를 마무리한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;올해 초부터 Covid-19 바이러스가 세계적으로 대 유행을하면서 많은 분들이 아직까지도 힘든시기를 보내고 있죠.
+여기까지 읽으셨다면 오늘은 제가 무슨 이야기를 할지 감을 잡으셨을 것 같은데….
+얘가 오늘은 코로나 관련해서 뭘 하려나보다 싶으셨을거에요. 
+틀렸습니다.
+저는 코로나 이야기가 아닌 코로나로 인해 세상이 멈추다시피 헀지만, 반면 그로 인해 좋아진 점은 없을까 생각해봤어요.&lt;/p&gt;
+
+&lt;p&gt;코로나가 본격적으로 유행한 것은 올해 초부터이고 작년까지 우리의 ‘건강’에 대한 민감한 이슈는 뭐였나요?
+불과 작년까지만 해도 우리의 건강에 관련된 최대 이슈는 미세먼지가 아니었나 싶어요.&lt;br /&gt;
+매일 밖을 나설때마다 마스크를 쓰고 나가지만 사실 우리가 마스크와 친해졌던 건 보다 먼저 미세먼지가 기승을 부렸기 때문이었죠.&lt;/p&gt;
+
+&lt;p&gt;오늘은 하나의 주제가 아니라 한개를 더 이야기해볼꺼에요. 이것도 바로 한두달 전까지만해도 매일같이 뉴스에 나오던 이슈에요.
+그건 바로………………….
+집값 문제였죠. 아마 관심이 없는 사람도 매일같이 뉴스에서 집값이 올랐다는 말로 도배를 해대니 한두번쯤은 들어봤을거에요.&lt;/p&gt;
+
+&lt;p&gt;각설하고 저는 미세먼지가 우리의 중요한 화두로 떠오를 무렵 문득 이런생각이 들었어요.
+살기좋은 동네(집값이 비싼지역)은 미세먼지도 별로 없을까?
+사실 살기 좋다는 것은 기준이 여러가지가 있을 수 있어서 맞을 것 같기도, 틀릴 것 같기도 하단 말이죠.
+살기 좋다는 건 무엇보다 여러 인프라가 편리하다는건데 그러면 차량이나 사람이 붐비게 될 것 같으니 미세먼지도 많아질 것 같고, 집값이 비싸다는건 녹지가 주변에 잘 조성되어있다는 의미일수도 있으니까 미세먼지가 별로 없을수도 있다는 생각도 들고요. 반대로 미세먼지가 많아서 집값에 영향을 줄 수도 있겠죠.
+그래서 오늘의 주제는 이거에요.&lt;/p&gt;
+
+&lt;h2 id=&quot;미세먼지의-농도와-공시지가의-상관관계를-알아보자&quot;&gt;미세먼지의 농도와 공시지가의 상관관계를 알아보자!&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95416492-dedc5900-096d-11eb-8834-f1f69eeeedd1.png&quot; width=&quot;200&quot; height=&quot;200&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95414113-0af4db80-0968-11eb-9cbe-6ab160ea1934.png&quot; width=&quot;400&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;왼쪽 그림은 2019년에 미세먼지 문제가 전년도에 비해서 많이 심각해졌다는 것을 알 수있고
+오른쪽 그림은 최근 3년동안 집값의 변동을 알 수 있는 자료입니다.
+따로 보면 알겠는데 이 둘은 어떤 상관관계를 가지고 있을까요?
+이제 차근차근 저랑 알아가봅시다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95682245-36edb680-0c1f-11eb-8163-ac81cbbf1518.png&quot; width=&quot;400&quot; height=&quot;200&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95682268-52f15800-0c1f-11eb-9540-905c45af9a99.png&quot; width=&quot;400&quot; height=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;먼저 데이터 분석을 하려면 데이터가 있어야겠죠. 미세먼지 측정데이터는 서울시에서 디지털 행정기반 마련을 위해 실시하고 있는 스마트 도시데이터센서(S-dot) 측정값을 배포한 데이터셋을 사용했습니다. 오른쪽 그림은 센서위치 좌표를 이용해서 제가 시각화를 해본 그림입니다. 코드가 궁금하시면 세부정보를 눌러보세요.&lt;/p&gt;
+&lt;summary&gt;
+&lt;details&gt;
+
+```py
+geo = '/content/drive/My Drive/Data Science/강의노트/20201005-1009_LS_DS_project week1/Seoul1.geojson'
+# 서울시 중심부의 위도, 경도
+center = [37.541, 126.986]
+
+# center를 중심으로 하고 zoom 단계에 해당하는 맵 생성
+map2 = folium.Map(location = center, 
+                 tiles = 'cartodbdark_matter',
+                  detect_retina=True,
+                 zoom_start=11)
+
+# 1000 개의 데이터만 그려냅니다.
+for i in location.index[:1000]:
+    folium.Circle(
+        location = location.loc[i, ['위도', '경도']],
+        tooltip = location.loc[i, 'NO'],
+        radius = 200
+    ).add_to(map2)
+
+
+map2.save('map2.html')
+map2
+```
+&lt;/details&gt;
+&lt;/summary&gt;
+
+&lt;p&gt;데이터셋의 기간은 센싱 데이터는 2020년 4월, 공시지가는 2020년 공시지가 데이터셋을 가져왔습니다.
+올해 초 코로나가 가장 심했을 때 중국도 셧다운이 됐었으니 중국으로 인한 영향이 적을 것 같아 4월의 데이터로 선정했습니다.
+먼저 제가 계획한 분석을 하기 위해 필요한 데이터를 정리해봤습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;서울시 미세먼지 센서 데이터 (시리얼번호, 미세먼지, 온도, 습도, 조도, 소음, 진동, 자외선, 풍속, 풍향 등)&lt;/li&gt;
+  &lt;li&gt;서울시 미세먼지 센서 위치정보(시리얼번호, 주소,  좌표값, 설치장소설명)&lt;/li&gt;
+  &lt;li&gt;서울시 공시지가(시군구명, 법정동명, 토지코드, 공시지가, 필지구분코드, 번지수 등)&lt;/li&gt;
+  &lt;li&gt;법정동_행정동 코드 데이터&lt;/li&gt;
+  &lt;li&gt;서울시 행정동을 경계로 한 지도데이터(jeojson)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;공시지가와 미세먼지데이터를 직접적으로 비교하려면 센서가 위치한 장소와 측정값 이 두가지를 알아야 하겠죠. 
+측정값 자체는 누구나 볼 수 있게 공개되어 있는데 위치정보는 신청서를 작성하여 담당 공무원에게 보내서 자료를 직접 받아야 합니다. 따라서 위치정보와 측정값이 분리되어있는 자료인 것이죠. 그러면 분리된 이 두 자료를 합쳐야 할텐데 이때 1,2번 데이터에 공통으로 들어가있는 값이 뭐가 있을까요? 네 바로 센서 시리얼번호입니다.
+이런식으로 각 자료를 합칠 때마다 공통된 열을 기준으로 값을 매핑시킬지 = merge
+아니면 그냥 따로 자료를 이어붙일지 = concat
+결정해야 하고 merge 한다면 각 자료의 교집합만 남길것인지 (how = inner) 합집합으로 합칠것인지(how = outer) 잘 고민해야 합니다.&lt;/p&gt;
+
+&lt;p&gt;추가적인 저의 데이터 전처리과정이 궁금하시다면 세부정보를 눌러주세요.&lt;/p&gt;
+&lt;summary&gt;
+&lt;details&gt;
+저는 센서의 값을 표만으로는 살펴보기가 힘들기 때문에 지도에 미세먼지 농도의 현황을 표현하고 싶었습니다. 
+그렇기 때문에 센서데이터를 지도에 표시하기 위해 각 센서의 주소를 시리얼번호를 기반으로 위치정보를 매핑시켜주었고 위치정보에 포함되어있는 주소를 세분화하여 법정동단위를 확보한 후, 공시지가 데이터셋과 법정동명을 기준으로 다시 매핑시켜주었습니다. 
+여기까지 센서데이터와 공시지가 데이터가 합쳐졌고 이제 이 데이터셋을 지도에 표현하기 위해 지도데이터(geojson)와 합쳐주어야 합니다. 제가 지도 시각화에 사용한 파이썬 라이브러리는 folium인데 이 패키지를 사용하려면 지도데이터와 지도에 표현할 데이터셋을 이어주는 매개체가 필요했고 저는 이 매개체를 행정동코드로 사용했습니다.
+기존 센서,공시지가 데이터셋의 시군구코드와 법정동 코드를 합치면 행정동코드로 변환할 수 있다는 것을 구글링을 통해 알아낸 후, **법정동_행정동 코드데이터**를 법정동코드를 기준으로 행정동코드를 매핑시켜주었습니다.
+
+&lt;/details&gt;
+&lt;/summary&gt;
+
+&lt;p&gt;전처리를 완료하고 미세먼지 농도와 공시지가의 관계를 알아보기 위해 간단하게 산점도를 그려 어떤 연관성이 있을지를 예상해봤습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95682899-ee37fc80-0c22-11eb-99aa-fecb23642914.png&quot; width=&quot;500&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;하지만 산점도로는 유의미한 연관성을 찾기 힘들었고 미세먼지와 공시지가의 상관계수(correlation)을 구해보았습니다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95682980-6d2d3500-0c23-11eb-85fd-6432f9038c9e.png&quot; width=&quot;300&quot; height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;상관계수 코드&lt;/p&gt;
+&lt;summary&gt;
+&lt;details&gt;
+
+```py
+Correlation = final[['미세먼지(㎍/㎥)','공시지가(원/㎡)']]
+Correlation.corr()
+```
+
+&lt;/details&gt;
+&lt;/summary&gt;
+
+&lt;p&gt;결과는…..전혀 상관이 없었죠.
+믿을수가 없어서 지도에 나타내서 제 눈으로 과연 상관이 정말 없는지 확인해보고싶었습니다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95420853-303d1600-0977-11eb-9a80-8927676da0dd.png&quot; width=&quot;350&quot; height=&quot;220&quot; /&gt; &lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95421291-1fd96b00-0978-11eb-9f8a-1f86c3ec1e8f.png&quot; width=&quot;350&quot; height=&quot;220&quot; /&gt;
+왼쪽이 공시지가, 오른쪽이 미세먼지 농도에 관한 그림입니다.&lt;/p&gt;
+
+&lt;p&gt;folium 라이브러리를 이용한 지도시각화 코드가 궁금하시다면&lt;/p&gt;
+&lt;summary&gt;
+&lt;details&gt;
+
+```py
+geo = '/gdrive/My Drive/Data Science/강의노트/20201005-1009_LS_DS_project week1/Seoul1.geojson'
+# 서울시 중심부의 위도, 경도
+center = [37.541, 126.986]
+
+# center를 중심으로 하고 zoom 단계에 해당하는 맵 생성
+map3 = folium.Map(location = center, 
+                 tiles = 'Cartodb Positron',
+                  detect_retina=True,
+                 zoom_start=11)
+
+# Choropleth 레이어를 만들고, 맵 m에 추가 
+folium.Choropleth(geo_data=geo, 
+                  data=final, 
+                  columns=('행정동코드', '미세먼지(㎍/㎥)'), 
+                  key_on='feature.properties.adm_cd2', 
+                  fill_color='RdPu', 
+                  legend_name='Concentration of fine dust', 
+                  ).add_to(map3)
+
+
+map3.save('map3.html')
+map3
+```
+
+&lt;/details&gt;
+&lt;/summary&gt;
+
+&lt;p&gt;선형적인 관계가 있으면 두 그림이 같은 경향을 보이거나 대비되는 모습을 보여야 하는데 아닌 것을 보면 확실히 연관성이 없다는 것을 알 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 여태까지 고생한게 얼만데 이렇게 끝낼 수는 없잖아요?
+그래서 저는 기왕 전처리해서 밑작업을 끝내놓은 김에 센서데이터를 이용해서 미세먼지 농도가 짙어질 때, 기온이나 자외선, 습도 등의 다른센서데이터는 어떤 경향을 보이는지 알아봤습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95683107-2855ce00-0c24-11eb-953d-e1d264b18a8f.png&quot; width=&quot;500&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그러기 위해 미세먼지 농도를 기준으로 정렬하여 상위 다섯개 도시를 뽑아봤습니다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95683138-5dfab700-0c24-11eb-82b2-b71072a3904b.png&quot; width=&quot;500&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;folium 지도시각화 &amp;amp; 마커 표시하기&lt;/p&gt;
+&lt;summary&gt;
+&lt;details&gt;
+
+```py
+# 미세먼지 상위 5개 도시
+geo = '/gdrive/My Drive/Data Science/강의노트/20201005-1009_LS_DS_project week1/Seoul1.geojson'
+# 서울시 중심부의 위도, 경도
+center = [37.541, 126.986]
+
+# center를 중심으로 하고 zoom 단계에 해당하는 맵 생성
+map5 = folium.Map(location = center, 
+                 tiles = 'Cartodb Positron',
+                  detect_retina=True,
+                 zoom_start=12)
+
+# Choropleth 레이어를 만들고, 맵 m에 추가 
+folium.Choropleth(geo_data=geo, 
+                  data=final, 
+                  columns=('행정동코드', '미세먼지(㎍/㎥)'), 
+                  key_on='feature.properties.adm_cd2', 
+                  fill_color='RdPu', 
+                  legend_name='fine dust', 
+                  ).add_to(map5)
+
+# 마커 객체 생성
+marker1 = folium.Marker([37.537951, 127.005507], 
+                        popup='Han-nam dong', 
+                        icon=folium.Icon(color='blue'))
+
+marker2 = folium.Marker([37.566123, 126.986117], 
+                        popup='Eul-ji-ro 2st', 
+                        icon=folium.Icon(color='blue'))
+
+marker3 = folium.Marker([37.471441, 127.105509], 
+                        popup='Se-gok dong 2st', 
+                        icon=folium.Icon(color='blue'))
+
+marker4 = folium.Marker([37.573198, 127.003028], 
+                        popup='Hyo-je dong', 
+                        icon=folium.Icon(color='blue'))
+
+marker5 = folium.Marker([37.555363, 127.001871], 
+                        popup='Jang Chung dong 2st', 
+                        icon=folium.Icon(color='blue'))
+
+# 마커 추가
+marker1.add_to(map5)
+marker2.add_to(map5)
+marker3.add_to(map5)
+marker4.add_to(map5)
+marker5.add_to(map5)
+
+map5.save('map5.html')
+map5
+```
+
+&lt;/details&gt;
+&lt;/summary&gt;
+
+&lt;p&gt;그리고 이 다섯개의 도시를 각각 바 그래프로 그려서 미세먼지의 농도에 따른 경향을 살펴봤어요.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/95683332-8c2cc680-0c25-11eb-863c-c453d439287b.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;상위도시 5개 추리기 및 바그래프로 그리기&lt;/p&gt;
+&lt;summary&gt;
+&lt;details&gt;
+
+```py
+# 미세먼지농도 상위 5개 지역
+
+#최종데이터에서 미세먼지농도를 기준으로 내림차순, 5개 뽑아 top_dust로 선언
+top_dust = final.sort_values(by='미세먼지(㎍/㎥)', ascending=False).head(5)
+#최종데이터에서 그래프로 시각화 할 컬럼 선택하여 데이터프레임 생성
+top_dust = top_dust[['미세먼지(㎍/㎥)', '법정동명', '진동_z 최대(g)', '자외선(UVI)','조도(lux)', '초미세먼지(㎍/㎥)', '상대습도( %)']]
+#top5 데이터프레임의 법정동명을 인덱스로 지정
+top_dust = top_dust.set_index('법정동명')
+
+plt.figure(figsize=(12, 8), dpi=120)
+
+plt.subplot(3,3,1)
+plt.bar(top_dust.index, top_dust['미세먼지(㎍/㎥)'], color='#86A99F')
+plt.xlabel('법정동')
+plt.ylabel('미세먼지농도')
+plt.title('Top5 별 미세먼지농도')
+
+plt.subplot(3,3,2)
+plt.bar(top_dust.index, top_dust['초미세먼지(㎍/㎥)'], color='#86A99F')
+plt.xlabel('법정동')
+plt.ylabel('초미세먼지농도')
+plt.title('Top5 별 초미세먼지농도')
+
+plt.subplot(3,3,3)
+plt.bar(top_dust.index, top_dust['진동_z 최대(g)'], color='#86A99F')
+plt.xlabel('법정동')
+plt.ylabel('최대 진동')
+plt.title('Top5 별 최대진동')
+
+plt.subplot(3,3,4)
+plt.bar(top_dust.index, top_dust['자외선(UVI)'], color='#86A99F')
+plt.xlabel('법정동')
+plt.ylabel('자외선')
+plt.title('Top5 별 자외선')
+
+plt.subplot(3,3,5)
+plt.bar(top_dust.index, top_dust['조도(lux)'], color='#86A99F')
+plt.xlabel('법정동')
+plt.ylabel('조도')
+plt.title('Top5 별 조도')
+
+plt.subplot(3,3,6)
+plt.bar(top_dust.index, top_dust['상대습도( %)'], color='#86A99F')
+plt.xlabel('법정동')
+plt.ylabel('상대습도')
+plt.title('Top5 별 상대습도')
+
+
+plt.tight_layout()
+plt.show()
+```
+
+&lt;/details&gt;
+&lt;/summary&gt;
+
+&lt;p&gt;사실 분석을 시작하기 전에는 특정한 요인, 즉 측정기간동안 미세먼지가 심했던 지역에서는 공사를 했다던지, 행사가 열렸다던지 등의 특별한 이슈가 있을 것 같았고 이런 이슈가 있었다면 진동이나 소음 등의 측정값에서 그 결과를 볼 수 있을 것이라고 판단했거든요? 하지만 시각화를 해보니 미세먼지와 초미세먼지만 약간 비슷한 경향을 보일 뿐, 미세먼지와 다른 요소들간에는 특이점을 찾을 수 없었어요. 가지고있는 데이터를 통해서 얻을 수 있는 인사이트는 크게 없었던 것 같아서 과외로 구글링을 통하여 조사도 해봤지만 공사가 있었거나 행사가 열렸다는 내용을 특별히 발견할 수는 없었죠.&lt;/p&gt;
+
+&lt;p&gt;전체적으로 해당 분석을 돌이켜보면..
+조사한 시점 기준으로 미세먼지 농도와 공시지가가 상관이 있는지 여부는 알 수 있었지만 미세먼지의 농도와 공시지가가 서로 어떤 영향을 미치는지는 분석할 수 없어 아쉬웠습니다.
+미세먼지 농도와 공시지가가 서로 어떤 영향을 주고받는지를 분석하려면 같은 기간의 미세먼지 농도의 변동율, 그리고 공시지가의 변동율이 필요했는데 미세먼지데이터는 올 4월부터 제공되기 시작했고 공시지가는 1년단위로 한번의 데이터밖에 없어서 변동율을 구할 수가 없었거든요. 시간을 너무 많이 사용하고나서야 내가 원하는 정보를 얻기위한 데이터가 중분치 않다는 것을 깨달아서 데이터셋을 변경할 생각도 하지 못헀어요. 하지만 추후에 데이터가 충분해지면 변동율을 이용한 분석을 다시 해봐도 괜찮을 것 같다는 생각을 했습니다.
+원했던 인사이트들을 얻지 못해서 잠시 허무하긴 했는데 첫 시도부터 만족스럽긴 힘들테니까요. 다음에는 어떻게 하면 좋겠다는 팁을 얻었다는 그 자체로 의미가 있었다고 생각하려고 합니다.(안그러면 허무해서 잠도 못잘 것 같아요.)
+추후에는 더욱 흥미로운 프로젝트를 소개해보겠습니다. 긴 글을 읽어주셔서 고맙습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>woongE</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="fundemental" />
+      
+
+      
+        <summary type="html">#python #pandas #statistics</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자</title>
+      <link href="http://localhost:4000/statistics" rel="alternate" type="text/html" title="통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자" />
+      <published>2020-09-19T01:40:00+09:00</published>
+      <updated>2020-09-19T01:40:00+09:00</updated>
+      <id>http://localhost:4000/statistics</id>
+      <content type="html" xml:base="http://localhost:4000/statistics">&lt;p&gt;#빈도주의 #베이지안 #통계학&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./project-1&quot;&gt;미세먼지와 공시지가의 상관관계 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./statistics&quot;&gt;통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;Git, Github 왜 써야 해? &lt;/a&gt;&lt;/li&gt;
+    
+
+    
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
+
+    
+
+
+
+
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;통계학의-두-관점-빈도주의와-베이지안에-대해서-알아보자&quot;&gt;통계학의 두 관점, 빈도주의와 베이지안에 대해서 알아보자.&lt;/h1&gt;
+
+&lt;p&gt;“빈도주의 통계학과 베이지안 관점의 통계학은 무엇이 다른가?” 라는 질문에, 
+뭔가 다른 것 같긴 한데 우물쭈물 대답할 말이 마땅히 생각나지 않는 그대는 이 글을 한번쯤 읽어봤으면 좋겠다.
+수학, 통계 이런거 아무것도 몰라도 쉽게 이해할 수 있게 말로 장황하게 늘어놓았으니, 겁먹지 말고 시작해보자.&lt;/p&gt;
+
+&lt;p&gt;베이지안 통계학이란?
+세상의 불확실성을 확률로 설명 가능한  학문이라고 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;확률을 정리하면 크게 &lt;code class=&quot;highlighter-rouge&quot;&gt;빈도주의&lt;/code&gt;와 &lt;code class=&quot;highlighter-rouge&quot;&gt;베이지안&lt;/code&gt; 두가지 관점으로 나눌 수 있다.
+빈도주의 관점에서는 확률을 &lt;strong&gt;상대적인 빈도의 극한값&lt;/strong&gt;으로 나타내는데  이 말은 동일한 일을 무한히 반복했을 때의 빈도를 의미한다. 
+빈도주의 관점에서는 동전던지기, 주사위 던지기 등의 무작위 사건의 확률을 설명할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;동전을 10번 던졌을 때 6번 앞면이 나온다면 이는 상대적 빈도값이 6/10이 되는 것이고, 
+10000번 던졌을 때 5600번 앞면이 나온다면 5600/10000, 횟수를 무한히 늘려나간다면 이 값은 결국 1/2 = 0.5(50%)에 수렴하게 된다. 
+이를 앞면이 나올 &lt;code class=&quot;highlighter-rouge&quot;&gt;확률&lt;/code&gt;이라고 정의하는 것이다.
+하지만 빈도주의 관점에서의 확률은 명확한 한계를 가지고 있는데 횟수를 무한히 늘릴 수 없는 사건에 대해서는 확률 계산이 불가능하다는 것이다. 
+예를들어 내일 비가 내릴 확률은 상대적인 빈도로는 설명할 수 없다. 같은 조건에서 무한히 반복할 수 없기 때문에 빈도를 계산할 수 없어서 확률을 구할 수가 없다. 이처럼 무작위 사건이 아닌 인식론적 불확실성을 설명하기 위해서 새로운 확률의 정의가 필요성이 생겼고,&lt;/p&gt;
+
+&lt;p&gt;그래서 등장한 것이 &lt;strong&gt;베이지안 관점의 확률&lt;/strong&gt;이다.
+베이지안 관점에서는 확률을 믿음의 정도(degree of belief)로 정의한다. 가령 “내일 비가 내릴 확률은 70%이다”라는 말처럼 어떠한 사건 발생에 대한 믿음의 정도로 확률을 정의하기 때문에, 빈도주의로 설명할 수 없는 훨씬 다양한 상황에 확률을 부여할 수 있다. 때문에 베이지안 관점의 확률을 &lt;strong&gt;불확실성 측정의 도구&lt;/strong&gt;라고도 이야기한다.&lt;/p&gt;
+
+&lt;p&gt;베이즈정리를 설명해보면,
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/93562522-2603a980-f9c1-11ea-8c16-b6b7b8541a1f.png&quot; alt=&quot;image&quot; /&gt;
+P(H) 는 사전확률로 가설 H에 대해서 사전에 우리가 믿고있는 정도(사전지식)를 이야기한다. 
+가능도P(D|H)는 가설 H가 주어졌을 때 데이터 D를 지지하는 정도, 즉 데이터D가 관찰될 가능성에 해당한다.
+사전확률 P(H) 와 가능도P(D|H)를 곱하여 업데이트된 확률인 사후확률 P(H|D)를 얻는다. 이는 데이터 D가 관찰되었을 때, 가설 H의 확률을 말한다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/93564809-46356780-f9c5-11ea-84e0-a7c5f3c38142.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;모집단을 설명하는 가설 H1,H2, H3, H4가 있다고 가정하고, D라는 데이터가 관찰되었을 때, P(H1&lt;/td&gt;
+      &lt;td&gt;D)를 공식으로 유도해보면 다음과 같다.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/93564180-3cf7cb00-f9c4-11ea-9c45-811abd769a77.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이제 공식을 설명해보면,
+P(H) 는 &lt;strong&gt;사전확률&lt;/strong&gt;로 가설 H에 대해서 사전에 우리가 믿고있는 정도(사전지식)를 이야기한다. 
+P(D|H)에서 가설 H가 주어졌을 때 데이터 D를 지지하는 정도, 즉 데이터D가 관찰될 가능성에 해당한다.
+사전확률 P(H) 와 가능도P(D|H)를 곱하여 업데이트된 확률인 사후확률 P(H|D)를 얻는다. 이는 데이터 D가 관찰되었을 때, 가설 H의 확률을 말한다.&lt;/p&gt;
+
+&lt;p&gt;사전확률 H1, H2, H3, H4는 모두 같았지만 D라는 데이터가 관찰되고 난 후, 데이터 D 안에서 H1이 차지하는 비중이 큰 것을 볼 수 있다. 즉, 데이터가 H1을 더 많이 지지하기 때문에 실제 현상에서도 H1이 일어날 확률이 더 높다고 추론할 수 있다.
+따라서 사전확률은 동일했지만 데이터 D가 주어졌을 때 H1의 확률은 다른 가설들보다 H1이 더 크게 되는 것이다. 즉 데이터가 관찰되고 나서 사전확률이 사후확률로 &lt;strong&gt;업데이트&lt;/strong&gt;된 것이다.
+이처럼 베이즈 정리는 &lt;code class=&quot;highlighter-rouge&quot;&gt;관찰된 데이터&lt;/code&gt;를 토대로 &lt;code class=&quot;highlighter-rouge&quot;&gt;사전확률&lt;/code&gt;이 어떻게 &lt;code class=&quot;highlighter-rouge&quot;&gt;사후확률&lt;/code&gt;로 &lt;strong&gt;업데이트&lt;/strong&gt; 되는지를 알 수 있게 해주고 데이터는 가능도를 통해 사후확률에 영향을 준다는 것을 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;기존의 빈도주의에 의한 통계는 집단이 어떤 분포를 가지는지를 정의하고 계산을 통한 확률에 대해 이야기한다. 하지만 베이지안 관점에서는 사전확률 즉, 경험이 주어지고 추가적인 정보를 통해 확률을 지속적으로 갱신한다.
+현대에 와서 베이지안 관점의 통계가 더 많은 주목을 받는 이유는 경험(데이터)가 나올수록 예측모델이 더 정확해지기 때문인데 데이터가 넘쳐나는 세상이라 그런 듯 하다. 호랑이 등에 날개를 단 격이라고 할까. 추가로 나중에 머신러닝에 대해 공부할 때, 이런 베이즈정리가 많이 쓰인다고 한다. 이번에 공부하면서 머신러닝에 Naive Bayes Clasify라는 이론도 많이 쓰인다는 것을 알게 되었는데 추후 머신러닝에 대해 공부할 때 이에 대해서도 자세히 소개하기로 다짐하며 글을 마친다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>woongE</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="fundemental" />
+      
+
+      
+        <summary type="html">#빈도주의 #베이지안 #통계학</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">코스레스토랑에 보내는 제안서</title>
+      <link href="http://localhost:4000/proposal" rel="alternate" type="text/html" title="코스레스토랑에 보내는 제안서" />
+      <published>2020-09-12T01:40:00+09:00</published>
+      <updated>2020-09-12T01:40:00+09:00</updated>
+      <id>http://localhost:4000/proposal</id>
+      <content type="html" xml:base="http://localhost:4000/proposal">&lt;p&gt;#시각화 #visualization #seaborn #tips&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./project-1&quot;&gt;미세먼지와 공시지가의 상관관계 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./statistics&quot;&gt;통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;Git, Github 왜 써야 해? &lt;/a&gt;&lt;/li&gt;
+    
+
+    
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
+
+    
+
+
+
+
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;p&gt;본 글에 나오는 데이터는 Seaborn 라이브러리의 기본 데이터셋 tips를 활용하였고, 코스레스토랑(&lt;code class=&quot;highlighter-rouge&quot;&gt;코&lt;/code&gt;드&lt;code class=&quot;highlighter-rouge&quot;&gt;스&lt;/code&gt;테이츠)과 구정환(&lt;code class=&quot;highlighter-rouge&quot;&gt;구&lt;/code&gt;일모, 한&lt;code class=&quot;highlighter-rouge&quot;&gt;정&lt;/code&gt;민, 김진&lt;code class=&quot;highlighter-rouge&quot;&gt;환&lt;/code&gt;) 매니저는 가상의 장소, 인물임을 알려드립니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;코스레스토랑에-보내는-제안서&quot;&gt;코스레스토랑에 보내는 제안서&lt;/h1&gt;
+
+&lt;p&gt;안녕하세요 코드레스토랑 구정환 매니저님. 우선 저를 믿고 서비스 컨설팅 의뢰를 맡겨주셔서 진심으로 감사합니다.
+보내주신 데이터의 분석 결과나 제안들을 보여드리기에 앞서, 본데이터를 어떻게 활용할 것이고 한계는 어떤것이었는지에 대해 먼저 간단하게 설명드리려고 합니다.
+먼저 보내주신 데이터를 간단하게 살펴봤을 때, 데이터 안에는 244개의 매출데이터가 있었는데 양을 봤을 때 일주일 중 목요일부터 일요일까지 일주일 정도의 분량일 것으로 생각됩니다. 데이터가 많을수록 매출의 ‘경향성’을 파악하기가 용이하지만 보내주신 데이터를 최대한 활용하여 분석을 실시했습니다. 나름의 근거를 제시했으나 데이터의 양이 부족하였기 때문에 제가 드리는 제언은 절대적인 것이 아니며 레스토랑 경영에 참고지표 정도로 사용하시는 것이 좋다는 사실을 미리 말씀드립니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;팁에 어떤 요인이 있는지를 분석해달라고 의뢰를 하셔서 어떤 방면으로 분석결과를 활용하실 것인지, 왜 팁에 대한 상관관계가 궁금했을지를 제일 먼저 생각해봤습니다.
+팁이 만약 종업원에게 전부 돌아간다면 경영자의 입장에서 분석을 의뢰하실 정도로 크게 의미있는 요소는 아니라고 생각되어 한가지 전제를 가지고 데이터 분석을 실시하였습니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;전제1. 레스토랑에서 받는 팁은 레스토랑측과 종업원이 일정비율로 나누어 갖는다. 즉 팁을 받는 것은 매출 향상에도 기여하고,&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;전제2. 따라서 팁을 많이 받을 수 있는 요인을 분석하는 것이 레스토랑의 매출을 향상시킬 수 있다고 판단하였습니다.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;자세한-분석결과를-보고싶으시다면-아래-세부정보를-눌러서-글을-펼쳐주세요&quot;&gt;자세한 분석결과를 보고싶으시다면 아래 세부정보를 눌러서 글을 펼쳐주세요.&lt;/h2&gt;
+&lt;summary&gt;
+&lt;details&gt;
+
+### 요일별 테이블 당 매출 &amp;amp; 팁
+먼저 전체 매출과 팁은 어떤 연관성이 있는지에 대한 결과입니다.
+![image](https://user-images.githubusercontent.com/70134676/92865871-d1e54c00-f439-11ea-9d87-684d531ef7c8.png)
+![image](https://user-images.githubusercontent.com/70134676/92866746-dcecac00-f43a-11ea-8d7f-f27e2ac66761.png)
+
+분석결과는 평균값으로 각 요일마다 테이블당 평균 매출과 팁이 얼마나 발생했는지를 보여주고 있습니다. 전반적으로 주중보다는 주말이 매출이 높았으며 팁은 매출과 비례하여 발생한다는 사실을 알 수 있습니다. 큰 의미가 있는 지표는 아니며 테이블당 얼마의 매출이 발생하는지, 전체 매출에 대한 팁은 어떤 연관관계가 있는지 정도의 기본정보라고 보시면 됩니다.
+
+다음은 팁을 받는데는 어떤 요인이 작용할지에 대한 분석자료입니다. 메뉴나 가격에 대한 정보가 없어 팁을 늘리기 위한 방편으로 팁을 받는 횟수(즉 매출이 발생한 횟수)를 늘려야 한다는 점에 초점을 맞추고 분석을 진행하였습니다.
+
+### 요일 별 팁 발생 횟수
+![image](https://user-images.githubusercontent.com/70134676/92867635-ceeb5b00-f43b-11ea-97f0-ff06315c2b7c.png)
+위의 그래프를 보시면 **금요일날 매출이 유독 적게 발생한다는 사실을 알 수 있습니다.**
+
+### 일행 숫자 별 팁 발생 횟수
+![image](https://user-images.githubusercontent.com/70134676/92867964-2db0d480-f43c-11ea-9a0c-0d09d201f0bb.png)
+위의 그래프는 일행 숫자에 따른 팁 횟수입니다. 여기서는 의미가 있는 결과가 나왔는데
+**일주일간 전체  매출 횟수 중에 2인 일행이 이용한 횟수가 절대적으로 많다는 사실을 보여줍니다.**
+
+### 성별에 따른 계산 횟수
+![image](https://user-images.githubusercontent.com/70134676/92868498-bdef1980-f43c-11ea-88f1-0a2852502431.png)
+다음은 어느 성별이 더 많이 계산을 하는가에 대한 지표입니다. 보통 **남성이 여성에 비해 두배에 가깝게 계산을 많이 한다는 것을 알 수 있습니다.**
+
+### 시간에 따른 팁 발생 횟수
+![image](https://user-images.githubusercontent.com/70134676/92868567-ce9f8f80-f43c-11ea-8f39-946bf3b6182a.png)
+마지막으로 전체 매출 중에 점심, 저녁으로 나누어 언제 팁이 많이 발생했는지에 대한 지표입니다.
+**팁 발생 횟수는 저녁이 점심보다 290%정도 많았다는 사실을 알 수 있습니다.**
+
+&lt;/details&gt;
+&lt;/summary&gt;
+
+&lt;h2 id=&quot;위의-분석-결과를-토대로-제가-코드레스토랑에-드리는-서비스-제언입니다&quot;&gt;위의 분석 결과를 토대로 제가 코드레스토랑에 드리는 서비스 제언입니다.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;금요일에 테이블회전율이 낮으니 금요일에 매출을 늘릴 수 있는 방법을 강구해야 합니다. 혹은 금요일의 매출이 정상궤도에 올라오기 전까지 인건비의 절약 차원에서 금요일에 종업원들에게 휴무일을 지정하거나 잉여노동력을 매장이 바쁜 시간대에 재배치 하는 등의 조치를 통해 노동력을 활용함에 있어 효율을 높이시길 바랍니다.&lt;/li&gt;
+  &lt;li&gt;점심에 이용하는 고객보다 저녁에 이용하는 고객이 많으므로 점심에 더 많은 고객을 유치할 수 있도록 하거나 저녁시간에 많은 손님이 몰릴 때 불만사항이 생기지 않도록 서비스를 더욱 강화해야 합니다.&lt;/li&gt;
+  &lt;li&gt;2인 테이블에서 대부분의 매출이 나오고 있으니 2인 테이블 손님들에게 좋은 인상을 줄만한 서비스를 발전시키는 것이 매출 향상에 유리합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;위의 제언을 참고하셔서 구정환 매니저님의 코드레스토랑이 더욱 번창하시길 기원합니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;사실 읽어보시면 아시겠지만 분석결과가 허접합니다.  그래서 어떤 코드를 작성했고 어떤 기법을 통해 예측을 했고 이런 기술적인 면 보다는 우리가 실제로 현업에 나가게 된다면 비전공자에게 분석 결과를 이해시켜야 할 일이 많을 것 같아 &lt;strong&gt;어떻게 쉽게 설명할 수 있을까?&lt;/strong&gt; 에 초점을 맞춘 글이라고 자기합리화를 해봅니다. (사실 판다스를 다루는 능력이 일천하여 시간내에 제가 원하는 연산들을 할 수가 없었습니다.ㅠㅠ)
+긴 글을 읽어주셔서 고맙습니다.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>woongE</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="fundemental" />
+      
+
+      
+        <summary type="html">#시각화 #visualization #seaborn #tips</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Git, Github 왜 써야 해?</title>
+      <link href="http://localhost:4000/github" rel="alternate" type="text/html" title="Git, Github 왜 써야 해?" />
+      <published>2020-09-05T01:40:00+09:00</published>
+      <updated>2020-09-05T01:40:00+09:00</updated>
+      <id>http://localhost:4000/github</id>
+      <content type="html" xml:base="http://localhost:4000/github">&lt;p&gt;#git #github&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./project-1&quot;&gt;미세먼지와 공시지가의 상관관계 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./statistics&quot;&gt;통계학의 두 축, 빈도주의와 베이지안 관점에 대해 알아보자 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./github&quot;&gt;Git, Github 왜 써야 해? &lt;/a&gt;&lt;/li&gt;
+    
+
+    
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;./proposal&quot;&gt;코스레스토랑에 보내는 제안서 &lt;/a&gt;&lt;/li&gt;     --&gt;
+
+    
+
+
+
+
+&lt;!-- 
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./test&quot;&gt;시험용 포스팅입니다 - 출력되어라&lt;/a&gt;&lt;/li&gt;
+  --&gt;
+    
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;git-github-왜-써야-해&quot;&gt;Git, Github 왜 써야 해?&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Github를 사용하라&lt;/strong&gt; 는 마치 마른하늘의 날벼락마냥 내게 미션처럼 주어졌다. 하라는 대로 따라하면 할 수는 있겠지만 별로 유용해보이지도 않는데(구글드라이브로 하면 안되나?) 굳이 내가 왜 이 Github에 익숙해져야 하는지 그 이유가 궁금했다. 개인적으로 &lt;strong&gt;‘왜’&lt;/strong&gt; 인지 이유를 알아야 의욕이 불타오르기도 하고 이유를 스스로 납득하면 Github에 익숙해지는데 더 동기유발도 되고 애정도 생길 것 같아 스스로 공부해볼 겸, 혹은 내가 궁금해하는 점을 똑같이 느끼는 누군가를 위하여, Git과 Github에 대하여 Github와 markdown을 이용하여 연습삼아 글을 몇글자 적어본다.&lt;/p&gt;
+
+&lt;p&gt;Github를 검색하면 이렇게 다양한 정보를 얻을 수 있다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/92198957-bfef3080-eeb0-11ea-8b87-964a66a7dfbb.png&quot; alt=&quot;위키결과&quot; title=&quot;이렇게 이미지를 간단하게 설명하는 주석도 넣을 수 있구나. markdown 편리한듯-직접 캡쳐&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;읽어도 이해가 잘 안가는 말이 태반이기에 이런 wiki문서를 내가 쉬운버전으로 번역하여 다시 작성해본다고 생각하고 글을 작성하려고 한다.&lt;/p&gt;
+
+&lt;p&gt;Github를 왜 사용해야하는지 이해하기 위해서는 먼저 Git에 대한 이해가 필요하다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;git이란-무엇인가&quot;&gt;Git이란 무엇인가?&lt;/h2&gt;
+&lt;p&gt;Git이란 분산형 버전관리시스템(DVCS)인데 &lt;strong&gt;버전관리시스템(VCS)&lt;/strong&gt; 에 대해 먼저 알아보면 &lt;del&gt;소스 코드를 관리할 때 버전별로 즉, 변화가 생길때마다 새롭게 저장을 하여 롤백하기 쉽게 하는 그런 시스템이라고 생각하면 될 듯 하다.&lt;/del&gt; 어려울 수 있는 말인데 예를들어 메모장을 열어서 작업 중간마다 저장을 하면 하나의 파일에 덮어씌워지는 구조이지만 Git같은 경우는 파일 변화를 시간에 따라 기록했다가 나중에 특정 시점의 버전을 다시 불러올 수 있게하는 시스템이다. 단순하게 생각해봐도 VCS를 사용하면 파일을 잃어버리거나 혹은 잘못 고쳤을 때도 쉽게 복구가 가능하다.  한마디로 &lt;strong&gt;‘다른이름으로저장’&lt;/strong&gt; 을 수정이 될때마다 수행해서 백업해준다는 것. 다만 각 버전의 변경사항만 기록되기때문에 여러 번 변경되고 저장된다고 하더라도 용량을 몇배로 차지하지는 않는다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 버전관리시스템 앞의 ‘분산형’이라는 말은 무엇일까?
+분산형 버전관리시스템은 중앙집중식과 달리 중앙서버자체가 없거나 그 역할을 하는 컴퓨터가 있다고 하더라도, 그 서버가 망가졌을 때 다른 컴퓨터로부터 자료를 복구할 수 있다는 특징이 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;git은-왜-필요할까&quot;&gt;Git은 왜 필요할까?&lt;/h2&gt;
+
+&lt;p&gt;개발분야에서 협업을 하다보면 수없이 많은 오류와 수정이 반복된다. 그러다보면 프로젝트를 과거로 되돌려야하는 일이 오는데 이럴 때 Git은 변화가 생긴 지점을 찾아 다시 되돌리기가 편하기 때문에 중간마다 따로 백업을 해둘 필요가 없다. 또한 다른사람들과 일을 같이 할 때도 수정사항을 쉽게 공유가 가능한 것도  Git이 가진 큰 장점이다.&lt;/p&gt;
+
+&lt;p&gt;조금 더 자세히 들어가보면&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;분산개발이 가능하다.
+Git을 사용하는 전체 개발 내역을 각 개발자의 로컬 컴퓨터로 복사하여 작업 후, 나중에 수정된 내역을 합칠 수 있다.&lt;/li&gt;
+  &lt;li&gt;비선형적인 개발이 가능하다.
+Git은 브랜치(Branch)라는 개념이 사용되는데 쉽게 말해서 프로젝트의 가지치기가 가능하다.&lt;/li&gt;
+  &lt;li&gt;효율적인 개발이 가능하다.
+Git은 변경 이력이 많더라도 변경된 내용만 처리한다는 점에서 메모리적인 효율성이 뛰어나다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;만약-git을-사용하지-않는다면&quot;&gt;만약 Git을 사용하지 않는다면?&lt;/h3&gt;
+&lt;p&gt;Git을 사용하지 않으면 프로젝트를 진행할 때 서로 일한 내용 공유하려고 소스코드를 USB에 담아서 다른사람한테 넘기거나 메일 등 다른수단으로 보내야 한다. 그러면 A가 수정한 내역이 B에게 즉각적으로 전달이 안 되기 때문에 다른 메신저를 이용하거나 전화하는 등의 추가적인 소통이 필요하여 A와 B가 동시에 작업을 진행하기가 어렵다. 또 작업을 완료해서 작업물을 업데이트 했는데 작동이 되지 않는다면 다시 이전버전으로 돌려야하는데 어디서부터 어떻게 손을 대야 할지 막막한 사태가 벌어지는 것이다.
+또한 누가 어떤 부분을 어떻게 고쳤는지 확인하기 어려워 마지막으로 파일의 어떤 부분이 변경됐는지 확인하려면 일일이 대조 작업을 해야 한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;github&quot;&gt;Github?&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/70134676/92206261-3c3e3f80-eec2-11ea-8c35-bbc04ef7e496.png&quot; alt=&quot;image&quot; title=&quot;DVSC에 대한 개념도-출처 https://ablockchainbuddy.blogspot.com/p/what-is-git.html&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Git이 분산버전관리시스템이라는 소프트웨어라면 &lt;strong&gt;Github&lt;/strong&gt;는 Git에서 진행되었던 각각의 내용들을 공유할 수 있게 공간을 제공하는 &lt;strong&gt;서비스&lt;/strong&gt; 라고 생각할 수 있다. 다수와 협업을 하면서도 물리적인 공간에 모여있을 필요 없이 원활하게 일을 공유할 수 있게 해주는 가상공간이라고 생각하면 쉬울 것이다.&lt;/p&gt;
+
+&lt;p&gt;Github는 전 세계의 개발자들이 이용하고 있기 때문에 내가 프로젝트를 진행하며 작업했던 소스코드들을 공개, 공유할 수 있고 그렇게 되면 전 세계에서 나와 비슷한 프로젝트를 가지고 고민했던 사람들과 소통하며 피드백을 받거나 줄 수 있다.&lt;br /&gt;
+오픈소스의 성지라고 불릴만큼 세계 곳곳의 뛰어난 프로그래머들이 작성한 수많은 코드들을 살펴볼 수 있고 본인이 의지만 있다면 코드를 올린 후 코드 리뷰도 받을 수 있으니 코딩 실력을 향상시키는데 활용하면 좋을 것이다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이번에는 Git과 Github에 대해 알아보았는데 이 글을 읽고 Github를 사용하려는 사람이 왜 Github와 친해져야 하는지 나처럼 이해가 되었기를 바라며.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>woongE</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="fundemental" />
+      
+
+      
+        <summary type="html">#git #github</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

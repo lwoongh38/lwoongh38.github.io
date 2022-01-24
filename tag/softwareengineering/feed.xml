@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="https://lwoongh38.github.io/tag/softwareengineering/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://lwoongh38.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-11-16T22:45:06+09:00</updated>
-  <id>https://lwoongh38.github.io/tag/softwareengineering/feed.xml</id>
+  <link href="http://localhost:4000/tag/softwareengineering/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-01-24T21:25:38+09:00</updated>
+  <id>http://localhost:4000/tag/softwareengineering/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Twitter Web Application</title>
-      <link href="https://lwoongh38.github.io/twitter-web-application" rel="alternate" type="text/html" title="Twitter Web Application" />
+      <link href="http://localhost:4000/twitter-web-application" rel="alternate" type="text/html" title="Twitter Web Application" />
       <published>2020-12-14T01:40:00+09:00</published>
       <updated>2020-12-14T01:40:00+09:00</updated>
-      <id>https://lwoongh38.github.io/twitter-web-application</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/twitter-web-application">&lt;p&gt;#Twitter #application #softwareengineering&lt;/p&gt;
+      <id>http://localhost:4000/twitter-web-application</id>
+      <content type="html" xml:base="http://localhost:4000/twitter-web-application">&lt;p&gt;#Twitter #application #softwareengineering&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -249,11 +249,11 @@
   
     <entry>
       <title type="html">Python - “Class” 이녀석</title>
-      <link href="https://lwoongh38.github.io/python-class" rel="alternate" type="text/html" title="Python - &quot;Class&quot; 이녀석" />
+      <link href="http://localhost:4000/python-class" rel="alternate" type="text/html" title="Python - &quot;Class&quot; 이녀석" />
       <published>2020-11-14T01:40:00+09:00</published>
       <updated>2020-11-14T01:40:00+09:00</updated>
-      <id>https://lwoongh38.github.io/python-class</id>
-      <content type="html" xml:base="https://lwoongh38.github.io/python-class">&lt;p&gt;#Python #Class #softwareengineering&lt;/p&gt;
+      <id>http://localhost:4000/python-class</id>
+      <content type="html" xml:base="http://localhost:4000/python-class">&lt;p&gt;#Python #Class #softwareengineering&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;목차 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
