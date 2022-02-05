@@ -11,7 +11,7 @@
 
 
 
-    <title>Intro to the Time Series Anomaly Detection</title>
+    <title>Time seriesAnomaly Detection Generative Adversarial Networks-loss function</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -49,26 +49,26 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Data Science 학습일지" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/atom-icon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/tadgan-copy" />
+    <link rel="canonical" href="http://localhost:4000/tadgan-lossfunction" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Data Scientist 성장기" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Intro to the Time Series Anomaly Detection" />
-    <meta property="og:description" content="#deeplearning #NLP #BERT #classification #filtering 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 시계열" />
-    <meta property="og:url" content="http://localhost:4000/tadgan-copy" />
-    <meta property="og:image" content="http://localhost:4000/assets/built/images/blockads.jpg" />
+    <meta property="og:title" content="Time seriesAnomaly Detection Generative Adversarial Networks-loss function" />
+    <meta property="og:description" content="#TadGAN #lossfunction #AnomalyDetection 목차 Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure Time seriesAnomaly Detection Generative Adversarial Networks-loss function Intro to the Time Series Anomaly Detection Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의" />
+    <meta property="og:url" content="http://localhost:4000/tadgan-lossfunction" />
+    <meta property="og:image" content="http://localhost:4000/assets/built/images/tadgan.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2023-10-28T07:00:00+09:00" />
-    <meta property="article:modified_time" content="2023-10-28T07:00:00+09:00" />
+    <meta property="article:published_time" content="2021-11-24T07:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-11-24T07:00:00+09:00" />
     <meta property="article:tag" content="Ai" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Intro to the Time Series Anomaly Detection" />
-    <meta name="twitter:description" content="#deeplearning #NLP #BERT #classification #filtering 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 시계열" />
+    <meta name="twitter:title" content="Time seriesAnomaly Detection Generative Adversarial Networks-loss function" />
+    <meta name="twitter:description" content="#TadGAN #lossfunction #AnomalyDetection 목차 Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure Time seriesAnomaly Detection Generative Adversarial Networks-loss function Intro to the Time Series Anomaly Detection Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의" />
     <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/blockads.jpg" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/tadgan.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Data Scientist 성장기" />
     <meta name="twitter:label2" content="Filed under" />
@@ -87,18 +87,18 @@
         "name": "Data Scientist 성장기",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/tadgan-copy",
+    "url": "http://localhost:4000/tadgan-lossfunction",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/assets/built/images/blockads.jpg",
+        "url": "http://localhost:4000/assets/built/images/tadgan.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/tadgan-copy"
+        "@id": "http://localhost:4000/tadgan-lossfunction"
     },
-    "description": "#deeplearning #NLP #BERT #classification #filtering 목차 Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의 범용적 활용가능성 분석 Bank marketing 정기예금 가입여부 예측 ROC curve에 대해 알아보자 연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 시계열"
+    "description": "#TadGAN #lossfunction #AnomalyDetection 목차 Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure Time seriesAnomaly Detection Generative Adversarial Networks-loss function Intro to the Time Series Anomaly Detection Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의"
 }
     </script>
 
@@ -111,7 +111,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Intro to the Time Series Anomaly Detection" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Time seriesAnomaly Detection Generative Adversarial Networks-loss function" href="/feed.xml" />
 
 
 </head>
@@ -174,7 +174,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="28 October 2023">28 October 2023</time>
+                    <time class="post-full-meta-date" datetime="24 November 2021">24 November 2021</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -184,20 +184,23 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Intro to the Time Series Anomaly Detection</h1>
+                <h1 class="post-full-title">Time seriesAnomaly Detection Generative Adversarial Networks-loss function</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/blockads.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/tadgan.png)">
             </figure>
              -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>#deeplearning #NLP #BERT #classification #filtering</p>
+                    <p>#TadGAN #lossfunction #AnomalyDetection</p>
 
 <p><span class="table-of-contents-list">목차 </span></p>
 <ul class="table-of-contents-list">
+    <li><a href="./tadgan-modelstructure">Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure </a></li>  
+    <li><a href="./tadgan-lossfunction">Time seriesAnomaly Detection Generative Adversarial Networks-loss function </a></li>  
+    <li><a href="./tadgan-intro">Intro to the Time Series Anomaly Detection </a></li>  
     <li><a href="./text-ads-filtering">Text 데이터 광고 필터링을 위한 분류 모델 구축 </a></li>
     <li><a href="./bert-sentiment-keyword">사용자 리뷰 핵심어 추출 및 감성분석 </a></li>
     <li><a href="./deeplearning-summary">Deep Learning - 핵심 개념 &amp; 용어 </a></li>
@@ -261,157 +264,86 @@ into the {body} of the default.hbs template -->
     
 </ul>
 
-<h1 id="시계열-데이터-이상치-탐지">시계열 데이터 이상치 탐지</h1>
+<h1 id="time-series-anomaly-detection-generative-adversarial-networks---loss-function">Time series Anomaly Detection Generative Adversarial Networks - Loss Function</h1>
 
-<h2 id="abstract">abstract</h2>
+<h2 id="1-gan의-loss-function">1. GAN의 Loss Function</h2>
 
-<p>본 프로젝트는 시계열 데이터의 이상 탐지  모델 중, 최근 두드러지는 성능을 보이고 있는 MIT 에서 발표한 논문 TadGAN : Time series Anomaly Detection Using Generative Adversarial Networks에 대하여 학습하고 데이터에 실제로 적용하여 논문을 구현하는 것을 목적으로 하였습니다.
-Google Colab을 사용하여 구현하고 데이콘에 공개되어 있는 데이터셋을 파일을 활용할 수 있도록 코드를 수정하여 구현하였습니다.
-이 프로젝트를 통해 이상 탐지 분야에 대하여 심도있게 학습하고 오픈소스를 빠르게 커스터마이징하여 목적에 맞도록 사용하는 능력을 개발할 수 있었습니다.</p>
+<p>이번 포스트에서는 TadGAN에 대해서 본격적으로 알아보겠습니다.
+TadGAN은 이론상으로 훌륭한 방법론이지만 실제로 구현하기가 상당히 까다롭습니다. 이는 GAN을 사용하는 방법론들이 가지는 근본적인 문제점이기도 한데 학습의 어려움이 존재하기 때문입니다. 이에 대한 자세한 이야기는 잘 정리되어있는 포스트가 있어 링크를 첨부합니다.(https://brunch.co.kr/@kakao-it/162)
+그래서 Time seriesAnomaly Detection Generative Adversarial Networks(이하 TadGAN) 논문에서는 Loss Function을 차별화하여 이런 어려움을 해결하고자 했습니다.
+먼저 GAN에서 기본적으로 사용하는 loss function으로 부터 어떻게 KL divergence, JSD divergence를 유도하는지를 살펴보면 아래와 같습니다.</p>
 
-<p><a href="https://github.com/lwoongh38/project_cs2" title="프로젝트링크">Github repo</a></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152629548-e954e27a-a108-44d2-810c-b575c2793558.png" width="40%" height="80%" /></p>
 
-<hr />
+<p><br /></p>
 
-<h2 id="1-intro">1. Intro</h2>
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152629661-e51c7121-64b1-4b93-a750-7c64f39aedfd.png" width="60%" height="80%" /></p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119241353-b158be80-bb90-11eb-92cb-69c4b43ea285.png" width="90%" height="100%" /></p>
+<p><br /></p>
 
-<p>TadGAN은 machine learning 중 비지도 학습 방식입니다. 입력되는 시계열 데이터와 최대한 유사한 데이터를 모방하도록 학습하고, Threshold에 따라 이상치를 판단하는 이상 탐지 기법입니다. 이상 탐지 분야는 다양한 목적을 위해 활용되고 있는데 다음과 같이 열거할 수 있습니다.</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152629689-6be09800-bede-41ee-a819-3e2315e99ba5.png" width="80%" height="80%" /></p>
 
-<ol>
-  <li>데이터 품질 향상
-스탠포드 대학의 Andrew ng 교수는 모델을 튜닝하는 것 못지않게 모델의 학습에 이용되는 데이터의 품질을 높이는 것이 모델 성능 향상에 주요한 영향을 미친다고 말했습니다.</li>
-</ol>
+<p><br /></p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119241578-78b9e480-bb92-11eb-8327-ff9456e7d2ab.png" width="90%" height="100%" /></p>
+<p>KL,JSD를 이용해서 f(x)로 표현된 분포를 g(x)의 분포가 되도록 학습을 시켜야 하는데 그러기 위해서는 아래 그림의 왼쪽 부분은 왼쪽 부분 끼리, 오른쪽 부분은 오른쪽 부분끼리 같아지도록 만들어줘야 합니다. 문제는 두 분포에 대해서 x,T(x) 값이 달라지면 KL,JSD는 같은 기준값을 가진 확률들만 계산하도록 고안된 확률거리 함수라서 기준값이 달라지면 항상 무한대의 값, 혹은 일정한 값만 나오게 되면서 학습을 전혀 할 수 없게 됩니다. 그래서 TadGAN에서는 새로운 loss function을 차용하게 되었는데, 그게 바로 wgan-gp 입니다. wgan-gp는 Wasserstein GAN + gradient panelty를 합친 용어인데 먼저 이 loss function을 알려면 Wasserstein distance가 무엇인지 알아야 할 필요가 있습니다.</p>
 
-<p>인스타그램.<br />
-현재 국내에서 가장 많이 쓰는 sns 2위를 차지하고 있고 세계적으로도 10억명 이상이 사용할 정도로 절대다수의 이용자들이 자신의 디지털 소통창구로 인스타그램을 활용하고 있습니다. 이런 막강한 유저풀을 활용한 콘텐츠 마케팅이 눈길을 끌고 있습니다.</p>
+<p><br /></p>
 
-<p>2021년 인스타그램에서 발표한 통계자료를 보면 사용자의 약 81%가 제품이나 서비스를 검색하기 위해 인스타그램을 사용하고 있고 1억 3천만명의 유저들이 매달 쇼핑에 관련된 게시글을 보고있습니다. 또 비즈니스계정 사용자는 하루에 평균 한 건의 게시물을 게재하고 있다고 합니다.</p>
+<h2 id="wasserstein-distance">Wasserstein distance?</h2>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119241664-10b7ce00-bb93-11eb-8799-e3a2ade9c4ec.png" width="90%" height="100%" /></p>
+<p>KL,JSD가 가지는 한계는 어떤 확률 집합, 혹은 확률함수등이 주어질 때 항상 같은 값에서만 비교가 가능하다는 것입니다. 만약에 다른 값에 대해서 얼마나 거리가 떨어져 있는 지를 확인한다면, KL과 JSD는 아래의 값만 계속 전달하게 됩니다.</p>
 
-<p>다음은 인스타그램에서 화장품을 검색했을 때 노출되는 게시글입니다.
-빨간색으로 강조되어있는 부분을 보면 이 게시글들은 광고인 것을 알 수 있습니다.</p>
+<p><br /></p>
 
-<p>문제는 일반 이용자의 경우는 해당 화장품의 솔직한 후기가 궁금하여 게시글을 검색하는 경우가 대부분인데 일일이 게시글을 열어보고 골라내야한다는 점과,
-기업의 입장에서는 사용자들의 솔직한 후기를 제품의 개선점이나 신제품출시에 대한 지표를 사용할텐데 텍스트파일을 일일이 읽어보고 광고를 골라내야한다는 점에서 소비자와 기업 모두 인스타그램 텍스트데이터를 활용하는데 있어 어려움을 겪고 있습니다.</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152629868-5d5957b2-81cf-449f-8e45-905b7f10001e.png" width="60%" height="100%" /></p>
 
-<h3 id="11-가설-설정">1.1 가설 설정</h3>
+<p><br /></p>
 
-<p>그래서 저는,</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Hate speech 탐지에 쓰이는 방법을 광고 분류 모델에도 적용할 수 있을 것이다.
-2. Hate speech 탐지에 쓰이는 이상탐지 메커니즘을 활용하여 광고성 문구를 판별하는 모델을 생성, 0.9 이상의 정확도를 달성할 수 있을 것이다.
-</code></pre></div></div>
-<p>라는 가설을 세우고 여러 모델을 제작하여 모델의 성능을 비교해보기로 했습니다.</p>
+<p>하지만 대부분의 무작위로 주어지는 확률 집합, 혹은 확률 함수들은 특수한 경우(값의 범위가 정해져 있는 경우)를 제외하고는 분포가 같을 경우가 거의 없습니다. 값이 정해져 있다면 애초에 관심이 가지 않겠죠. 풀어서 생각해보면 우리는 사과를 다른 모양의 사과로 변환시키는 것(값의 분포가 같은 경우)보다는 사과를 오렌지, 혹은 배등으로 변환시키는 것(값의 분포가 다를 경우)에 더 관심이 있을 것 입니다.</p>
 
-<ol>
-  <li>인스타그램 텍스트데이터를 입력하여 전처리, 토큰화하고, 레이블을 입력합니다.</li>
-  <li>각 모델별로 광고성, 비광고성 글에 나타나는 특징에 따라 광고 여부를 판단할 수 있도록 학습시킵니다.</li>
-</ol>
+<p>우리는 다른 분포를 가진 확률함수에 대해 KL과 JSD가 유의미한 결과를 주지 않는다는 것을 알았습니다. 그래서 TadGAN 논문에서는 다른 분포를 가지는 확률 함수들에 대해서 값을 비교하기 위해 Wasserstein distance를 채택하게 됩니다. Wasserstein distance는 다른 말로 EMD(Eearth Mover distance)라고도 하는데, 쉽게 말해 Euclidean distance라고 생각하시면 됩니다. 이 확률 거리 측정 방법은 KL과 JSD와는 확실히 다릅니다. KL과 JSD가 다른 값에 대해서 서로 같은 확률을 가질 때 무한 대의 값이나 일정값만을 출력한다면, Wasserstein distance는 다른 분포에 대한 거리 정보까지 담고 있습니다.</p>
 
-<p>인스타그램의 텍스트데이터를 사용하여 광고를 분류할 수 있는 모델을 만드는 것이 최종 목표입니다.</p>
+<p>조금 더 쉽게 설명해 보겠습니다. 예를 들어서 X=[2,2,2,2,3,4,4,5], Y=[3,3,4,4,6,6,6,6]이 존재한다고 하겠습니다. 이 때 X와 Y가 각각 원소를 뽑게 될 때 두 집합의 확률이 얼마나 거리가 떨어져 있는 지에 대해서 알아보려고 합니다. 바로 전체를 비교하면 어려울 수 있으니 각 집합에서 X(2)와 Y(6)이 얼마나 떨어져 있는지 한번 비교해 보도록 하겠습니다.</p>
 
-<h2 id="2-modeling">2. Modeling</h2>
+<p>각 원소들이 뽑힐 확률이 1/n이라고 했을 때, X가 2를 뽑을 확률은 1/2이고, Y가 6을 뽑을 확률도 역시 1/2 입니다. 그리고 X가 2를 뽑을 확률과 Y가 6을 뽑을 확률에 대한 거리를 계산한다면, 두 경우에 대해서 확률이 동일하기 때문에 위에서 저희가 이미 구한 것 처럼 KL은 inf, JSD는 log2 가 나오지만 Wasserstein distance는 다음과 같이 계산됩니다.</p>
 
-<h3 id="21-모델-결정">2.1 모델 결정</h3>
+<p><br /></p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119241971-3c3bb800-bb95-11eb-9523-6d6564e40dc1.png" width="90%" height="100%" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152630165-0a8631cb-f3ed-4fbb-bd2e-e625f9be7e03.png" width="40%" height="100%" /></p>
 
-<p>제가 구축할 파이프라인에 사용될 모델 중 하나는 버트입니다.<br />
-다층의 레이어를 활용해서 문장을 구성하고 있는 토큰 사이의 의미를 잘 추출해낼 수 있습니다.<br />
-간단하게 버트가 학습하는 과정을 살펴보면 문장의 일부 단어를 mask토큰으로 바꾸고 가려진 단어를 예측하도록 하는 첫번째 학습을 통해 문맥을 파악하는 능력을 기르게 되고
-또 다음 문장이 올바른 문장인지 맞추는 학습을 통해 문장 사이의 관계를 학습하게 됩니다.<br />
-저는 버트 모델중에서도 한글에 특화되어있는 skt에서 한글로 학습시킨 kobert 을 선택했습니다.</p>
+<p><br /></p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119241997-69886600-bb95-11eb-9a57-acf3efe2e1c1.png" width="90%" height="100%" /></p>
+<p>즉 확률은 같아도 2를 1/2로 뽑을 확률과 6을 1/2로 뽑을 확률은 정확히 4 만큼의 거리를 가진다는 것을 알 수 있습니다.</p>
 
-<p>두번째 모델은 bilstm입니다.<br />
-Bilstm에 대해 예를 들어 설명하면,</p>
+<p>지금까지 우리는 wasserstein distance를 어떻게 구하는 지에 대해 알아봤습니다. 하지만 이 것은 X(2) -&gt; Y(6) 로 갈 때만의 이야기를 한 것입니다. 우리가 알고 싶은 것은 X와 Y에 대한 확률 거리가 얼마나 떨어져 있는지를 어떻게 하면 정량적으로 나타낼 수 있는가? 입니다.</p>
 
-<p><code class="highlighter-rouge">" 나는 __을 뒤집어 쓰고 펑펑 울었다. "</code></p>
+<p><br /></p>
 
-<p>위의 문장에서 빈칸에 어떤 단어가 들어갈 지 유추할때, 한국어를 자유자재로 사용하는 사람은 빈칸에 들어갈 말이 이불이라는 것을 쉽게 알 수 있습니다. 그런데 이 문장의 경우, 빈칸을 유추 할때, 빈칸 앞보다는 빈칸 뒤에 나오는 단어들이 더 중요 합니다.<br />
- ‘나는’ 뒤에 나올 수 있는 단어는 수없이 많은 반면에, ‘뒤집어 쓰고 펑펑 울었다’ 앞에 나올 수 있는 단어는 흔치 않기 때문 입니다.<br />
- 이 예제에서 볼 수 있듯이, 텍스트 데이터는 정방향 추론 못지 않게 역방향 추론도 유의미한 결과를 낼 수 있습니다. 그래서 lstm을 다음과 같이 정방향 학습, 역방향 학습을 할 수 있도록 설계한 것이 bilstm입니다.</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152630205-cfd4d08d-e1b0-4e77-a546-ebe0e8f9986e.png" width="80%" height="100%" /></p>
 
-<h3 id="22-데이터-수집">2.2 데이터 수집</h3>
+<p><br /></p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119242063-f0d5d980-bb95-11eb-9a43-5339e7a8c57a.png" width="90%" height="100%" /></p>
+<p>X,Y에 대해서 각 원소들이 뽑힐 확률이 uniform(전부) 균일)이라고 가정할 때, 각 원소들이 뽑힐 확률은 모두 1/n으로 동일 합니다. 그래서 각 원소들이 뽑힐 확률은 Y축에 표시되어 있고, 그 원소의 값들은 X축에 표시되어 있습니다. 그리고 우리는 이제 X를 Y처럼 만들면 되는데, 만드는 방식은 블록 쌓기와 같습니다. 이 블록은 모든 블록의 크기를 더하면 1이 되는 블록입니다. 하지만 이렇게 되면 경우의 수가 너무 많이 발생합니다. 예를 들면 X(2)를 X(6)에 전부 다 옮겨 Y(6) 처럼 만들어주는 방법이 있습니다. 그것도 아니라면 X(3),X(4),X(5)를 X(6)으로 모두 옮긴 다음, X(2)를 잘게 쪼개서 X(3),X(4),X(5)를 채워주는 방법도 있습니다. 이렇게 여러가지의 방법들이 존재하기 때문에 Wasserstein distance에는 제약 조건이 있습니다. 어떻게 옮기든 상관은 없는데, 그 중 최소비용이 드는 방법을 두 함수의 거리로 생각하겠다는 것입니다. 비용 측정은 다음과 같이 합니다.</p>
 
-<p>저는 인스타로더를 사용해서 인스타그램 텍스트데이터를 확보했습니다.<br />
-하지만 정제가 되어있지 않기 때문에 주어진 시간을 효율적으로 활용하기 위해 광고일 확률이 높은 해시태그와 광고가 아닐 확률이 높은 해시태그를 선정해서 크롤링한 다음, 광고 필터링 리스트를 제작해서 라벨링을 진행했습니다.</p>
+<p><br /></p>
 
-<p>검증, 테스트용 데이터셋은 일반적으로 사람이 광고를 분류하는 기준을 적용하기 위해서 약 3만개의 데이터를 직접 분류하는 방법으로 라벨링했습니다.<br />
-학습용 데이터셋은 제품이나 서비스 분야를 가리지 않고 적용시킬 수 있도록 #광고아님, #찐후기, #내돈내산, #홍보, #협찬 등과 같이 되도록 일반적인 해시태그로 데이터를 추출했고
-검증, 테스트용 데이터셋은 광고와 광고가 아닌 일반 후기를 수집하기 수월한 #설화수, #미용기기 프라엘을 선정해서 이것을 해시태그로 수집했습니다.</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152630229-9a370792-c94c-4cfa-a8c2-0e327cf17917.png" width="80%" height="100%" /></p>
 
-<h3 id="23-데이터-전처리">2.3 데이터 전처리</h3>
+<p><br /></p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119242145-a1dc7400-bb96-11eb-92e1-18a50068bda8.png" width="90%" height="100%" /></p>
+<p>이 계산식은 EM distance, Wasserstein-1 이라고 불리는 거리계산 방법입니다. 언뜻 보면 어려워 보일 수 있지만 집합 r과 집합 g에서 사건이 동시에 발생할 때 가능한 모든 확률들 중에서,L2 norm 공식을 적용했을 때 임의로 선택된 x,y의 확률의 차이와 값의 차이가 가장 작은 것을 Wasserstein distance라고 정하기로 한 것입니다. 그렇다면 이제 우리는 우리가 처음에 말했던, “왼쪽 부분은 왼쪽 부분 끼리, 오른쪽 부분은 오른쪽 부분끼리 같아지도록 만들어줘야”라는 의미가 무엇인지 생각해볼 수 있습니다. 물론 이렇게 확률을 변화시키지 않아도 되지만 최대한 근접하게 확률을 변화해야만 Wasserstein distance를 구하기 수월해 집니다.</p>
 
-<p>인스타그램 텍스트데이터를 크롤링하는 패키지를 사용해서 얻어지는 raw데이터는 위와 같고, 1차적으로 이모티콘을 제거하고 줄바꿈과 같은 제어문자를 제거했습니다.</p>
+<p>즉, Wasserstein distance는 어떤 사건이 동시에 발생했을 때, 두 사건이 가지는 확률과 분포가 달라지는 경우가 발생합니다. 분포가 같고 확률만 다르다면 기존의 KL, JSD로 충분히 계산이 가능하겠지만, 분포가 다르면 KL은 무한대로 발산하고 JSD는 log2의 값만 나타내게 됩니다. 하지만 Wasserstein distance는 분포가 다르더라도 분포의 차이, 그리고 확률의 차이를 동시에 고려합니다. 그래서 분포가 다른 두 확률에 대해서 얼마나 차이가 나는 지를 구별하여 나타낼 수 있는 거리 함수입니다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119242197-f2ec6800-bb96-11eb-8f27-86c7e0febe45.png" width="90%" height="100%" /></p>
+<h2 id="wgan-gp">wgan-gp?</h2>
 
-<p>모든 특수 문자를 한번에 지우지 않은 이유는, 필터링을 통해 라벨링을 할 때 예를 들어 #광고 해시태그를 필터링 하고 싶을 때 #이 없으면 광고로 필터링을 진행해야 하는데 이 때 광고아님도 같이 포함되어 필터링이 되기 때문에 1차 전처리 완료하고 라벨링을 한다음, 이어서 전처리를 진행했습니다.</p>
+<p>이제까지 기본적인 GAN loss function의 한계를 알아보았고, 왜 KL, JSD divergnece를 사용해서 학습을 하면 안되는지, 그리고 Wasserstein distance라는 확률거리 함수를 사용해서 어떻게 이를 극복하는지를 했는지를 알아보았습니다. 실제로 tadgan 논문의 5쪽을 보면 일반적으로 GAN에서 사용하는 loss function과, 저자가 학습이 잘 되지 않는 이슈 때문에 wgan-gp를 사용하겠다는 내용이 나옵니다. 그리고 Wasserstein loss는 1-Lipschitz continuous function 조건(llf(x1) − f(x2)ll ≤ Klx1 − x2l, ∀x1, x2 ∈ dom f)을 만족 시키기 때문에 어느정도 기울기에 대한 변화를 제어할 수 있습니다. 여기까지 보면보면 Wasserstein distance를 이용한 Wasserstein loss로 충분해보이지만, 사실은 그렇지 않습니다. Improved Training of Wasserstein GANs:https://arxiv.org/abs/1704.00028)논문을 보면 1-Lipschitz 조건을 만족하긴 하지만, 이것 역시 아직 gredient 변화에 대해서 적절히 반응하지 못한다는 것을 확인할 수 있습니다. 그래서 gradient penalty를 추가 해서 gradient의 변화를 조절합니다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119242226-1ca58f00-bb97-11eb-8663-80ccecd074c1.png" width="90%" height="100%" /></p>
+<h2 id="conclusion">Conclusion</h2>
 
-<p>다음은 라벨링을 완료하고 2차전처리로 특수기호까지 제거해준 모습입니다.</p>
+<p>loss function을 사용할 때, 기존의 GAN에 적용하던 확률거리함수(KL, JSD) 보다는 Wasserstein distance를 사용해야 모델이 학습을 잘 하게 되는데, 그 이유는 KL, JSD 발산은 서로 다른 값을 뽑을 확률에 대한 계산을 하게 되면 특정 값이나 무한대의 값을 측정하기 때문에 학습이 제대로 이루어지지 않습니다. 하지만 Wasserstein distance는 서로 다른 값을 뽑을 확률에 대해서 그 확률에 상관 없이 가변적인 값을 도출해 내기 때문에 손실 함수의 거리 계산으로 적합하다는 내용 입니다. 이 Wasserstein distance를 사용한 GAN을 wgan이라고 하는데, 이 wgan도 조금 문제가 있어서 wgan-gp라는 손실 함수가 새로 나오게 되었습니다.
+다음 포스트에서는 TadGAN의 모델구조에 대해서 알아보겠습니다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/70134676/119242252-537ba500-bb97-11eb-9360-47922e294363.png" width="90%" height="100%" /></p>
-
-<p>띄어쓰기가 되어있지 않은 데이터 같은 경우는 그냥 전처리를 하게 되면 토큰화를 할 때 의미단위로 코퍼스가 분리되지 않는 문제가 있어서 따로 처리해줬습니다.</p>
-
-<p><img src="https://user-images.githubusercontent.com/70134676/119242278-9178c900-bb97-11eb-9828-9979390601a5.png" width="90%" height="100%" /></p>
-
-<p>최종적으로 전처리가 완료되면 위와 같은 방식으로 정제되는 것을 볼 수 있습니다.</p>
-
-<h2 id="3-검증">3. 검증</h2>
-
-<h3 id="31-데이터-eda">3.1 데이터 EDA</h3>
-
-<p><img src="https://user-images.githubusercontent.com/70134676/119242312-d3a20a80-bb97-11eb-86c2-869ce5da0d38.png" width="90%" height="100%" /></p>
-
-<p>데이터셋의 단어 통계를 확인하고싶어 한국어 형태소 분석기인 Mecab 패키지를 사용해서 간단하게 EDA를 진행해봤습니다. 토크나이저를 사용하고, 각 학습용 데이터셋에 대해서 라벨별로 최빈 단어들을 모아본 결과, 다음과 같은 결과를 얻을 수 있었습니다. 광고 데이터셋의 최빈단어목록에서 ‘협찬’ 같은 단어가 발견되었지만 그 외에는 크게 의미가 있는 결과를 보여주진 못했습니다.</p>
-
-<p><img src="https://user-images.githubusercontent.com/70134676/119242428-870aff00-bb98-11eb-86de-2bed2386cb59.png" width="90%" height="100%" /></p>
-
-<p>혹시 데이터의 길이로 판별이 가능한지 알아본 결과 광고성 글은 비 광고성 글의 길이보다 평균 두배 정도가 차이가 났습니다. 하지만 두 레이블 모두  겹치는 구간이 꽤 발생하기 때문에 문장의 길이로 단정짓기는 힘들다고 판단했습니다.</p>
-
-<h3 id="4-실험-결과-및-결론">4. 실험 결과 및 결론</h3>
-
-<p><img src="https://user-images.githubusercontent.com/70134676/119242466-d81af300-bb98-11eb-92b5-c66a83fe8c68.png" width="90%" height="100%" /></p>
-
-<p>완성된 두가지 모델입니다.<br />
-정밀도와 재현율, f1 스코어를 평가지표로 결정했고 이중에 재현율을 좀더 중요하게 활용하기로 했습니다.<br />
-광고가 아닌 글들을 광고라고 판단하는 경우가 다소 있더라도, 실제 광고 글을 잘 분류해내는 것이 모델이 달성해야 할 최우선 목표라고 생각했기 때문입니다.<br />
-평가지표상의 성능으로 판단해보면 데이터들의 분포는 오른쪽 그림과 같이 되어있음을 추측해볼 수 있었습니다.</p>
-
-<p>이 모델들이 실제 광고를 광고로 올바르게 분류할 확률은 0.9 이상으로 가설로 제시했던 0.6을 상회하는 성능을 보여주었습니다. 이는 실제 광고를 광고라고 예측하는 기능은 모델의 목적에 맞도록 잘 작동하고 있다고 볼 수 있습니다.<br />
-하지만 재현율에 비해 정밀도나 F1스코어가 많이 낮은것을 보면 광고라고 예측된 것 중에 실제로는 광고가 아니었던 사례들이 꽤 많다는 것을 알 수 있어 모델의 전반적인 성능을 위해 개선작업이 필요하다고 판단됩니다.</p>
-
-<p><img src="https://user-images.githubusercontent.com/70134676/119242536-8aeb5100-bb99-11eb-882c-ba5998ac90ec.png" width="90%" height="100%" /></p>
-
-<p>마지막으로 모델로 데이터 전체를 분류해본 결과입니다.<br />
-두가지 모델의 성능은 크게 다르지 않았지만 한글을 모델에 적용하는 과정에서 kobert가 전이학습된 모델을 가져와서 사용하기 때문에 형태소분석 등의 번거로운 과정을 생략할 수 있다는 점이 큰 장점으로 다가왔습니다.</p>
-
-<hr />
-
-<h2 id="프로젝트를-마무리하며">프로젝트를 마무리하며..</h2>
-
-<p>저는 이번 프로젝트에서 인스타그램의 텍스트 데이터 분류를 위한 광고 필터링 모델을 제작하는 것을 계획했습니다. 기술적인 어려움도 있었지만 데이터를 라벨링하는 과정에서 수동으로 일일이 광고인 것과 아닌 것을 분류해야하는 작업에서 시간적인 어려움을 겪었습니다. 전체 프로젝트에 할당된 시간중 거의 90%에 가까운 시간이 데이터를 크롤링하고, 정제하고, 라벨링하는데 소요되었습니다.</p>
-
-<p>여태껏 정제되어있는 데이터만을 프로젝트에서 사용했었는데 데이터셋 하나를 만든다는 것이 얼마나 많은 공이 들어가는 일인지를 알 수 있었습니다. 특히 NLP에 사용되는 데이터셋은 전처리 과정에서 이것저것 신경쓸 것도 많아 쉽지않은 과정이었습니다. 데이터셋을 만드는데 얼마나 많은 공이 들어가는지 알게 되었으니 앞으로는 고마운 마음으로 써야할 것 같네요.</p>
-
-<p>이번 프로젝트에서 가장 크게 배운점이라면 바로 윈도우와 맥os에서 한글의 유니코드 정규화가 다르게 이루어진다는 것을 알게 된 것입니다.<br />
-중2병이 돋은듯한 한글자모분리현상과 일부 특수기호나 이모티콘이 일괄제거가 되지 않아 원인을 파고파고 또 파보니 맥os는 NFD, 윈도우는 NFC라는 방식을 사용한다고 합니다.<br />
-같은 언어를 운영체제에 따라 다르게 받아들일 수 있다고는 상상도 못해봤기에 기업간의 쓸데없는 자존심 싸움이 사용자들에게 의미없는 수고를 강요한다는 생각이 들었습니다.</p>
-
-<p>프로젝트 진행과정에서 전처리와 레이블링 과정에서 굉장히 고생을 많이 했고 또 배운점이 많아 추후에 텍스트 전처리와 레이블링 작업에 대해 별도로 포스팅 해리라 결심해보며 이번 프로젝트를 마무리합니다.</p>
 
                 </div>
             </section>
@@ -475,9 +407,9 @@ Bilstm에 대해 예를 들어 설명하면,</p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'http://localhost:4000/tadgan-copy';
-                            this.page.identifier = '/tadgan copy';
-                            this.page.title = 'Intro to the Time Series Anomaly Detection';
+                            this.page.url = 'http://localhost:4000/tadgan-lossfunction';
+                            this.page.identifier = '/tadgan-lossfunction';
+                            this.page.title = 'Time seriesAnomaly Detection Generative Adversarial Networks-loss function';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -522,6 +454,11 @@ Bilstm에 대해 예를 들어 설명하면,</p>
                                 
                                   
                                     
+                                        
+                                        
+                                            <li><a href="/tadgan-modelstructure">Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure</a></li>
+                                        
+                                    
                                   
                                 
                                   
@@ -532,7 +469,7 @@ Bilstm에 대해 예를 들어 설명하면,</p>
                                     
                                         
                                         
-                                            <li><a href="/tadgan">TadGAN</a></li>
+                                            <li><a href="/tadgan-intro">Intro to the Time Series Anomaly Detection</a></li>
                                         
                                     
                                   
@@ -549,8 +486,6 @@ Bilstm에 대해 예를 들어 설명하면,</p>
                                   
                                     
                                         
-                                        
-                                            <li><a href="/bert-sentiment-keyword">사용자 리뷰 핵심어 추출 및 감성분석</a></li>
                                         
                                     
                                   
@@ -617,6 +552,55 @@ Bilstm에 대해 예를 들어 설명하면,</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/tadgan-modelstructure">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/tadgan.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/tadgan-modelstructure">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Ai</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/woongE/">woongE</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -624,12 +608,12 @@ Bilstm에 대해 예를 들어 설명하면,</p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/tadgan">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/blockads.jpg)"></div>
+            <a class="post-card-image-link" href="/tadgan-intro">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/tadgan.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/tadgan">
+            <a class="post-card-content-link" href="/tadgan-intro">
                 <header class="post-card-header">
                     
                         
@@ -683,18 +667,18 @@ Bilstm에 대해 예를 들어 설명하면,</p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Intro to the Time Series Anomaly Detection</div>
+    <div class="floating-header-title">Time seriesAnomaly Detection Generative Adversarial Networks-loss function</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Intro+to+the+Time+Series+Anomaly+Detection&amp;url=https://lwoongh38.github.io/tadgan-copy"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Time+seriesAnomaly+Detection+Generative+Adversarial+Networks-loss+function&amp;url=https://lwoongh38.github.io/tadgan-lossfunction"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://lwoongh38.github.io/tadgan-copy"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://lwoongh38.github.io/tadgan-lossfunction"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

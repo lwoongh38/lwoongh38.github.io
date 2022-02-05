@@ -4,25 +4,9 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:4000/tadgan-copy.html</loc>
+        <loc>http://localhost:4000/tadgan-modelstructure.html</loc>
         
-        <lastmod>2023-10-28T07:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/tadgan.html</loc>
-        
-        <lastmod>2021-10-28T07:00:00+09:00</lastmod>
+        <lastmod>2021-11-28T07:00:00+09:00</lastmod>
         
 
         
@@ -36,9 +20,25 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/tadgan.html</loc>
+        <loc>http://localhost:4000/tadgan-lossfunction.html</loc>
         
-        <lastmod>2021-10-25T07:00:00+09:00</lastmod>
+        <lastmod>2021-11-24T07:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tadgan-intro.html</loc>
+        
+        <lastmod>2021-11-20T07:00:00+09:00</lastmod>
         
 
         
