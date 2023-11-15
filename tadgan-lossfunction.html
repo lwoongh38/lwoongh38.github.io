@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Time seriesAnomaly Detection Generative Adversarial Networks-loss function</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- custom.css -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- 웹폰트 -->
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
+
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css">
+  
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Data Science 학습일지" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/atom-icon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/tadgan-lossfunction" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Data Scientist 성장기" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Time seriesAnomaly Detection Generative Adversarial Networks-loss function" />
+    <meta property="og:description" content="#TadGAN #lossfunction #AnomalyDetection 목차 Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure Time seriesAnomaly Detection Generative Adversarial Networks-loss function Intro to the Time Series Anomaly Detection Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의" />
+    <meta property="og:url" content="http://localhost:4000/tadgan-lossfunction" />
+    <meta property="og:image" content="http://localhost:4000/assets/built/images/tadgan.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2021-11-24T07:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-11-24T07:00:00+09:00" />
+    <meta property="article:tag" content="Ai" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Time seriesAnomaly Detection Generative Adversarial Networks-loss function" />
+    <meta name="twitter:description" content="#TadGAN #lossfunction #AnomalyDetection 목차 Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure Time seriesAnomaly Detection Generative Adversarial Networks-loss function Intro to the Time Series Anomaly Detection Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/tadgan.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Data Scientist 성장기" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Ai" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Data Scientist 성장기",
+        "logo": "http://localhost:4000/"
+    },
+    "url": "http://localhost:4000/tadgan-lossfunction",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/assets/built/images/tadgan.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/tadgan-lossfunction"
+    },
+    "description": "#TadGAN #lossfunction #AnomalyDetection 목차 Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure Time seriesAnomaly Detection Generative Adversarial Networks-loss function Intro to the Time Series Anomaly Detection Text 데이터 광고 필터링을 위한 분류 모델 구축 사용자 리뷰 핵심어 추출 및 감성분석 Deep Learning - 핵심 개념 &amp; 용어 NLP - 딥러닝 모델의"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Time seriesAnomaly Detection Generative Adversarial Networks-loss function" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://localhost:4000/">Data Scientist 성장기</a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-fundemental" role="menuitem"><a href="/tag/fundemental/">Fundemental</a></li>
+    <li class="nav-softwareengineering" role="menuitem"><a href="/tag/softwareengineering/">Software Engineering</a></li>
+    <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
+    <li class="nav-til" role="menuitem"><a href="/tag/til/">TIL</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag별 Posts</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-ai post tag-ai ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="24 November 2021">24 November 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/ai/'>AI</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Time seriesAnomaly Detection Generative Adversarial Networks-loss function</h1>
+            </header>
+
+            <!-- 
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/tadgan.png)">
+            </figure>
+             -->
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>#TadGAN #lossfunction #AnomalyDetection</p>
+
+<p><span class="table-of-contents-list">목차 </span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./tadgan-modelstructure">Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure </a></li>  
+    <li><a href="./tadgan-lossfunction">Time seriesAnomaly Detection Generative Adversarial Networks-loss function </a></li>  
+    <li><a href="./tadgan-intro">Intro to the Time Series Anomaly Detection </a></li>  
+    <li><a href="./text-ads-filtering">Text 데이터 광고 필터링을 위한 분류 모델 구축 </a></li>
+    <li><a href="./bert-sentiment-keyword">사용자 리뷰 핵심어 추출 및 감성분석 </a></li>
+    <li><a href="./deeplearning-summary">Deep Learning - 핵심 개념 &amp; 용어 </a></li>
+    <li><a href="./versatility">NLP - 딥러닝 모델의 범용적 활용가능성 분석 </a></li>
+    <li><a href="./bank-marketing">Bank marketing 정기예금 가입여부 예측 </a></li>
+    <li><a href="./roccurve">ROC curve에 대해 알아보자 </a></li>
+    <li><a href="./machinelearning-linearregression">연어의 회귀본능이 아닌 선형회귀에 대해 알아보자 </a></li>  
+    
+        
+    
+    
+
+
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li> -->
+    <!-- <li><a href="./proposal">코스레스토랑에 보내는 제안서 </a></li>     -->
+
+
+
+
+
+
+
+
+
+<!-- 
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+    <li><a href="./test">시험용 포스팅입니다 - 출력되어라</a></li>
+  -->
+    
+</ul>
+
+<h1 id="time-series-anomaly-detection-generative-adversarial-networks---loss-function">Time series Anomaly Detection Generative Adversarial Networks - Loss Function</h1>
+
+<h2 id="1-gan의-loss-function">1. GAN의 Loss Function</h2>
+
+<p>이번 포스트에서는 TadGAN에 대해서 본격적으로 알아보겠습니다.
+TadGAN은 이론상으로 훌륭한 방법론이지만 실제로 구현하기가 상당히 까다롭습니다. 이는 GAN을 사용하는 방법론들이 가지는 근본적인 문제점이기도 한데 학습의 어려움이 존재하기 때문입니다. 이에 대한 자세한 이야기는 잘 정리되어있는 포스트가 있어 링크를 첨부합니다.(https://brunch.co.kr/@kakao-it/162)
+그래서 Time seriesAnomaly Detection Generative Adversarial Networks(이하 TadGAN) 논문에서는 Loss Function을 차별화하여 이런 어려움을 해결하고자 했습니다.
+먼저 GAN에서 기본적으로 사용하는 loss function으로 부터 어떻게 KL divergence, JSD divergence를 유도하는지를 살펴보면 아래와 같습니다.</p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152629548-e954e27a-a108-44d2-810c-b575c2793558.png" width="40%" height="80%" /></p>
+
+<p><br /></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152629661-e51c7121-64b1-4b93-a750-7c64f39aedfd.png" width="60%" height="80%" /></p>
+
+<p><br /></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152629689-6be09800-bede-41ee-a819-3e2315e99ba5.png" width="80%" height="80%" /></p>
+
+<p><br /></p>
+
+<p>KL,JSD를 이용해서 f(x)로 표현된 분포를 g(x)의 분포가 되도록 학습을 시켜야 하는데 그러기 위해서는 아래 그림의 왼쪽 부분은 왼쪽 부분 끼리, 오른쪽 부분은 오른쪽 부분끼리 같아지도록 만들어줘야 합니다. 문제는 두 분포에 대해서 x,T(x) 값이 달라지면 KL,JSD는 같은 기준값을 가진 확률들만 계산하도록 고안된 확률거리 함수라서 기준값이 달라지면 항상 무한대의 값, 혹은 일정한 값만 나오게 되면서 학습을 전혀 할 수 없게 됩니다. 그래서 TadGAN에서는 새로운 loss function을 차용하게 되었는데, 그게 바로 wgan-gp 입니다. wgan-gp는 Wasserstein GAN + gradient panelty를 합친 용어인데 먼저 이 loss function을 알려면 Wasserstein distance가 무엇인지 알아야 할 필요가 있습니다.</p>
+
+<p><br /></p>
+
+<h2 id="wasserstein-distance">Wasserstein distance?</h2>
+
+<p>KL,JSD가 가지는 한계는 어떤 확률 집합, 혹은 확률함수등이 주어질 때 항상 같은 값에서만 비교가 가능하다는 것입니다. 만약에 다른 값에 대해서 얼마나 거리가 떨어져 있는 지를 확인한다면, KL과 JSD는 아래의 값만 계속 전달하게 됩니다.</p>
+
+<p><br /></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152629868-5d5957b2-81cf-449f-8e45-905b7f10001e.png" width="60%" height="100%" /></p>
+
+<p><br /></p>
+
+<p>하지만 대부분의 무작위로 주어지는 확률 집합, 혹은 확률 함수들은 특수한 경우(값의 범위가 정해져 있는 경우)를 제외하고는 분포가 같을 경우가 거의 없습니다. 값이 정해져 있다면 애초에 관심이 가지 않겠죠. 풀어서 생각해보면 우리는 사과를 다른 모양의 사과로 변환시키는 것(값의 분포가 같은 경우)보다는 사과를 오렌지, 혹은 배등으로 변환시키는 것(값의 분포가 다를 경우)에 더 관심이 있을 것 입니다.</p>
+
+<p>우리는 다른 분포를 가진 확률함수에 대해 KL과 JSD가 유의미한 결과를 주지 않는다는 것을 알았습니다. 그래서 TadGAN 논문에서는 다른 분포를 가지는 확률 함수들에 대해서 값을 비교하기 위해 Wasserstein distance를 채택하게 됩니다. Wasserstein distance는 다른 말로 EMD(Eearth Mover distance)라고도 하는데, 쉽게 말해 Euclidean distance라고 생각하시면 됩니다. 이 확률 거리 측정 방법은 KL과 JSD와는 확실히 다릅니다. KL과 JSD가 다른 값에 대해서 서로 같은 확률을 가질 때 무한 대의 값이나 일정값만을 출력한다면, Wasserstein distance는 다른 분포에 대한 거리 정보까지 담고 있습니다.</p>
+
+<p>조금 더 쉽게 설명해 보겠습니다. 예를 들어서 X=[2,2,2,2,3,4,4,5], Y=[3,3,4,4,6,6,6,6]이 존재한다고 하겠습니다. 이 때 X와 Y가 각각 원소를 뽑게 될 때 두 집합의 확률이 얼마나 거리가 떨어져 있는 지에 대해서 알아보려고 합니다. 바로 전체를 비교하면 어려울 수 있으니 각 집합에서 X(2)와 Y(6)이 얼마나 떨어져 있는지 한번 비교해 보도록 하겠습니다.</p>
+
+<p>각 원소들이 뽑힐 확률이 1/n이라고 했을 때, X가 2를 뽑을 확률은 1/2이고, Y가 6을 뽑을 확률도 역시 1/2 입니다. 그리고 X가 2를 뽑을 확률과 Y가 6을 뽑을 확률에 대한 거리를 계산한다면, 두 경우에 대해서 확률이 동일하기 때문에 위에서 저희가 이미 구한 것 처럼 KL은 inf, JSD는 log2 가 나오지만 Wasserstein distance는 다음과 같이 계산됩니다.</p>
+
+<p><br /></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152630165-0a8631cb-f3ed-4fbb-bd2e-e625f9be7e03.png" width="40%" height="100%" /></p>
+
+<p><br /></p>
+
+<p>즉 확률은 같아도 2를 1/2로 뽑을 확률과 6을 1/2로 뽑을 확률은 정확히 4 만큼의 거리를 가진다는 것을 알 수 있습니다.</p>
+
+<p>지금까지 우리는 wasserstein distance를 어떻게 구하는 지에 대해 알아봤습니다. 하지만 이 것은 X(2) -&gt; Y(6) 로 갈 때만의 이야기를 한 것입니다. 우리가 알고 싶은 것은 X와 Y에 대한 확률 거리가 얼마나 떨어져 있는지를 어떻게 하면 정량적으로 나타낼 수 있는가? 입니다.</p>
+
+<p><br /></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152630205-cfd4d08d-e1b0-4e77-a546-ebe0e8f9986e.png" width="80%" height="100%" /></p>
+
+<p><br /></p>
+
+<p>X,Y에 대해서 각 원소들이 뽑힐 확률이 uniform(전부) 균일)이라고 가정할 때, 각 원소들이 뽑힐 확률은 모두 1/n으로 동일 합니다. 그래서 각 원소들이 뽑힐 확률은 Y축에 표시되어 있고, 그 원소의 값들은 X축에 표시되어 있습니다. 그리고 우리는 이제 X를 Y처럼 만들면 되는데, 만드는 방식은 블록 쌓기와 같습니다. 이 블록은 모든 블록의 크기를 더하면 1이 되는 블록입니다. 하지만 이렇게 되면 경우의 수가 너무 많이 발생합니다. 예를 들면 X(2)를 X(6)에 전부 다 옮겨 Y(6) 처럼 만들어주는 방법이 있습니다. 그것도 아니라면 X(3),X(4),X(5)를 X(6)으로 모두 옮긴 다음, X(2)를 잘게 쪼개서 X(3),X(4),X(5)를 채워주는 방법도 있습니다. 이렇게 여러가지의 방법들이 존재하기 때문에 Wasserstein distance에는 제약 조건이 있습니다. 어떻게 옮기든 상관은 없는데, 그 중 최소비용이 드는 방법을 두 함수의 거리로 생각하겠다는 것입니다. 비용 측정은 다음과 같이 합니다.</p>
+
+<p><br /></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/70134676/152630229-9a370792-c94c-4cfa-a8c2-0e327cf17917.png" width="80%" height="100%" /></p>
+
+<p><br /></p>
+
+<p>이 계산식은 EM distance, Wasserstein-1 이라고 불리는 거리계산 방법입니다. 언뜻 보면 어려워 보일 수 있지만 집합 r과 집합 g에서 사건이 동시에 발생할 때 가능한 모든 확률들 중에서,L2 norm 공식을 적용했을 때 임의로 선택된 x,y의 확률의 차이와 값의 차이가 가장 작은 것을 Wasserstein distance라고 정하기로 한 것입니다. 그렇다면 이제 우리는 우리가 처음에 말했던, “왼쪽 부분은 왼쪽 부분 끼리, 오른쪽 부분은 오른쪽 부분끼리 같아지도록 만들어줘야”라는 의미가 무엇인지 생각해볼 수 있습니다. 물론 이렇게 확률을 변화시키지 않아도 되지만 최대한 근접하게 확률을 변화해야만 Wasserstein distance를 구하기 수월해 집니다.</p>
+
+<p>즉, Wasserstein distance는 어떤 사건이 동시에 발생했을 때, 두 사건이 가지는 확률과 분포가 달라지는 경우가 발생합니다. 분포가 같고 확률만 다르다면 기존의 KL, JSD로 충분히 계산이 가능하겠지만, 분포가 다르면 KL은 무한대로 발산하고 JSD는 log2의 값만 나타내게 됩니다. 하지만 Wasserstein distance는 분포가 다르더라도 분포의 차이, 그리고 확률의 차이를 동시에 고려합니다. 그래서 분포가 다른 두 확률에 대해서 얼마나 차이가 나는 지를 구별하여 나타낼 수 있는 거리 함수입니다.</p>
+
+<h2 id="wgan-gp">wgan-gp?</h2>
+
+<p>이제까지 기본적인 GAN loss function의 한계를 알아보았고, 왜 KL, JSD divergnece를 사용해서 학습을 하면 안되는지, 그리고 Wasserstein distance라는 확률거리 함수를 사용해서 어떻게 이를 극복하는지를 했는지를 알아보았습니다. 실제로 tadgan 논문의 5쪽을 보면 일반적으로 GAN에서 사용하는 loss function과, 저자가 학습이 잘 되지 않는 이슈 때문에 wgan-gp를 사용하겠다는 내용이 나옵니다. 그리고 Wasserstein loss는 1-Lipschitz continuous function 조건(llf(x1) − f(x2)ll ≤ Klx1 − x2l, ∀x1, x2 ∈ dom f)을 만족 시키기 때문에 어느정도 기울기에 대한 변화를 제어할 수 있습니다. 여기까지 보면보면 Wasserstein distance를 이용한 Wasserstein loss로 충분해보이지만, 사실은 그렇지 않습니다. Improved Training of Wasserstein GANs:https://arxiv.org/abs/1704.00028)논문을 보면 1-Lipschitz 조건을 만족하긴 하지만, 이것 역시 아직 gredient 변화에 대해서 적절히 반응하지 못한다는 것을 확인할 수 있습니다. 그래서 gradient penalty를 추가 해서 gradient의 변화를 조절합니다.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>loss function을 사용할 때, 기존의 GAN에 적용하던 확률거리함수(KL, JSD) 보다는 Wasserstein distance를 사용해야 모델이 학습을 잘 하게 되는데, 그 이유는 KL, JSD 발산은 서로 다른 값을 뽑을 확률에 대한 계산을 하게 되면 특정 값이나 무한대의 값을 측정하기 때문에 학습이 제대로 이루어지지 않습니다. 하지만 Wasserstein distance는 서로 다른 값을 뽑을 확률에 대해서 그 확률에 상관 없이 가변적인 값을 도출해 내기 때문에 손실 함수의 거리 계산으로 적합하다는 내용 입니다. 이 Wasserstein distance를 사용한 GAN을 wgan이라고 하는데, 이 wgan도 조금 문제가 있어서 wgan-gp라는 손실 함수가 새로 나오게 되었습니다.
+다음 포스트에서는 TadGAN의 모델구조에 대해서 알아보겠습니다.</p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!-- 
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Data Scientist 성장기</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+             -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/woongE">woongE</a></h4>
+                                
+                                    <p>Read <a href="/author/woongE">more posts</a> by this author.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/woongE">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'http://localhost:4000/tadgan-lossfunction';
+                            this.page.identifier = '/tadgan-lossfunction';
+                            this.page.title = 'Time seriesAnomaly Detection Generative Adversarial Networks-loss function';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://xxxxxxxx.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/built/images/blog-cove1.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Data Scientist 성장기 &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/ai/">Ai</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/tadgan-modelstructure">Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/tadgan-intro">Intro to the Time Series Anomaly Detection</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/text-ads-filtering">Text 데이터 광고 필터링을 위한 분류 모델 구축</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/ai/">
+                                
+                                    See all 9 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/tadgan-modelstructure">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/tadgan.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/tadgan-modelstructure">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Ai</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Time seriesAnomaly Detection Generative Adversarial Networks-Model Structure</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/woongE/">woongE</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/tadgan-intro">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/tadgan.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/tadgan-intro">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Ai</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Intro to the Time Series Anomaly Detection</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/stellarium-icon.png" alt="woongE" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/woongE/">woongE</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/">
+            
+            <span>Data Scientist 성장기</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Time seriesAnomaly Detection Generative Adversarial Networks-loss function</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Time+seriesAnomaly+Detection+Generative+Adversarial+Networks-loss+function&amp;url=https://lwoongh38.github.io/tadgan-lossfunction"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://lwoongh38.github.io/tadgan-lossfunction"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/">Data Scientist 성장기</a> &copy; 2023</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search Data Scientist 성장기</h1>
+            <p class="subscribe-overlay-description">
+            lunr.js를 이용한 posts 검색 </p>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-xxxxxxxx-x', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
